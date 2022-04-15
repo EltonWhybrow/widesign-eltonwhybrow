@@ -1,0 +1,6 @@
+.nav__link,
+.nav__sublink {
+  &.is-active {
+    @apply text-tealy-500;
+  }
+}

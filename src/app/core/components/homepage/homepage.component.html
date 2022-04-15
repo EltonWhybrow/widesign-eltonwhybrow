@@ -1,1 +1,50 @@
-<p>homepage works!</p>
+<section class="container px-10 xl:px-0 mx-auto py-20 max-w-5xl">
+  <div class="grid grid-cols-2 gap-14">
+    <app-card *ngFor="let service of allServicesData">
+      <div card-img>
+        <img src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="random img"
+          class="w-full object-cover object-center rounded-lg shadow-md">
+      </div>
+
+      <h1 card-header>{{service.heading}}</h1>
+      <div card-body>{{service.body}}</div>
+      <div card-footer *ngFor="let skill of service.footer"
+        class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-xs rounded-md mx-1 mb-4 mt-2">
+        {{skill}}
+      </div>
+
+      <div card-more>
+        <button
+          class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+          routerLink="{{service.url}}">Find out more
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+
+        </button>
+      </div>
+
+    </app-card>
+  </div>
+</section>
+
+
+<app-testimonial *ngIf="oneTestimonial else loading">
+  <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
+    <span class="testimonial_highlight bg-teal-500 text-white py-1 pl-2 pr-1 mr-2">
+      {{oneTestimonial.testimonialHighlight}}
+
+    </span>
+    {{oneTestimonial.testimonial}}
+  </div>
+  <div testimonial-client class="text-right">
+    <h2 class="text-tealy-200 text-base">{{oneTestimonial.name}} - {{oneTestimonial.company}}</h2>
+    <h3 class="text-tealy-200 text-xs">- {{oneTestimonial.location}}</h3>
+  </div>
+</app-testimonial>
+
+<ng-template #loading>
+  Loading...
+</ng-template>

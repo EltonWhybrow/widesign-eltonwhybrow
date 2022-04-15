@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "heading": "Web Design",
+    "body": "Working from (sometimes) sunny Redhill, Surrey in the South of England. Currently a Senior UI Web Designer for a Insurance company on their family of websites. Going on 2 decades in the online sphere and creating user centric applcations.",
+    "footer": [
+      "HTML5",
+      "SCSS",
+      "Javscript"
+    ],
+    "url": "/web-design",
+    "imageName": "web-design"
+  },
+  {
+    "id": "2",
+    "heading": "Development",
+    "body": "Working the front end using Javascript Frameworks, HTML5, CSS3, SCSS along with best practices and maintable, tested code. Always learning new things abd wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "HTML5",
+      "SCSS",
+      "Javscript"
+    ],
+    "url": "/development",
+    "imageName": "web-development"
+  },
+  {
+    "id": "3",
+    "heading": "UX/UI Design",
+    "body": "Usability is one of the most, if not the most important factors when creating your online masterpeice to share with the world. If your interface is confusing and the user fails to see a clear path their gonna leave, period. Always looking at way to increase engagment...",
+    "footer": [
+      "HTML5",
+      "SCSS",
+      "Javscript"
+    ],
+    "url": "/ux-ui-design",
+    "imageName": "ux-ui-design"
+  },
+  {
+    "id": "4",
+    "heading": "SEO",
+    "body": "Using only white hat techniques and proven SEO formulas to increade you visibilty in the populor search engines #google and pull in relevant and targeting customer and clients. I work long term with clients to produce successful results and maintain web vitals ",
+    "footer": [
+      "HTML5",
+      "SCSS",
+      "Javscript"
+    ],
+    "url": "/seo-engagement",
+    "imageName": "seo-engagement"
+  }
+]

@@ -1,110 +1,129 @@
-<header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
-    <div class="px-6 w-full flex flex-wrap items-center justify-between">
-      <div class="flex items-center">
-        <button
-          class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
-          type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentY"
-          aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path fill="currentColor"
-              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
-            </path>
-          </svg>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
-        <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
-          <li class="nav-item">
-            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-              href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-              href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-              href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Pricing</a>
-          </li>
-          <li class="nav-item mb-2 lg:mb-0">
-            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-              href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar -->
+<header class="navbar shadow-md py-2 bg-white relative flex items-center w-full z-50" role="navigation">
+  <div class="px-6 w-full flex flex-wrap items-center justify-between">
 
-  <!-- Background image -->
-  <div class="relative overflow-hidden bg-no-repeat bg-cover" style="
+    <div id="logo" routerLink="/home" routerLinkActive="is-active" class="cursor-pointer h-24 w-24 block">
+      <svg class="w-full h-full" viewBox="0 10 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="logo_web" fill="none" transform="translate(-10.000000, -10.000000)">
+          <rect id="Rectangle" x="0" y="0" width="140" height="140"></rect>
+          <path class="logo-path" stroke="#0d888c" stroke-width="1"
+            d="M81.984,36.912 C80.892,36.912 80.136,37.752 80.22,38.844 C80.304,40.272 78.288,41.616 75.684,42.036 C72.156,35.988 66.696,31.2 61.152,31.2 C56.364,31.2 54.096,34.056 54.096,36.912 C54.096,44.472 66.024,46.488 73.5,45.816 C75.516,50.016 76.608,55.056 76.608,59.928 C76.608,73.872 69.216,83.868 58.632,83.868 C52.416,83.868 49.56,79.332 48.132,76.98 C53.508,70.344 56.7,61.608 56.7,56.232 C56.7,48.504 53.004,47.076 50.652,47.076 C44.352,47.076 41.412,56.316 41.412,62.784 C41.412,67.992 42.252,72.612 43.764,76.392 C40.488,79.92 36.288,82.86 31.584,82.86 C28.728,82.86 26.46,81.684 24.78,80.004 C22.596,77.736 21.42,73.956 21.42,69 C21.42,64.548 22.512,59.424 24.696,54.72 C34.86,54.72 47.124,46.908 47.124,41.28 C47.124,38.172 44.772,35.988 41.58,35.988 C34.104,35.988 27.132,42.624 22.596,50.94 C19.488,50.184 16.212,47.748 16.212,43.296 C16.212,42.96 16.38,41.616 16.38,41.364 C16.38,40.356 15.624,39.516 14.616,39.516 C12.6,39.516 12.6,41.868 12.6,43.296 C12.6,48.84 16.38,52.704 21,54.132 C18.984,59.004 17.64,64.212 17.64,69 C17.64,79.668 22.512,86.22 31.584,86.22 C36.456,86.22 41.244,83.952 45.528,79.668 C48.468,84.876 53.424,87.312 58.632,87.312 C71.148,87.312 80.388,76.14 80.388,59.928 C80.388,54.888 79.212,49.68 77.28,45.144 C82.236,43.884 83.832,41.28 83.832,38.844 C83.832,37.752 82.992,36.912 81.984,36.912 Z M57.96,36.912 C57.96,35.736 59.052,34.812 61.152,34.812 C64.512,34.812 68.544,37.584 71.82,42.456 C63,42.792 57.96,39.768 57.96,36.912 L57.96,36.912 Z M50.652,50.688 C52.332,50.688 52.92,53.04 52.92,56.232 C52.92,60.18 50.568,67.656 46.536,73.536 C45.612,70.512 45.108,66.564 45.108,62.784 C45.108,57.744 47.376,50.688 50.652,50.688 L50.652,50.688 Z M41.58,39.516 C42.336,39.516 43.344,39.936 43.344,41.28 C43.344,44.052 34.86,50.268 26.544,51.108 C30.492,44.22 36.372,39.516 41.58,39.516 L41.58,39.516 Z M91.224,74.376 C88.032,74.376 85.428,76.896 85.428,80.424 C85.428,84.624 89.796,87.396 94.584,87.396 C100.968,87.396 104.664,83.532 104.664,78.324 C104.664,74.04 101.892,71.604 97.776,69.168 C94.416,67.152 93.66,66.144 93.66,64.548 C93.66,62.364 95.172,60.684 97.86,60.684 C100.044,60.684 101.22,62.532 101.472,63.372 C101.64,64.044 102.48,64.464 102.984,64.464 C104.076,64.464 104.916,63.624 104.916,62.532 C104.916,61.104 102.984,57.492 97.944,57.492 C92.736,57.492 89.964,61.104 89.964,64.548 C89.964,68.748 93.408,71.016 96.096,72.444 C99.876,74.46 100.884,76.812 100.884,78.828 C100.884,82.608 97.692,84.372 94.668,84.372 C91.644,84.372 89.208,82.356 89.208,80.34 C89.208,79.164 89.628,77.904 91.224,77.904 C91.812,77.904 92.064,78.072 92.568,78.156 C93.072,78.24 94.248,77.988 94.248,76.56 C94.248,74.88 92.736,74.376 91.224,74.376 L91.224,74.376 Z"
+            id="WS"></path>
+        </g>
+      </svg>
+    </div>
+
+    <nav role="navigation" class="nav items-center">
+      <ul class="nav mr-auto md:flex md:flex-row">
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/services']" routerLinkActive="is-active">Services</a>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/portfolio']" routerLinkActive="is-active">Portfolio</a>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/faqs']" routerLinkActive="is-active">FAQs</a>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/playground']" routerLinkActive="is-active">Playground</a>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/about']" routerLinkActive="is-active">About</a>
+          <ul
+            class="shadow invisible opacity-0 absolute group-hover:visible group-hover:opacity-100 transition duration-300 ease-in-out">
+            <li class="p-2 bg-white text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out">
+              <a class="nav__sublink" [routerLink]="['/testimonials']" routerLinkActive="is-active">Testimonials</a>
+            </li>
+            <li class="p-2 bg-white text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out">
+              <a class="nav__sublink" [routerLink]="['/pricing']" routerLinkActive="is-active">Pricing</a>
+            </li>
+            <li class="p-2 bg-white text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out">
+              <a class="nav__sublink" [routerLink]="['/resume']" routerLinkActive="is-active">R&eacute;sum&eacute;</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/contact']" routerLinkActive="is-active">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="side-nav items-center">
+      <ul class="mr-auto lg:flex lg:flex-row">
+        <!-- <li class="nav__item group relative">
+          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+            [routerLink]="['/contact']" routerLinkActive="is-active">Contact</a>
+        </li> -->
+        <li class="side-nav__item">
+          <button
+            class="side-nav__link inline-flex text-white pl-5 pr-4 py-2  bg-tealy-500 hover:bg-tealy-600 transition duration-150 ease-in-out rounded"
+            [routerLink]="['/login']">Login
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="md:hidden flex items-center">
+      <button
+        class="navbar__toggler border-0 py-3 leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+        type="button" aria-label="Toggle navigation">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="hero relative overflow-hidden bg-no-repeat bg-cover z-10" style="
     background-position: 50%;
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/146.webp');
+    background-image: url('../../../../assets/imgs/heros/horizon-hero.jpg');
     height: 350px;
   ">
-    <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-      style="background-color: rgba(0, 0, 0, 0.75)">
-      <div class="flex justify-center items-center h-full">
-        <div class="text-center text-white px-6 md:px-12">
-          <h1 class="text-5xl font-bold mt-0 mb-6">Heading</h1>
-          <h3 class="text-3xl font-bold mb-8">Subeading</h3>
-          <button type="button"
-            class="inline-block px-6 py-2.5 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-            data-mdb-ripple="true" data-mdb-ripple-color="light">
-            Get started
+  <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+    style="background-color: rgba(0, 0, 0, 0.75)">
+    <div class="flex justify-center items-center h-full">
+      <div class="text-center text-white px-6 md:px-12">
+        <h1 class="hero__heading flex items-center flex-wrap  mt-0 mb-6">
+          <span class="text-white text-5xl py-3 px-2 mr-3 bg-tealy-500 rounded-md">aka</span>
+          <span class="text-6xl mt-2">Elton Whybrow</span>
+        </h1>
+        <h3 class="text-3xl font-bold mb-8">Web Design &amp; Development</h3>
+        <div class="flex space-x-2 justify-center">
+          <button type="button" routerLink="/contact" routerLinkActive="is-active"
+            class="inline-block px-5 py-2.5 border border-white text-white font-medium text-sm leading-tight uppercase rounded hover:bg-black  focus:outline-none focus:ring-0 transition-all duration-300 ease-in-out">
+            Get in touch
           </button>
+
+          <a href="tel:+07910742752" aria-label="Call Elton"
+            class="inline-block px-5 py-2.5 border border-white text-white font-medium text-sm leading-tight uppercase rounded hover:bg-black  focus:outline-none focus:ring-0 transition-all duration-300 ease-in-out">07910742752</a>
         </div>
       </div>
+
     </div>
   </div>
-  <!-- Background image -->
-</header>
-
-
-<header id="header" class="flex mx-auto w-full text-center py-10">
-
-
-
-
-
-  <div id="logo" routerLink="/home" routerLinkActive="router-link-active"
-    class="cursor-pointer h-24 w-24 block px-2 py-5">
-    <svg class="w-full h-full" viewBox="0 10 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g id="logo_web" fill="none" transform="translate(-10.000000, -10.000000)">
-        <rect id="Rectangle" x="0" y="0" width="140" height="140"></rect>
-        <path class="logo-path" stroke="#0d888c" stroke-width="1"
-          d="M81.984,36.912 C80.892,36.912 80.136,37.752 80.22,38.844 C80.304,40.272 78.288,41.616 75.684,42.036 C72.156,35.988 66.696,31.2 61.152,31.2 C56.364,31.2 54.096,34.056 54.096,36.912 C54.096,44.472 66.024,46.488 73.5,45.816 C75.516,50.016 76.608,55.056 76.608,59.928 C76.608,73.872 69.216,83.868 58.632,83.868 C52.416,83.868 49.56,79.332 48.132,76.98 C53.508,70.344 56.7,61.608 56.7,56.232 C56.7,48.504 53.004,47.076 50.652,47.076 C44.352,47.076 41.412,56.316 41.412,62.784 C41.412,67.992 42.252,72.612 43.764,76.392 C40.488,79.92 36.288,82.86 31.584,82.86 C28.728,82.86 26.46,81.684 24.78,80.004 C22.596,77.736 21.42,73.956 21.42,69 C21.42,64.548 22.512,59.424 24.696,54.72 C34.86,54.72 47.124,46.908 47.124,41.28 C47.124,38.172 44.772,35.988 41.58,35.988 C34.104,35.988 27.132,42.624 22.596,50.94 C19.488,50.184 16.212,47.748 16.212,43.296 C16.212,42.96 16.38,41.616 16.38,41.364 C16.38,40.356 15.624,39.516 14.616,39.516 C12.6,39.516 12.6,41.868 12.6,43.296 C12.6,48.84 16.38,52.704 21,54.132 C18.984,59.004 17.64,64.212 17.64,69 C17.64,79.668 22.512,86.22 31.584,86.22 C36.456,86.22 41.244,83.952 45.528,79.668 C48.468,84.876 53.424,87.312 58.632,87.312 C71.148,87.312 80.388,76.14 80.388,59.928 C80.388,54.888 79.212,49.68 77.28,45.144 C82.236,43.884 83.832,41.28 83.832,38.844 C83.832,37.752 82.992,36.912 81.984,36.912 Z M57.96,36.912 C57.96,35.736 59.052,34.812 61.152,34.812 C64.512,34.812 68.544,37.584 71.82,42.456 C63,42.792 57.96,39.768 57.96,36.912 L57.96,36.912 Z M50.652,50.688 C52.332,50.688 52.92,53.04 52.92,56.232 C52.92,60.18 50.568,67.656 46.536,73.536 C45.612,70.512 45.108,66.564 45.108,62.784 C45.108,57.744 47.376,50.688 50.652,50.688 L50.652,50.688 Z M41.58,39.516 C42.336,39.516 43.344,39.936 43.344,41.28 C43.344,44.052 34.86,50.268 26.544,51.108 C30.492,44.22 36.372,39.516 41.58,39.516 L41.58,39.516 Z M91.224,74.376 C88.032,74.376 85.428,76.896 85.428,80.424 C85.428,84.624 89.796,87.396 94.584,87.396 C100.968,87.396 104.664,83.532 104.664,78.324 C104.664,74.04 101.892,71.604 97.776,69.168 C94.416,67.152 93.66,66.144 93.66,64.548 C93.66,62.364 95.172,60.684 97.86,60.684 C100.044,60.684 101.22,62.532 101.472,63.372 C101.64,64.044 102.48,64.464 102.984,64.464 C104.076,64.464 104.916,63.624 104.916,62.532 C104.916,61.104 102.984,57.492 97.944,57.492 C92.736,57.492 89.964,61.104 89.964,64.548 C89.964,68.748 93.408,71.016 96.096,72.444 C99.876,74.46 100.884,76.812 100.884,78.828 C100.884,82.608 97.692,84.372 94.668,84.372 C91.644,84.372 89.208,82.356 89.208,80.34 C89.208,79.164 89.628,77.904 91.224,77.904 C91.812,77.904 92.064,78.072 92.568,78.156 C93.072,78.24 94.248,77.988 94.248,76.56 C94.248,74.88 92.736,74.376 91.224,74.376 L91.224,74.376 Z"
-          id="WS"></path>
-      </g>
-    </svg>
-  </div>
-
-  <div class="border-b-2 border-slate-900">
-    <h1 routerLink="/">
-      <span
-        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
-        <span class="relative text-white">AKA</span>
-      </span>
-      Elton Whybrow
-
-    </h1>
-  </div>
-
-
-
-  <button class="btn header__btn header__btn--hover">Click Me!</button>
-  <button class="btn">Click Me!</button>
-
-
-  <!--
-  <div class="flex space-x-4 bg-blue-500 hover:bg-nav-hover-blue">
-    <div>01</div>
-    <div>02</div>
-    <div>03</div>
-  </div>
-</div> -->
-</header>
+</div>

@@ -1,0 +1,31 @@
+[
+  {
+    "rating": 2,
+    "company": "Bud Design & Landscaping",
+    "name": "Steve Corio",
+    "testimonialHighlight": "Not only did Elton capture our vision beautifully he took it to the next level.",
+    "testimonial": "Having him design and build our website has been a true pleasure, a bonus is he's always available on the phone when we need help with something.",
+    "location": "Berkshire"
+  },
+  {
+    "rating": 5,
+    "company": "Bud Design & Landscaping",
+    "name": "Steve Corio",
+    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
+    "location": "New Hampshire"
+  },
+  {
+    "rating": 2,
+    "company": "Bud Design & Landscaping",
+    "name": "Steve Corio",
+    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
+    "location": "New Hampshire"
+  },
+  {
+    "rating": 2,
+    "company": "Bud Design & Landscaping",
+    "name": "Steve Corio",
+    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
+    "location": "New Hampshire"
+  }
+]
