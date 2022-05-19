@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit {
   constructor(private httpService: HttpService) { }
 
   allServicesData: IServices[] | undefined;
-  oneTestimonial: any | undefined;
+  oneTestimonial: ITestmonial | undefined;
 
   ngOnInit(): void {
     this.httpService.getServices()
@@ -26,9 +26,10 @@ export class HomepageComponent implements OnInit {
         () => console.log('completed')
       );
 
-    this.httpService.getOneTestimonial()
+    // Pass in index of which testimonial you want displayed
+    this.httpService.getOneTestimonial(1)
       .subscribe(
-        (data: any) => this.oneTestimonial = data,
+        (data: ITestmonial) => this.oneTestimonial = data,
         (error: any) => console.log(error),
         () => console.log('completed')
       );

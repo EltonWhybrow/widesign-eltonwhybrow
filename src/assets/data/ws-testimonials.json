@@ -3,29 +3,33 @@
     "rating": 2,
     "company": "Bud Design & Landscaping",
     "name": "Steve Corio",
+    "image": "testimonial-steve-profile",
     "testimonialHighlight": "Not only did Elton capture our vision beautifully he took it to the next level.",
     "testimonial": "Having him design and build our website has been a true pleasure, a bonus is he's always available on the phone when we need help with something.",
-    "location": "Berkshire"
+    "location": "Slough, Berkshire"
+  },
+  {
+    "rating": 2,
+    "company": "Spares 4 Mowers",
+    "name": "Mark James",
+    "image": "testimonial-mark-profile",
+    "testimonial": "Had the best experience working with Elton at WideSign. He knows his stuff, and is extremely competent and reliable. He has set up and maintained multiple sites for us spanning a decade now.",
+    "location": "Holyport, Maidenhead"
   },
   {
     "rating": 5,
-    "company": "Bud Design & Landscaping",
-    "name": "Steve Corio",
-    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
-    "location": "New Hampshire"
+    "company": "BT Roofing Services Limited",
+    "name": "Frankie Austin",
+    "image": "testimonial-frankie-profile",
+    "testimonial": "It can be a minefield trying to choose the right designers/developer to work with, Elton's extremely passionate, he brings fresh new ideas to table every time. His extensive knowledge and computer wizardry is something to be admired, which has definitely given my company a competitive edge",
+    "location": "Reigate, Surrey"
   },
   {
     "rating": 2,
-    "company": "Bud Design & Landscaping",
-    "name": "Steve Corio",
-    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
-    "location": "New Hampshire"
-  },
-  {
-    "rating": 2,
-    "company": "Bud Design & Landscaping",
-    "name": "Steve Corio",
-    "testimonial": "Having Elton Design and build our website has been a true pleasure, not only did he capture our vision beautifully he took it to the next level.",
-    "location": "New Hampshire"
+    "company": "Flashlight Photography",
+    "name": "Sue King",
+    "image": "testimonial-sue-profile",
+    "testimonial": "Great customer support...the changes on my website were dealt with quickly and efficiently by Elton. I wouldn't hesitate to recommend his services.",
+    "location": "Cobham, Surrey"
   }
 ]

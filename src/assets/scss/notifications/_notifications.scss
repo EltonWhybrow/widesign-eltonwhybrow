@@ -1,0 +1,19 @@
+.is-disabled {
+  @apply bg-gray-300 text-gray-600;
+}
+
+.notification {
+  @apply p-4;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  &--is-warning {
+    @apply bg-red-400 text-white;
+  }
+  &--is-success {
+    @apply bg-green-600 text-white;
+  }
+  &--is-fade {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+  }
+}

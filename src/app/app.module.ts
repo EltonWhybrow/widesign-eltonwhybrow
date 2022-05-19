@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { TestimonialComponent } from './shared/components/testimonial/testimonial.component';
+import { CallBackComponent } from './shared/components/call-back/call-back.component';
 
 
 @NgModule({
@@ -20,13 +22,17 @@ import { TestimonialComponent } from './shared/components/testimonial/testimonia
     TestimonialComponent,
     CardComponent,
     routingComponents,
+    CallBackComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

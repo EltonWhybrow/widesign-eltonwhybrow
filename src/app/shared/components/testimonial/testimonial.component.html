@@ -5,14 +5,10 @@ background-position: top left;
 background-size: cover !important;
 background-attachment: fixed !important;
     ">
-  <div class="flex flex-wrap md:flex-nowrap md:space-x-10 mx-auto max-w-5xl">
+  <div class="flex flex-wrap md:flex-nowrap md:space-x-5 mx-auto max-w-5xl">
     <div class="w-1/5">
-      <picture>
-        <source srcset="../../../../assets/imgs/testimonials/testimonial-steve-profile.webp" type="image/webp">
-        <source srcset="../../../../assets/imgs/testimonials/testimonial-steve-profile.jpg" type="image/jpeg">
-        <img class="w-full max-h-96 object-cover object-center rounded-full shadow-md"
-          src="../../../../assets/imgs/testimonials/testimonial-steve-profile.jpg" alt="Steve Corio">
-      </picture>
+      <ng-content select=" [testimonial-image]">
+      </ng-content>
     </div>
     <div class="w-4/5">
       <ng-content select=" [testimonial-comment]">

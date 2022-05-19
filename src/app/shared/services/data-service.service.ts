@@ -21,11 +21,12 @@ export class HttpService {
     );
   }
 
-  getOneTestimonial(): Observable<ITestmonial[]> {
+  getOneTestimonial(id: number): Observable<ITestmonial> {
     return this.http.get<any>('../../assets/data/ws-testimonials.json').pipe(
-      map(testmonial => testmonial[0]),
-      tap(testmonial => console.log("Testimonial: " + JSON.stringify(testmonial[0]))),
-      catchError(this.handleError<ITestmonial[]>([]))
+      // map(testmonial => testmonial[0]),
+      map(testmonial => testmonial[id]),
+      tap(testmonial => console.log("Testimonial: " + JSON.stringify(testmonial))),
+      catchError(this.handleError<ITestmonial>())
     );
   }
 

@@ -6,7 +6,7 @@
           class="w-full object-cover object-center rounded-lg shadow-md">
       </div>
 
-      <h1 card-header>{{service.heading}}</h1>
+      <ng-container card-header>{{service.heading}}</ng-container>
       <div card-body>{{service.body}}</div>
       <div card-footer *ngFor="let skill of service.footer"
         class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-xs rounded-md mx-1 mb-4 mt-2">
@@ -30,8 +30,16 @@
   </div>
 </section>
 
-
 <app-testimonial *ngIf="oneTestimonial else loading">
+  <ng-container testimonial-image>
+    <picture>
+      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
+      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
+      <img class="h-32 mx-auto object-cover object-center rounded-full shadow-md"
+        src="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
+    </picture>
+  </ng-container>
+
   <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
     <span class="testimonial_highlight bg-teal-500 text-white py-1 pl-2 pr-1 mr-2">
       {{oneTestimonial.testimonialHighlight}}
@@ -39,12 +47,18 @@
     </span>
     {{oneTestimonial.testimonial}}
   </div>
-  <div testimonial-client class="text-right">
+  <div testimonial-client class="text-right pr-5">
     <h2 class="text-tealy-200 text-base">{{oneTestimonial.name}} - {{oneTestimonial.company}}</h2>
     <h3 class="text-tealy-200 text-xs">- {{oneTestimonial.location}}</h3>
   </div>
 </app-testimonial>
 
 <ng-template #loading>
-  Loading...
+  <h2 class="p-10 text-center align-middle font-semibold text-tealy-500">
+    Loading...
+  </h2>
 </ng-template>
+
+<section class="container px-10 xl:px-0 mx-auto py-20 max-w-5xl">
+  <app-call-back></app-call-back>
+</section>

@@ -3,6 +3,7 @@ export interface ITestmonial {
   testimonial: string;
   testimonialHighlight: string;
   name: string;
+  image: string;
   location: string;
   company: string
 }
