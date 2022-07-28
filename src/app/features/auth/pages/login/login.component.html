@@ -1,8 +1,23 @@
 <div class="max-w-xl mx-auto shadow p-5 rounded-lg py-10">
   <h1 class="text-center text-2xl font-semibold pb-5">Login</h1>
-  <form action="" class="form mx-3">
+
+  <ng-container *ngIf="(submitted && unauthorisedMessage !== '')">
+    <div class="notification notification--is-warning">
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        {{unauthorisedMessage}}
+      </p>
+    </div>
+  </ng-container>
+
+  <form [formGroup]="loginForm" (ngSubmit)="adminLogin()" class="form">
     <label class="relative block py-1">
-      <span class="sr-only">Search</span>
+      <span class="sr-only">Username</span>
       <span class="absolute inset-y-0 left-0 flex items-center pl-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24"
           stroke="currentColor" stroke-width="2">
@@ -12,11 +27,31 @@
       </span>
       <input
         class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-        placeholder="Username" type="text" name="username" />
+        placeholder="Username" type="text" name="username" formControlName="username" />
     </label>
 
+    <ng-container *ngIf="(submitted && !username?.valid) || (!username?.valid && username?.dirty && username?.touched)">
+      <div class="notification notification--is-warning flex">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+
+        <div>
+          <p *ngIf="username?.hasError('required')">
+            Username is required.
+          </p>
+          <p>
+            Username is not correct, it should only contain letters, point, single
+            apostrophe, dashes and space
+          </p>
+        </div>
+      </div>
+    </ng-container>
+
     <label class="relative block py-1">
-      <span class="sr-only">Search</span>
+      <span class="sr-only">Password</span>
       <span class="absolute inset-y-0 left-0 flex items-center pl-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24"
           stroke="currentColor" stroke-width="2">
@@ -26,13 +61,34 @@
       </span>
       <input
         class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-        placeholder="Password" type="password" name="password" />
+        placeholder="Password" type="password" name="password" formControlName="password" />
     </label>
 
-    <button
-      class="form_btn text-white inline-flex mt-5 pl-5 pr-4 py-2  bg-tealy-500 hover:bg-tealy-600 transition duration-150 ease-in-out rounded"
-      [routerLink]="['/login']">Login
-      <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+    <ng-container *ngIf="(submitted && !password?.valid) || (!password?.valid && password?.dirty &&
+    password?.touched)">
+
+      <div class="notification notification--is-warning flex">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <div>
+          <p *ngIf="password?.hasError('required')">
+            Password is required.
+          </p>
+
+          <p>
+            Password must contain at least 8 characters including 1 number and 1 special character and a capital letter.
+          </p>
+        </div>
+      </div>
+    </ng-container>
+
+    <button [class.is-disabled]="!loginForm.valid || disableSubmit"
+      class="form_btn text-white inline-flex mt-5 pl-5 pr-4 py-2  bg-tealy-500 hover:bg-tealy-600 hover:text-white transition duration-150 ease-in-out rounded">Login
+      <svg xmlns=" http://www.w3.org/2000/svg" class="ml-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
           clip-rule="evenodd" />

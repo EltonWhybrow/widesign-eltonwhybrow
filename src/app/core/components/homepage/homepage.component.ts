@@ -27,7 +27,7 @@ export class HomepageComponent implements OnInit {
       );
 
     // Pass in index of which testimonial you want displayed
-    this.httpService.getOneTestimonial(1)
+    this.httpService.getOneTestimonial(0)
       .subscribe(
         (data: ITestmonial) => this.oneTestimonial = data,
         (error: any) => console.log(error),

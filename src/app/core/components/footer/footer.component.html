@@ -27,7 +27,7 @@
         <li>
           <a href="/testimonials" aria-label="Wide Sign testimonials">Testimonials</a>
         </li>
-        <li>
+        <li *ngIf="authService.isLoggedIn">
           <a href="/playground" aria-label="Playground">Playground</a>
         </li>
         <li>

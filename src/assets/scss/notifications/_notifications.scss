@@ -3,17 +3,17 @@
 }
 
 .notification {
-  @apply p-4;
-  opacity: 0;
-  transition: opacity 3s ease-in-out;
+  @apply p-3 my-2 rounded text-xs;
+  // opacity: 0;
+  // transition: opacity 3s ease-in-out;
   &--is-warning {
-    @apply bg-red-400 text-white;
+    @apply bg-red-500 text-white;
   }
   &--is-success {
     @apply bg-green-600 text-white;
   }
-  &--is-fade {
-    opacity: 1;
-    transition: opacity 3s ease-in-out;
-  }
+  // &--is-fade {
+  //   opacity: 1;
+  //   transition: opacity 3s ease-in-out;
+  // }
 }
