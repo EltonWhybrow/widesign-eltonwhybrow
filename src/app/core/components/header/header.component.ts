@@ -23,6 +23,7 @@ export class HeaderComponent {
   public logout() {
     this.authService.setLoggedIn(false);
     localStorage.removeItem('loggedIn');
+    this.router.navigate(['/'])
   }
 
 

@@ -13,7 +13,7 @@ export class AuthService {
   private loggedInStatus: boolean = JSON.parse(localStorage.getItem('loggedIn') || 'false')
   private NODE_BASE_URL = environment.nodeBaseUrl;
 
-  setLoggedIn(value: boolean) {
+  public setLoggedIn(value: boolean) {
     this.loggedInStatus = value;
     localStorage.setItem('loggedIn', 'true')
   }
@@ -22,7 +22,7 @@ export class AuthService {
     return JSON.parse(localStorage.getItem('loggedIn') || 'false' || this.loggedInStatus.toString())
   }
 
-  userLogin(url: string, data: {}) {
+  public userLogin(url: string, data: {}) {
     return this.http.post<ILoginStatus>(`${this.NODE_BASE_URL}${url}`, data);
 
   }

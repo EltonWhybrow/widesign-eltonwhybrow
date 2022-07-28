@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   public unauthorisedMessage: string = '';
   public submitted: boolean = false; // true if form has attempted to be submitted (for validation)
   public disableSubmit: boolean = false; // set to true during login on button attempt (stops resending form)
-  public formError: boolean = false;
-  public formSuccess: boolean = false;
+  // public formError: boolean = false;
+  // public formSuccess: boolean = false;
 
   public loginCredentials!: ILogin;
 
@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
         .subscribe(
           (data: any) => {
             const res: ILoginStatus = data;
-            // console.log('Data from node server', res);
+            console.log('Data from node server', res);
             if (res.success) {
               // redirect on success
               this.authService.setLoggedIn(true);
@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
 
           }, () => {
             this.loginForm.reset();
-            console.log('complete');
+            // console.log('complete');
           }
         )
     }
