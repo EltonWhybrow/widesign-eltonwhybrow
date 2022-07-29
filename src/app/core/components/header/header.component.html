@@ -1,4 +1,5 @@
-<header class="navbar shadow-md py-2 bg-white relative flex items-center w-full z-50" role="navigation">
+<header class="navbar shadow-md py-2 bg-white relative flex items-center w-full z-50" role="navigation"
+  [class.mb-4]="currentRoute !== '/'">
   <div class="px-6 w-full flex flex-wrap items-center justify-between">
 
     <div id="logo" routerLink="/" routerLinkActive="is-active" class="cursor-pointer h-24 w-24 block">
