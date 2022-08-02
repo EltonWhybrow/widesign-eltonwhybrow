@@ -11,6 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   private loggedInStatus: boolean = JSON.parse(localStorage.getItem('loggedIn') || 'false')
+  public nickname: string = (localStorage.getItem('nickname') || 'Elton');
   private NODE_BASE_URL = environment.nodeBaseUrl;
 
   public setLoggedIn(value: boolean) {

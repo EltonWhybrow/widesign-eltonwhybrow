@@ -61,6 +61,8 @@ export class LoginComponent implements OnInit {
             console.log('Data from node server', res);
             if (res.success) {
               // redirect on success
+              localStorage.setItem('nickname', res.username);
+              this.authService.nickname = res.username;
               this.authService.setLoggedIn(true);
               this.router.navigate(['/playground']);
             }
@@ -69,7 +71,7 @@ export class LoginComponent implements OnInit {
             this.unauthorisedMessage = err.error.message;
 
           }, () => {
-            this.loginForm.reset();
+            // this.loginForm.reset();
             // console.log('complete');
           }
         )

@@ -8,6 +8,8 @@ export interface ILogin {
 export interface ILoginStatus {
   success: string;
   messsage: string;
+  username: string;
+  accessToken: string;
 
 }
 
