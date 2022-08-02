@@ -1,5 +1,6 @@
 .is-disabled {
-  @apply bg-gray-300 text-gray-600;
+  @apply bg-gray-700 text-gray-200;
+  cursor: not-allowed;
 }
 
 .notification {
