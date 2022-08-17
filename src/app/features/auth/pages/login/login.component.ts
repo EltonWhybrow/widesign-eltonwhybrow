@@ -2,8 +2,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { ILogin, ILoginStatus } from 'src/app/shared/models/login-interface';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
   public password: FormControl | undefined;
   public loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -54,23 +56,38 @@ export class LoginComponent implements OnInit {
         password: this.password?.value.trim(),
       }
 
-      this.authService.userLogin('/login', this.loginCredentials)
+      this.authService.login('/login', this.loginCredentials)
         .subscribe(
-          (data: any) => {
-            const res: ILoginStatus = data;
-            console.log('Data from node server', res);
+          (data: ILoginStatus) => {
+            const res = data;
+            // console.log('Data from node server', res);
             if (res.success) {
-              // redirect on success
-              localStorage.setItem('nickname', res.username);
+              // TODO: localStorage.setItem('tempToken', res.accessToken);
+
+              // set token to cookie
+              // moment js to expire cookie
+              const expiresIn = moment().add(24, 'h').toDate()
+              console.log('cookie expires at: ', expiresIn);
+              this.cookieService.set('wsat', res.accessToken, { expires: expiresIn, path: '/' });
+
+              // set nickname + localstoreage
               this.authService.nickname = res.username;
+              localStorage.setItem('nickname', res.username);
+
+              // set to logged in
               this.authService.setLoggedIn(true);
+              // redirect on success
               this.router.navigate(['/playground']);
+            } else {
+              console.log('log>>>', 'ERROORRRRROORRR');
+              throw new Error
             }
           },
           (err: HttpErrorResponse) => {
             this.unauthorisedMessage = err.error.message;
 
-          }, () => {
+          },
+          () => {
             // this.loginForm.reset();
             // console.log('complete');
           }
