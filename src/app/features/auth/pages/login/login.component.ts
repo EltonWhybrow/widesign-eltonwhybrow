@@ -84,8 +84,11 @@ export class LoginComponent implements OnInit {
             }
           },
           (err: HttpErrorResponse) => {
-            this.unauthorisedMessage = err.error.message;
-
+            console.error('error caught in trying to login', err.error.type)
+            if (err.error.type === "error") {
+              this.unauthorisedMessage = 'Seems the node server is down, the webmaster should reall ylook at this.'
+            }
+            this.unauthorisedMessage = err.error.message; // TODO:handle no message!!!!!!
           },
           () => {
             // this.loginForm.reset();

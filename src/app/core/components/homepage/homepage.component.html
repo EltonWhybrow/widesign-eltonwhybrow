@@ -1,64 +1,71 @@
+<!-- Blub section -->
 <section class="container px-10 xl:px-0 mx-auto py-20 max-w-5xl">
-  <div class="grid grid-cols-2 gap-14">
-    <app-card *ngFor="let service of allServicesData">
-      <div card-img>
-        <img src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="random img"
-          class="w-full object-cover object-center rounded-lg shadow-md">
-      </div>
-
-      <ng-container card-header>{{service.heading}}</ng-container>
-      <div card-body>{{service.body}}</div>
-      <div card-footer *ngFor="let skill of service.footer"
-        class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-xs rounded-md mx-1 mb-4 mt-2">
-        {{skill}}
-      </div>
-
-      <div card-more>
-        <button
-          class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
-          routerLink="{{service.url}}">Find out more
-          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd" />
-          </svg>
-
-        </button>
-      </div>
-
-    </app-card>
+  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif">Hi my name is Elton and I <span
+      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">build for the
+      web</span>. My goal is to create <span
+      class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">great user
+      experiences</span> whilst <span
+      class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">delivering clients
+      requirements.</span> Plus, have some fun along the way...</h1>
+  <div class="border-t-2 border-teal pt-5 my-2 rounded-md">
+    <p class="text-xl pt-2 pb-0 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>I live in the South-East England with my
+      family and dog Woody!
+    </p>
+    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>
+      I work on javascript projects (Angular
+      mainly), quite often involved in the design phase too.
+    </p>
+    <!-- <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>You can read <a routerLink="/contact" class="border-b hover:border-b-2 border-b-raw-500">more about me</a>
+      and see if I
+      fit the bill for your next project. Maybe
+      you could even help me. 😄
+    </p> -->
+    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>You can read <a routerLink="/contact"
+        class="inline-block group transition duration-300 border-b border-b-raw-500">more
+        about
+        me<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-raw-600"></span></a>
+      and see if I
+      fit the bill for your next project. Maybe
+      you could even help me. 😄
+    </p>
   </div>
 </section>
 
-<app-testimonial *ngIf="oneTestimonial else loading">
-  <ng-container testimonial-image>
+<!-- Services panel -->
+<app-panel></app-panel>
+
+<!-- Call back from section -->
+<section class="container px-10 xl:px-0 mx-auto py-20 max-w-5xl" style="background-image: url(/assets/imgs/logos/logo-callback-bg.svg);
+  background-position: 0px 115%;
+  background-repeat: no-repeat;
+  background-size: 55%;">
+  <div class="grid md:grid-cols-2 gap-14 px-10 xl:px-0 mx-auto py-20 max-w-5xl">
+    <app-call-back></app-call-back>
     <picture>
-      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
-      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
-      <img class="h-32 mx-auto object-cover object-center rounded-full shadow-md"
-        src="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
+      <source srcset="../../../../assets/imgs/profile.webp" type="image/webp">
+      <source srcset="../../../../assets/imgs/profile.jpg" type="image/jpeg">
+      <img class="w-full object-cover object-center rounded-lg shadow-md" src="../../../../assets/imgs/profile.jpg"
+        alt="Elton Whybrow">
     </picture>
-  </ng-container>
 
-  <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
-    <span class="testimonial_highlight bg-teal-500 text-white py-1 pl-2 pr-1 mr-2">
-      {{oneTestimonial.testimonialHighlight}}
-
-    </span>
-    {{oneTestimonial.testimonial}}
   </div>
-  <div testimonial-client class="text-right pr-5">
-    <h2 class="text-tealy-200 text-base">{{oneTestimonial.name}} - {{oneTestimonial.company}}</h2>
-    <h3 class="text-tealy-200 text-xs">- {{oneTestimonial.location}}</h3>
-  </div>
-</app-testimonial>
-
-<ng-template #loading>
-  <h2 class="p-10 text-center align-middle font-semibold text-tealy-500">
-    Loading...
-  </h2>
-</ng-template>
-
-<section class="container px-10 xl:px-0 mx-auto py-20 max-w-5xl">
-  <app-call-back></app-call-back>
 </section>
+
+<!-- Past companies section -->
+<app-companies></app-companies>

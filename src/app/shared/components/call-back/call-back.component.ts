@@ -26,7 +26,7 @@ export class CallBackComponent implements OnInit {
   public contactNumber: FormControl | undefined;
   public callBackForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private email: EmailService) { }
+  constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.submitted = false;
@@ -56,7 +56,7 @@ export class CallBackComponent implements OnInit {
         contactNumber: this.contactNumber?.value.trim(),
       };
 
-      this.email.sendEmail('/callback', this.callbackCredentials).subscribe(
+      this.emailService.sendEmail('/callback', this.callbackCredentials).subscribe(
         (data: any) => {
           const res: any = data;
           /* istanbul ignore next */
