@@ -14,7 +14,7 @@ export class AuthService {
 
   private loggedInStatus: boolean = JSON.parse(localStorage.getItem('loggedIn') || 'false')
   private NODE_BASE_URL = environment.nodeBaseUrl;
-  public nickname: string = (localStorage.getItem('nickname') || 'Elton');
+  public nickname: string = (localStorage.getItem('nickname') || 'Anonymous');
 
   public setLoggedIn(value: boolean) {
     this.loggedInStatus = value;
@@ -32,6 +32,7 @@ export class AuthService {
   public logout() {
     this.setLoggedIn(false);
     localStorage.removeItem('loggedIn');
+    localStorage.removeItem('nickname');
     this.cookieService.delete('wsat');
     this.router.navigate(['/'])
   }
