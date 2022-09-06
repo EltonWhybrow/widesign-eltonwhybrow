@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { CardComponent } from './shared/components/card/card.component';
 import { TestimonialComponent } from './shared/components/testimonial/testimonial.component';
 import { CallBackComponent } from './shared/components/call-back/call-back.component';
+import { CompaniesComponent } from './shared/components/companies/companies.component';
+import { PanelComponent } from './shared/components/panel/panel.component';
+import { ClientAreaComponent } from './features/client-area/client-area.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { CallBackComponent } from './shared/components/call-back/call-back.compo
     CardComponent,
     routingComponents,
     CallBackComponent,
+    CompaniesComponent,
+    PanelComponent,
+    ClientAreaComponent,
   ],
   imports: [
     BrowserModule,

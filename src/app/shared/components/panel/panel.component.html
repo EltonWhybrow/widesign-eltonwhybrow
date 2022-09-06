@@ -1,0 +1,10 @@
+<div class="panels">
+  <li #panelItem *ngFor="let panel of panels; let i = index" class="panel panel{{i}}" (click)="toggleOpen(panel)"
+    [ngClass]="{
+    'open open-active':selectedPanel === panel
+    }">
+    <p>{{panel.heading}}</p>
+    <p>{{panel.main}}</p>
+    <p>{{panel.footer}}</p>
+  </li>
+</div>
