@@ -12,23 +12,24 @@ export class PanelComponent {
   constructor() { }
 
   panels = [{
-    "heading": "Web",
+    "heading": "Help with",
     "main": "Design",
-    "footer": "Advocate"
+    "footer": "& planning"
   },
   {
-    "heading": "Fontend",
+    "heading": "Im a web",
     "main": "Dev",
     "footer": "Engineer"
   },
   {
-    "heading": "Healthly",
+    "heading": "Make your site",
     "main": "SEO",
-    "footer": "Believer"
-  }, {
-    "word1": "Friendly",
-    "word2": "UX/UI",
-    "footer": "Installer"
+    "footer": "Friendly"
+  },
+  {
+    "heading": "Improve the",
+    "main": "UX/UI",
+    "footer": "for visitors"
   }];
 
   // Note that the parameter here relates to the #panelItem in the template.

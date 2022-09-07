@@ -54,7 +54,13 @@ module.exports = {
           '800': '#88512e',
           '900': '#6f4226'
         }
-      }
+      },
+      rotate: {
+        '357': '357deg',
+      },
+      fontFamily: {
+        'style-script': ['Style Script', 'sans-serif']
+      },
     },
   },
   variants: {
