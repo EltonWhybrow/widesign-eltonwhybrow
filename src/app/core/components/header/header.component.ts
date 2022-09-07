@@ -9,19 +9,32 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  burgerActive: boolean = false;
   public currentRoute: string = '/';
 
   constructor(public authService: AuthService, private router: Router) {
+
+    /*
+      Getting current route to display items based on / route
+    */
     this.router.events.pipe(
       filter((event: any) => event instanceof NavigationEnd)
     ).subscribe(event => {
       this.currentRoute = event.url;
     })
-  }
 
+  }
+  /*
+    Logout user
+  */
   public logout() {
     this.authService.logout();
+  }
+  /*
+    toggle class on mobile burger
+  */
+  public toggleBurgerNav() {
+    this.burgerActive = !this.burgerActive
   }
 
 

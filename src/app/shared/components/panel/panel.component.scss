@@ -44,21 +44,25 @@
 
 .panel > *:first-child {
   transform: translateY(-100%);
+  visibility: hidden;
   align-items: flex-end;
   flex: 1 0 auto;
   display: flex;
 }
 .panel.open-active > *:first-child {
   transform: translateY(0);
+  visibility: visible;
 }
 .panel > *:last-child {
   transform: translateY(100%);
+  visibility: hidden;
   justify-content: flex-start;
   flex: 1 0 auto;
   display: block;
 }
 .panel.open-active > *:last-child {
   transform: translateY(0);
+  visibility: visible;
 }
 .panel.open-active > * {
   flex: auto 0 auto;
@@ -79,7 +83,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .panel {
+    min-height: 6rem;
+  }
   .panel p {
     font-size: 1em;
+  }
+  .panels {
+    display: block;
   }
 }
