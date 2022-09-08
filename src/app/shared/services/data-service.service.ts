@@ -17,7 +17,7 @@ export class HttpService {
   getServices(): Observable<IServices[]> {
     return this.http.get<IServices[]>('../../assets/data/ws-services.json').pipe(
       // TODO: temp deay to check resolve
-      delay(2000),
+      // delay(2000),
       // tap(services => console.log("services: " + JSON.stringify(services))),
       catchError(this.handleError<IServices[]>([]))
     );

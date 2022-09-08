@@ -53,23 +53,25 @@
 
         <ul>
           <li *ngFor="let tweet of twitterFeed?.data"
-            class="border-b rounded border-teal-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0">
+            class="border-b rounded border-teal-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
 
-            <ng-container *ngIf="tweet?.entities?.urls;else nourl">
-              <a class="hover:underline" [attr.href]="tweet?.entities?.urls[0].expanded_url" target="_blank">
-                {{tweet.text}}!
-              </a>
-              <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">
-                Likes {{tweet.public_metrics.like_count}} /
-                Retweets {{tweet.public_metrics.retweet_count}}</span>
+            <ng-container *ngIf="tweet?.entities?.urls;">
+              <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">
+                <a href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
+                  <img *ngIf="i==1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
+              </div>
             </ng-container>
 
-            <ng-template #nourl>
-              {{tweet.text}}
-              <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">
-                Likes {{tweet.public_metrics.like_count}} /
-                Retweets {{tweet.public_metrics.retweet_count}}</span>
-            </ng-template>
+            <p>
+              <a class="hover:underline" href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
+                {{tweet.text}}
+              </a>
+            </p>
+
+            <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">
+              Likes {{tweet.public_metrics.like_count}} /
+              Retweets {{tweet.public_metrics.retweet_count}}</span>
+
           </li>
         </ul>
       </div>
