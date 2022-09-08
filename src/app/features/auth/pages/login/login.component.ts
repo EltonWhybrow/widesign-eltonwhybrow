@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
         password: this.password?.value.trim(),
       }
 
-      this.authService.login('/login', this.loginCredentials)
+      this.authService.login('/users/login', this.loginCredentials)
         .subscribe(
           (data: ILoginStatus) => {
             const res = data;

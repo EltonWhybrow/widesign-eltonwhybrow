@@ -24,14 +24,9 @@ export class HeaderComponent {
     })
 
   }
+
   /*
-    Logout user
-  */
-  public logout() {
-    this.authService.logout();
-  }
-  /*
-    toggle class on mobile burger
+    Toggle class on mobile burger
   */
   public toggleBurgerNav() {
     this.burgerActive = !this.burgerActive

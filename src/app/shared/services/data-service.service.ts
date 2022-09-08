@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+import { catchError, tap, map, delay } from 'rxjs/operators';
 import { IServices } from 'src/app/shared/models/service-interface';
 import { IClients } from 'src/app/shared/models/clients-interface';
 import { ITestmonial } from '../models/testimonials-interface';
@@ -16,6 +16,8 @@ export class HttpService {
 
   getServices(): Observable<IServices[]> {
     return this.http.get<IServices[]>('../../assets/data/ws-services.json').pipe(
+      // TODO: temp deay to check resolve
+      delay(2000),
       // tap(services => console.log("services: " + JSON.stringify(services))),
       catchError(this.handleError<IServices[]>([]))
     );

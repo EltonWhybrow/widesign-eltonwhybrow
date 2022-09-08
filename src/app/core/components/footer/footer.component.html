@@ -45,9 +45,9 @@
     </div>
 
     <!-- Twitter Feed API V2.0 -->
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 mt-6 md:mt-0">
       <div class="border-2 border-teal-900 rounded">
-        <h2 class="mt-10 md:mt-0 font-serif heading_highlight bg-teal-900 text-white p-2 mb-4 font-semibold text-2xl">
+        <h2 class="font-serif heading_highlight bg-teal-900 text-white p-2 mb-4 font-semibold text-2xl">
           @eltonwhybrow
           Tweets</h2>
 
@@ -63,6 +63,7 @@
                 Likes {{tweet.public_metrics.like_count}} /
                 Retweets {{tweet.public_metrics.retweet_count}}</span>
             </ng-container>
+
             <ng-template #nourl>
               {{tweet.text}}
               <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">

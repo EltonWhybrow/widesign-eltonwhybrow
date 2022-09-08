@@ -4,7 +4,8 @@
   src: url("../fonts/StyleScript-Regular.eot?#iefix")
       format("embedded-opentype"),
     url("../fonts/StyleScript-Regular.woff2") format("woff2"),
-    url("../fonts/StyleScript-Regular.woff") format("woff"),
-    url("../fonts/StyleScript-Regular.ttf") format("truetype"),
-    url("../fonts/StyleScript-Regular.svg#Style Script") format("svg");
+    url("../fonts/StyleScript-Regular.woff") format("woff");
+  font-display: block;
+  // url("../fonts/StyleScript-Regular.ttf") format("truetype"),
+  // url("../fonts/StyleScript-Regular.svg#Style Script") format("svg");
 }

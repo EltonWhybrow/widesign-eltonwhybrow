@@ -1,6 +1,6 @@
 .nav__link,
 .nav__sublink {
   &.is-active {
-    @apply text-tealy-500;
+    @apply text-tealy-500 underline underline-offset-4;
   }
 }

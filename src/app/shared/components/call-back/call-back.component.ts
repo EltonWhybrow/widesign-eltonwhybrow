@@ -56,7 +56,7 @@ export class CallBackComponent implements OnInit {
         contactNumber: this.contactNumber?.value.trim(),
       };
 
-      this.emailService.sendEmail('/callback', this.callbackCredentials).subscribe(
+      this.emailService.sendEmail('/forms/callback', this.callbackCredentials).subscribe(
         (data: any) => {
           const res: any = data;
           /* istanbul ignore next */

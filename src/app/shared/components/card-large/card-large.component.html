@@ -1,0 +1,35 @@
+<div class="flex">
+  <ng-content select="[card-img]"></ng-content>
+
+  <div class="relative w-1/2">
+    <div class="bg-white p-6 rounded-b-sm shadow-lg">
+
+      <h4 class="pb-2 text-xl font-semibold leading-tight">
+        <ng-content select="[card-header]"></ng-content>
+      </h4>
+
+      <div class="mt-1">
+        <p class="text-gray-600 text-sm">
+          <ng-content select="[card-body]"></ng-content>
+        </p>
+      </div>
+
+      <div class="mt-1">
+        <p class="text-gray-600 text-sm">
+          <ng-content select="[card-footer]"></ng-content>
+        </p>
+      </div>
+
+      <div class="flex justify-end pt-5">
+        <a class="p-2 text-sm hover:text-tealy-600 text-tealy-400 transition duration-150 ease-in-out"
+          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a>
+
+        <ng-content select="[card-more]"></ng-content>
+      </div>
+
+    </div>
+  </div>
+
+  <ng-content select="[card-img-right]"></ng-content>
+
+</div>

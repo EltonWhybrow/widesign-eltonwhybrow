@@ -15,6 +15,7 @@ export class ServicesComponent implements OnInit {
   constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {
+    // Getting the offered services data
     this.httpService.getServices()
       .subscribe(
         (data: IServices[]) => this.allServicesData = data,
@@ -22,7 +23,7 @@ export class ServicesComponent implements OnInit {
         () => console.log('completed')
       );
 
-    // Pass in index of which testimonial you want displayed
+    // Pass in index of which testimonial you want to get/display
     this.httpService.getOneTestimonial(0)
       .subscribe(
         (data: ITestmonial) => this.oneTestimonial = data,

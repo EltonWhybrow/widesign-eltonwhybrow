@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   constructor(public authService: AuthService, private twitService: TwitService) { }
 
   ngOnInit(): void {
-    this.twitService.getTweets('/get-tweets').subscribe(
+    this.twitService.getTweets('/tweets/get').subscribe(
       (data: any) => {
         const res: any = data;
         this.twitterFeed = res;

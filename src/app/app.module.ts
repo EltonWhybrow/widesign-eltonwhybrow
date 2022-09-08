@@ -14,6 +14,8 @@ import { CallBackComponent } from './shared/components/call-back/call-back.compo
 import { CompaniesComponent } from './shared/components/companies/companies.component';
 import { PanelComponent } from './shared/components/panel/panel.component';
 import { ClientAreaComponent } from './features/client-area/client-area.component';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
+import { CardLargeComponent } from './shared/components/card-large/card-large.component';
 
 
 @NgModule({
@@ -24,11 +26,13 @@ import { ClientAreaComponent } from './features/client-area/client-area.componen
     PageNotFoundComponent,
     TestimonialComponent,
     CardComponent,
+    CardLargeComponent,
     routingComponents,
     CallBackComponent,
     CompaniesComponent,
     PanelComponent,
     ClientAreaComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
