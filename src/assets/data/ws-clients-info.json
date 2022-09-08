@@ -1,0 +1,26 @@
+[
+  {
+    "subHeading": "Website & Hosting",
+    "heading": "Hosting Account",
+    "imageName": "web-design",
+    "description": "If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage domain name, add/modify email addresses.",
+    "url": "https://uk.cloudlogin.co/login",
+    "urlText": "Login"
+  },
+  {
+    "subHeading": "Webmail",
+    "heading": "Access you inbox",
+    "imageName": "web-design",
+    "description": "Access you email online anywhere, anytime. If you need to check junk or lost access on your devices, you can do it here. If you lost your login details you will need to get in touch with me.",
+    "url": "https://webmail.supremecluster.com/",
+    "urlText": "Access email"
+  },
+  {
+    "subHeading": "Project/Client",
+    "heading": "Lets get started!",
+    "imageName": "web-design",
+    "description": "Have a new project you want to discuss or need some help/updates on an exisitng site? Drop me an email and we can set up a meeting to discuss.",
+    "url": "/contact",
+    "urlText": "Get in touch"
+  }
+]

@@ -2,11 +2,11 @@
   {
     "id": "1",
     "heading": "Web Design",
-    "body": "Working from (sometimes) sunny Redhill, Surrey in the South of England. Currently a Senior UI Web Designer for a Insurance company on their family of websites. Going on 2 decades in the online sphere and creating user centric applcations.",
+    "body": "Design & planning have been my bread and butter for well over a decade. From structual site planning to storyboarding and graphics, this is something i love doing. <br /> I still cannot wait to open up my graphic software of choice or start planning a new user journey whenever the oppotunity presents itself. I have designed logos, email suites, brand guideline and full component libaraies.",
     "footer": [
-      "HTML5",
-      "SCSS",
-      "Javscript"
+      "Sketch",
+      "InVision",
+      "Illustrator"
     ],
     "url": "/web-design",
     "imageName": "web-design"
@@ -14,11 +14,13 @@
   {
     "id": "2",
     "heading": "Development",
-    "body": "Working the front end using Javascript Frameworks, HTML5, CSS3, SCSS along with best practices and maintable, tested code. Always learning new things abd wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
     "footer": [
-      "HTML5",
-      "SCSS",
-      "Javscript"
+      "Angular",
+      "Node",
+      "CD/CI",
+      "CMS",
+      "Typescript"
     ],
     "url": "/development",
     "imageName": "web-development"
@@ -26,11 +28,11 @@
   {
     "id": "3",
     "heading": "UX/UI Design",
-    "body": "Usability is one of the most, if not the most important factors when creating your online masterpeice to share with the world. If your interface is confusing and the user fails to see a clear path their gonna leave, period. Always looking at way to increase engagment...",
+    "body": "Usability is a key considerations when building any application. Confusing the user is you single point of failure. Designing UI's that just work, before going to build can make for some happy devs, and stakeholders. <br />Always looking at ways to simplify the interface whilst using tried and tested methods to funnel users to the end goal &amp; increase engagement",
     "footer": [
-      "HTML5",
-      "SCSS",
-      "Javscript"
+      "inVision",
+      "Sketch",
+      "AdobeXD"
     ],
     "url": "/ux-ui-design",
     "imageName": "ux-ui-design"
@@ -38,11 +40,12 @@
   {
     "id": "4",
     "heading": "SEO",
-    "body": "Using only white hat techniques and proven SEO formulas to increade you visibilty in the populor search engines #google and pull in relevant and targeting customer and clients. I work long term with clients to produce successful results and maintain web vitals ",
+    "body": "I use only white hat techniques and proven SEO formulas to increade your visibilty in the populor search engines #google. This way wepull in relevant and targeted customer and clients alike. <br />I work short &amp; long term with clients to produce successful results and maintain web vitals and ranking",
     "footer": [
-      "HTML5",
-      "SCSS",
-      "Javscript"
+      "Keywords/Research",
+      "Analytics",
+      "Optimize",
+      "Content"
     ],
     "url": "/seo-engagement",
     "imageName": "seo-engagement"

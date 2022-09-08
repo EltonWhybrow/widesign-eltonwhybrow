@@ -2,14 +2,14 @@
   <ng-content select="[card-img]"></ng-content>
 
   <div class="relative w-1/2">
-    <div class="bg-white p-6 rounded-b-sm shadow-lg">
+    <div class="bg-white px-5 pt-2 pb-5 rounded-b-md shadow-lg">
 
       <h4 class="pb-2 text-xl font-semibold leading-tight">
         <ng-content select="[card-header]"></ng-content>
       </h4>
 
       <div class="mt-1">
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 text-base">
           <ng-content select="[card-body]"></ng-content>
         </p>
       </div>
@@ -20,10 +20,7 @@
         </p>
       </div>
 
-      <div class="flex justify-end pt-5">
-        <a class="p-2 text-sm hover:text-tealy-600 text-tealy-400 transition duration-150 ease-in-out"
-          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a>
-
+      <div class=" pt-6">
         <ng-content select="[card-more]"></ng-content>
       </div>
 

@@ -23,43 +23,9 @@
 
 <!-- services offered section -->
 <section *ngIf="allServicesData else loadingServices" class="container px-10 xl:px-0 mx-auto py-5 mb-10 max-w-5xl">
-  <!--
-  <div class="grid grid-cols-2 gap-14">
-    <app-card *ngFor="let service of allServicesData">
-      <div card-img class="h-52">
-        <picture>
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
-          <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
-            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="Steve Corio">
-        </picture>
-      </div>
 
-      <ng-container card-header>{{service.heading}}</ng-container>
-      <div card-body>{{service.body}}</div>
-      <div card-footer *ngFor="let skill of service.footer"
-        class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-xs rounded-md mx-1 mb-4 mt-2">
-        {{skill}}
-      </div>
+  <!-- Card / Large -->
 
-      <div card-more>
-        <button
-          class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
-          routerLink="{{service.url}}">Find out more
-          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-
-    </app-card>
-  </div> -->
-
-
-
-  <!-- // Large CARD -->
   <div class="grid grid-cols-1 gap-20">
     <app-card-large *ngFor="let service of allServicesData; let even=even">
       <div *ngIf="even" card-img class="w-1/2">
@@ -67,19 +33,21 @@
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
           <img #userImage class="w-full object-cover object-center rounded-l-lg shadow-md"
-            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="Steve Corio">
+            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
 
       <ng-container card-header>{{service.heading}}</ng-container>
-      <div card-body>{{service.body}}</div>
+      <div card-body [innerHtml]="service.body"></div>
       <div card-footer *ngFor="let skill of service.footer"
-        class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-xs rounded-md mx-1 mb-4 mt-2">
+        class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-sm rounded-md mx-1 mt-3">
         {{skill}}
       </div>
 
       <div card-more>
-        <button
+        <a class="absolute bottom-0 right-0 p-2 text-sm border-t border-l hover:text-tealy-700 hover:border-tealy-700 border-tealy-300 text-tealy-300 rounded-tl transition duration-150 ease-in-out"
+          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a>
+        <!-- <button
           class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-500 hover:bg-tealy-600 transition duration-200 ease-in-out rounded-md"
           routerLink="{{service.url}}">Find out more
           <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -87,7 +55,7 @@
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
               clip-rule="evenodd" />
           </svg>
-        </button>
+        </button> -->
       </div>
 
       <div *ngIf="!even" card-img-right class="w-1/2">
@@ -95,7 +63,7 @@
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
           <img #userImage class="w-full object-cover object-center rounded-r-lg shadow-md"
-            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="Steve Corio">
+            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
 
@@ -121,7 +89,7 @@
   </ng-container>
 
   <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
-    <span class="heading_highlight bg-teal-700 text-white py-1 pl-2 pr-1 mr-2">
+    <span class="font-serif heading_highlight bg-tealy-700 text-white py-2 pl-3 pr-2 mr-2">
       {{oneTestimonial.testimonialHighlight}}
 
     </span>

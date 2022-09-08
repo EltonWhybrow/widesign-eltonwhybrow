@@ -4,26 +4,23 @@
 
   <div class="relative -mt-12">
     <div class="bg-white p-6 rounded-lg shadow-md">
-      <h4 class="pb-2 text-xl font-semibold leading-tight">
+      <h4 class="pb-2 text-2xl font-semibold leading-tight">
         <ng-content select="[card-header]"></ng-content>
       </h4>
 
+      <h4 class="pb-2 text-base font-semibold leading-tight">
+        <ng-content select="[card-sub-header]"></ng-content>
+      </h4>
+
       <div class="mt-1">
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600">
           <ng-content select="[card-body]"></ng-content>
         </p>
       </div>
 
-      <div class="mt-1">
-        <p class="text-gray-600 text-sm">
-          <ng-content select="[card-footer]"></ng-content>
-        </p>
-      </div>
-
       <div class="flex justify-end pt-5">
-        <a class="p-2 text-sm hover:text-tealy-600 text-tealy-400 transition duration-150 ease-in-out"
-          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a>
-
+        <!-- <a class="p-2 text-sm hover:text-tealy-600 text-tealy-400 transition duration-150 ease-in-out"
+          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a> -->
         <ng-content select="[card-more]"></ng-content>
       </div>
     </div>

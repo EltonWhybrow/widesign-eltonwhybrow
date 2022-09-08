@@ -1,14 +1,14 @@
 <footer class="p-10 bg-tealy-600 text-white relative items-center overflow-hidden w-full">
   <div
-    class="container max-w-5xl md:space-x-32 mx-auto pt-20 pb-10 w-full flex flex-wrap items-start justify-between text-center z-50">
+    class="container max-w-5xl md:space-x-16 mx-auto pt-5 md:pt-12 pb-10 w-full md:flex items-start justify-between text-center z-50">
 
     <!-- Alt menu and Admin -->
-    <div class="w-full md:w-1/3 mb-10 md:mb-0">
-      <div class="border-2 border-teal-900 rounded">
-        <h2 class="font-serif bg-teal-900 text-white mb-1 py-1 font-semibold text-2xl">Admin
+    <div class="w-full md:w-80 flex-none mb-10 md:mb-0">
+      <div class="border-2 border-tealy-900 rounded">
+        <h2 class="font-serif bg-tealy-900 text-white mb-1 py-1 font-semibold text-2xl">Admin
         </h2>
         <ul class="text-lg px-3 pb-2 text-left">
-          <p *ngIf="authService.isLoggedIn" class="inline-block font-semibold text-base text-teal-900">Welcome back,
+          <p *ngIf="authService.isLoggedIn" class="inline-block font-semibold text-base text-tealy-900">Welcome back,
             {{this.authService.nickname}}!</p>
           <li *ngIf="!authService.isLoggedIn">
             <a routerLink="/login" aria-label="Login"
@@ -45,15 +45,15 @@
     </div>
 
     <!-- Twitter Feed API V2.0 -->
-    <div class="w-full md:w-1/2 mt-6 md:mt-0">
-      <div class="border-2 border-teal-900 rounded">
-        <h2 class="font-serif heading_highlight bg-teal-900 text-white p-2 mb-4 font-semibold text-2xl">
+    <div class="mt-6 md:mt-0">
+      <div class="border-2 border-tealy-900 rounded">
+        <h2 class="font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
           @eltonwhybrow
           Tweets</h2>
 
         <ul>
           <li *ngFor="let tweet of twitterFeed?.data"
-            class="border-b rounded border-teal-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
+            class="border-b rounded border-tealy-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
 
             <ng-container *ngIf="tweet?.entities?.urls;">
               <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">

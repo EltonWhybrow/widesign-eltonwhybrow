@@ -34,7 +34,7 @@ export class AuthService {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('nickname');
     this.cookieService.delete('wsat');
-    this.router.navigate(['/'])
+    // this.router.navigate(['/'])
   }
 
 }
