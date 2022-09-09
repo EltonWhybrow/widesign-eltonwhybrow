@@ -1,5 +1,7 @@
 export interface IEmail {
-  name: string;
+  contactName: string;
   contactNumber: string;
+  contactEmail?: string;
+  contactMessage?: string;
 
 }

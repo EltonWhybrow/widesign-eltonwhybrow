@@ -18,14 +18,14 @@ export class FooterComponent implements OnInit {
       (data: any) => {
         const res: any = data;
         this.twitterFeed = res;
-        console.log(this.twitterFeed);
+        // console.log(this.twitterFeed);
       },
       (err: any) => {
-        console.log('There has been a error sending twit info >>>>>>>>>>>>>>>>>', err);
+        console.log('There has been a error sending twits >>>', err);
 
       }, () => {
         /* istanbul ignore next */
-        console.log('complete');
+        // console.log('complete');
       }
     );
   }

@@ -1,26 +1,64 @@
 [
   {
-    "subHeading": "Website & Hosting",
-    "heading": "Hosting Account",
-    "imageName": "web-design",
+    "private": false,
+    "heading": "Existing Website",
+    "subHeading": "Visit your web hosting Account",
+    "imageName": "web-hosting",
     "description": "If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage domain name, add/modify email addresses.",
     "url": "https://uk.cloudlogin.co/login",
     "urlText": "Login"
   },
   {
-    "subHeading": "Webmail",
-    "heading": "Access you inbox",
-    "imageName": "web-design",
+    "private": false,
+    "heading": "Webmail",
+    "subHeading": "Access you inbox",
+    "imageName": "email-access",
     "description": "Access you email online anywhere, anytime. If you need to check junk or lost access on your devices, you can do it here. If you lost your login details you will need to get in touch with me.",
     "url": "https://webmail.supremecluster.com/",
     "urlText": "Access email"
   },
   {
-    "subHeading": "Project/Client",
-    "heading": "Lets get started!",
-    "imageName": "web-design",
-    "description": "Have a new project you want to discuss or need some help/updates on an exisitng site? Drop me an email and we can set up a meeting to discuss.",
-    "url": "/contact",
-    "urlText": "Get in touch"
+    "private": false,
+    "heading": "Web Hosting Services",
+    "subHeading": "WideSign Hosting Partner",
+    "imageName": "web-hosting-new",
+    "description": "I have been using these guys for over adecade and the servers and supports are second to none. We offer a 99.9% server uptime guarantee and a '30-day Free Trail'. We also offer daily backups as well",
+    "url": "https://widesign.duoservers.com/",
+    "urlText": "Get Hosting"
+  },
+  {
+    "private": false,
+    "heading": "Domain Name Finder",
+    "subHeading": "Search available domain names",
+    "imageName": "domain-names",
+    "description": "At WideSign, we don't simply provide domains. We provide outstanding domain management solutions. Plus, we supply you with a FREE domain name together with any one of our cloud hosting packages ",
+    "url": "https://widesign.duoservers.com/get-a-domain/",
+    "urlText": "Find Domain"
+  },
+  {
+    "private": true,
+    "heading": "Client Management",
+    "subHeading": "Uselful tools",
+    "imageName": "clients-tools",
+    "description": "Useful links for managing clients needs.",
+    "url": "https://search.google.com/search-console",
+    "urlText": "Search Console",
+    "url2": "https://analytics.google.com/analytics/",
+    "urlText2": "Analytics",
+    "url3": "https://tagmanager.google.com/",
+    "urlText3": "Google Tag Manager"
+  },
+  {
+    "private": true,
+    "heading": "Reseller Hosting",
+    "subHeading": "My reseller account",
+    "imageName": "reseller",
+    "description": "You only see this if you are logged in",
+    "url": "https://secure.resellerspanel.com/login/login.html",
+    "urlText": "Reseller Login",
+    "url2": "https://analytics.google.com/analytics/",
+    "urlText2": "Analytics",
+    "url3": "https://tagmanager.google.com/",
+    "urlText3": "Google Tag Manager"
   }
 ]

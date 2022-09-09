@@ -42,6 +42,6 @@ export const routingComponents = [
   ServicesComponent,
   AboutComponent,
   FaqsComponent,
-
+  ClientAreaComponent,
   ContactComponent
 ]

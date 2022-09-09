@@ -36,14 +36,14 @@ export class HttpService {
     return this.http.get<any>('../../assets/data/ws-testimonials.json').pipe(
       // map(testmonial => testmonial[0]),
       map(testmonial => testmonial[id]),
-      tap(testmonial => console.log("One Testimonial: " + JSON.stringify(testmonial))),
+      // tap(testmonial => console.log("One Testimonial: " + JSON.stringify(testmonial))),
       catchError(this.handleError<ITestmonial>())
     );
   }
 
   getTestimonials(): Observable<ITestmonial[]> {
     return this.http.get<ITestmonial[]>('../../assets/data/ws-testimonials.json').pipe(
-      tap(testmonial => console.log("Testimonials: " + JSON.stringify(testmonial))),
+      // tap(testmonial => console.log("Testimonials: " + JSON.stringify(testmonial))),
       catchError(this.handleError<ITestmonial[]>([]))
     );
   }

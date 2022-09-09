@@ -28,7 +28,7 @@
 
   <div class="grid grid-cols-1 gap-20">
     <app-card-large *ngFor="let service of allServicesData; let even=even">
-      <div *ngIf="even" card-img class="w-1/2">
+      <div *ngIf="even" card-img class="md:w-1/2">
         <picture>
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
@@ -58,7 +58,7 @@
         </button> -->
       </div>
 
-      <div *ngIf="!even" card-img-right class="w-1/2">
+      <div *ngIf="!even" card-img-right class="md:w-1/2">
         <picture>
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">

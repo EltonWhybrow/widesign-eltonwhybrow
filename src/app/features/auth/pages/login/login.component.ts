@@ -79,14 +79,14 @@ export class LoginComponent implements OnInit {
               // redirect on success
               this.router.navigate(['/playground']);
             } else {
-              console.log('log>>>', 'ERROORRRRROORRR');
+              console.log('Error login method >>');
               throw new Error
             }
           },
           (err: HttpErrorResponse) => {
             console.error('error caught in trying to login', err.error.type)
             if (err.error.type === "error") {
-              this.unauthorisedMessage = 'Seems the node server is down, the webmaster should reall ylook at this.'
+              this.unauthorisedMessage = 'Seems the node server is down, the webmaster should really look at this.'
             }
             this.unauthorisedMessage = err.error.message; // TODO:handle no message!!!!!!
           },

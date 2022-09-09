@@ -22,7 +22,7 @@ export class ServicesComponent implements OnInit {
       .subscribe(
         (data: IServices[]) => this.allServicesData = data,
         (error: any) => console.log(error),
-        () => console.log('completed')
+        // () => console.log('completed')
       );
 
     /*
@@ -33,7 +33,7 @@ export class ServicesComponent implements OnInit {
       .subscribe(
         (data: ITestmonial) => this.oneTestimonial = data,
         (error: any) => console.log(error),
-        () => console.log('completed')
+        // () => console.log('completed')
       );
   }
 

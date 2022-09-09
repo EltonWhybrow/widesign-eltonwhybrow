@@ -10,19 +10,36 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
 })
 export class ClientAreaComponent implements OnInit {
   allClientInfo: IClientsInfo[] | undefined;
-
+  privateInfo: [] | undefined;
+  ;
   constructor(public httpService: HttpService, public authService: AuthService) { }
 
-  ngOnInit(): void {
-    /*
- Getting the offered services data
- */
+  // private loogedInInfo() {
+  //   let newArray: any = []
+  //   this.allClientInfo?.forEach(x => {
+  //     if (x.private) {
+  //       newArray.push(x);
+  //     }
+  //   },
+  //     this.privateInfo = newArray)
+  //   console.log('>>>LOG>>>', this.privateInfo);
+  // }
+
+  private getServicesData() {
     this.httpService.getClientsInfo()
       .subscribe(
-        (data: IClientsInfo[]) => this.allClientInfo = data,
+        (data: IClientsInfo[]) => {
+          this.allClientInfo = data
+          // this.loogedInInfo();
+        },
         (error: any) => console.log(error),
-        () => console.log('completed')
+        // () => console.log('completed')
       );
+  }
+
+  ngOnInit(): void {
+    this.getServicesData()
+
   }
 
 }

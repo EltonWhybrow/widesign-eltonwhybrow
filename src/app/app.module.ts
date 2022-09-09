@@ -13,7 +13,6 @@ import { TestimonialComponent } from './shared/components/testimonial/testimonia
 import { CallBackComponent } from './shared/components/call-back/call-back.component';
 import { CompaniesComponent } from './shared/components/companies/companies.component';
 import { PanelComponent } from './shared/components/panel/panel.component';
-import { ClientAreaComponent } from './features/client-area/client-area.component';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 import { CardLargeComponent } from './shared/components/card-large/card-large.component';
 
@@ -31,7 +30,6 @@ import { CardLargeComponent } from './shared/components/card-large/card-large.co
     CallBackComponent,
     CompaniesComponent,
     PanelComponent,
-    ClientAreaComponent,
     SpinnerComponent,
   ],
   imports: [

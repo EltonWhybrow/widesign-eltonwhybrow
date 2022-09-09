@@ -35,58 +35,50 @@
     </p>
   </div>
 </section>
-<!-- Change to cleint json info section -->
+
+<!-- Client information info section -->
 <section *ngIf="allClientInfo else loadingClientStuff" class="container px-10 xl:px-0 mx-auto py-5 mb-10 max-w-5xl">
 
-  <div class="grid grid-cols-2 gap-14">
-    <app-card *ngFor="let client of allClientInfo">
-
-      <div card-img class="h-52">
-        <picture>
-          <source srcset="../../../../assets/imgs/{{client.imageName}}.webp" type="image/webp">
-          <source srcset="../../../../assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">
-          <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
-            src="../../../../assets/imgs/{{client.imageName}}.jpg" alt="{{client.imageName}}">
-        </picture>
-      </div>
-
-      <ng-container card-header>{{client.heading}}</ng-container>
-      <ng-container card-sub-header>{{client.subHeading}}</ng-container>
-      <div card-body>{{client.description}}</div>
-
-      <div card-more>
-
-        <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
-          href="{{client.url}}" target="_blank">{{client.urlText}}
-          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-    </app-card>
-
-    <div *ngIf="authService.isLoggedIn">
-      <app-card>
+  <div class="grid md:grid-cols-2 gap-14">
+    <ng-container *ngFor="let client of allClientInfo">
+      <!-- Shoe public/client services info -->
+      <app-card *ngIf="!client.private">
 
         <div card-img class="h-52">
           <picture>
-            <source srcset="../../../../assets/imgs/web-design.webp" type="image/webp">
-            <source srcset="../../../../assets/imgs/web-design.jpg" type="image/jpeg">
+            <source srcset="../../../../assets/imgs/{{client.imageName}}.webp" type="image/webp">
+            <source srcset="../../../../assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">
             <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
-              src="../../../../assets/imgs/web-design.jpg" alt="Reseller hosting">
+              src="../../../../assets/imgs/{{client.imageName}}.jpg" alt="{{client.imageName}}">
           </picture>
         </div>
 
-        <ng-container card-header>Reseller Hosting</ng-container>
-        <ng-container card-sub-header>My reseller account</ng-container>
-        <div card-body>You only see this if you are logged in.!! {{this.authService.nickname}}</div>
+        <ng-container card-header>{{client.heading}}</ng-container>
+        <ng-container card-sub-header>{{client.subHeading}}</ng-container>
+        <div card-body>{{client.description}}</div>
 
-        <div card-more>
+        <div card-more class="flex gap-x-2">
 
           <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
-            href="https://secure.resellerspanel.com/login/login.html" target="_blank">Reseller Login
+            href="{{client.url}}" target="_blank">{{client.urlText}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a *ngIf="client.url2"
+            class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+            href="{{client.url2}}" target="_blank">{{client.urlText2}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a *ngIf="client.url3"
+            class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+            href="{{client.url3}}" target="_blank">{{client.urlText3}}
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd"
                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -95,7 +87,56 @@
           </a>
         </div>
       </app-card>
-    </div>
+
+      <!-- Show my admin helpers/tools if logged in -->
+      <app-card *ngIf="client.private && this.authService.isLoggedIn">
+
+        <div card-img class="h-52">
+          <picture>
+            <source srcset="../../../../assets/imgs/{{client.imageName}}.webp" type="image/webp">
+            <source srcset="../../../../assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">
+            <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
+              src="../../../../assets/imgs/{{client.imageName}}.jpg" alt="{{client.imageName}}">
+          </picture>
+        </div>
+
+        <ng-container card-header>{{client.heading}}</ng-container>
+        <ng-container card-sub-header>{{client.subHeading}}</ng-container>
+        <div card-body>{{client.description}}</div>
+
+        <div card-more class="flex gap-x-2">
+
+          <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+            href="{{client.url}}" target="_blank">{{client.urlText}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a *ngIf="client.url2"
+            class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+            href="{{client.url2}}" target="_blank">{{client.urlText2}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a *ngIf="client.url3"
+            class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+            href="{{client.url3}}" target="_blank">{{client.urlText3}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+
+      </app-card>
+
+    </ng-container>
   </div>
 
 </section>

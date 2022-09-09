@@ -22,7 +22,7 @@ export class CallBackComponent implements OnInit {
   public formSuccess: boolean = false;
   public sending: boolean | undefined;
 
-  public name: FormControl | undefined;
+  public contactName: FormControl | undefined;
   public contactNumber: FormControl | undefined;
   public callBackForm!: FormGroup;
 
@@ -35,11 +35,11 @@ export class CallBackComponent implements OnInit {
   }
 
   initForm() {
-    this.name = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
+    this.contactName = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
     this.contactNumber = new FormControl('', [Validators.required, Validators.pattern(this.NUMS_REGEX)]);
 
     this.callBackForm = this.fb.group({
-      name: this.name,
+      contactName: this.contactName,
       contactNumber: this.contactNumber,
     });
   }
@@ -52,7 +52,7 @@ export class CallBackComponent implements OnInit {
       this.sending = true;
 
       this.callbackCredentials = {
-        name: this.name?.value.trim(),
+        contactName: this.contactName?.value.trim(),
         contactNumber: this.contactNumber?.value.trim(),
       };
 
@@ -60,10 +60,10 @@ export class CallBackComponent implements OnInit {
         (data: any) => {
           const res: any = data;
           /* istanbul ignore next */
-          console.log(`This is sending email from ${this.callbackCredentials.name}`);
+          // console.log(`This is sending email from ${this.callbackCredentials.contactName}`);
+          // console.log(res);
 
           this.callBackForm.reset();
-
           this.formSuccess = true;
           this.formError = false;
           this.submitted = false;
