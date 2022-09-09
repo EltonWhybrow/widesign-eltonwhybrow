@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     if (this.contactForm.valid && !this.disableSubmit) {
-      console.warn(this.contactForm?.value);
+      // console.warn(this.contactForm?.value);
 
       this.disableSubmit = true;
       this.sending = true;
@@ -96,6 +96,7 @@ export class ContactComponent implements OnInit {
       );
     } else {
       this.submitted = true; // shows validation issues
+      this.resetFormStates(10);
     }
   }
 

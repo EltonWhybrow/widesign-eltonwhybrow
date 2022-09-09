@@ -5,13 +5,13 @@ background-position: top left;
 background-size: cover !important;
 background-attachment: fixed !important;
     ">
-  <div class="flex flex-wrap md:flex-nowrap md:space-x-5 mx-auto max-w-5xl">
-    <div class="w-1/5">
-      <ng-content select=" [testimonial-image]">
+  <div class="md:flex flex-wrap md:flex-nowrap md:space-x-5 mx-auto max-w-5xl">
+    <div class="md:w-1/5">
+      <ng-content select="[testimonial-image]">
       </ng-content>
     </div>
-    <div class="w-4/5">
-      <ng-content select=" [testimonial-comment]">
+    <div class="md:w-4/5">
+      <ng-content select="[testimonial-comment]">
       </ng-content>
       <ng-content select="[testimonial-client]"></ng-content>
     </div>

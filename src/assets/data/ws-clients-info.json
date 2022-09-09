@@ -2,7 +2,7 @@
   {
     "private": false,
     "heading": "Existing Website",
-    "subHeading": "Visit your web hosting Account",
+    "subHeading": "Visit your web hosting account",
     "imageName": "web-hosting",
     "description": "If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage domain name, add/modify email addresses.",
     "url": "https://uk.cloudlogin.co/login",
@@ -20,7 +20,7 @@
   {
     "private": false,
     "heading": "Web Hosting Services",
-    "subHeading": "WideSign Hosting Partner",
+    "subHeading": "Need some new web hosting service",
     "imageName": "web-hosting-new",
     "description": "I have been using these guys for over adecade and the servers and supports are second to none. We offer a 99.9% server uptime guarantee and a '30-day Free Trail'. We also offer daily backups as well",
     "url": "https://widesign.duoservers.com/",
@@ -53,12 +53,8 @@
     "heading": "Reseller Hosting",
     "subHeading": "My reseller account",
     "imageName": "reseller",
-    "description": "You only see this if you are logged in",
+    "description": "Control all you hsting in one place with your trusted reseller.",
     "url": "https://secure.resellerspanel.com/login/login.html",
-    "urlText": "Reseller Login",
-    "url2": "https://analytics.google.com/analytics/",
-    "urlText2": "Analytics",
-    "url3": "https://tagmanager.google.com/",
-    "urlText3": "Google Tag Manager"
+    "urlText": "Reseller Login"
   }
 ]

@@ -1,4 +1,4 @@
-<section class="container px-4 md:px-10 xl:px-0 mx-auto py-5 md:py-10 max-w-5xl">
+<section class="container px-4 md:px-10 xl:px-0 mx-auto py-10 md:pt-10 max-w-5xl">
   <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif">Some <span
       class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">high level</span> <span
       class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">info</span> on
@@ -7,32 +7,44 @@
 
   <div class="border-t-2 border-teal pt-5 my-2 rounded-md">
 
-    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
+    <!-- <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
       </svg>You can <a routerLink="/contact"
         class="inline-block group transition duration-300 border-b border-b-raw-500">contact me<span
           class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
-      if yada yad.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint esse necessitatibus fugiat ullam
-      enim totam
-      expedita atque. Culpa est doloremque nulla.
+      if you think you have a project I wold be interested.
+    </p> -->
+    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>Im a Web Developer with varied development/design background spanning nearly 2 decades.
+    </p>
+    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>Find out more <a routerLink="/about"
+        class="inline-block group transition duration-300 border-b border-b-raw-500">about me<span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a> and
+      check out my skill stack below.
     </p>
   </div>
 </section>
 
 <!-- services offered section -->
-<section *ngIf="allServicesData else loadingServices" class="container px-10 xl:px-0 mx-auto py-5 mb-10 max-w-5xl">
+<section *ngIf="allServicesData else loadingServices" class="container md:px-10 xl:px-0 mx-auto pb-5 mb-10 max-w-5xl">
 
   <!-- Card / Large -->
-
   <div class="grid grid-cols-1 gap-20">
     <app-card-large *ngFor="let service of allServicesData; let even=even">
       <div *ngIf="even" card-img class="md:w-1/2">
         <picture>
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
-          <img #userImage class="w-full object-cover object-center rounded-l-lg shadow-md"
+          <img #userImage class="w-full object-cover object-center md:rounded-l-lg shadow-md"
             src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
@@ -62,7 +74,7 @@
         <picture>
           <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
-          <img #userImage class="w-full object-cover object-center rounded-r-lg shadow-md"
+          <img #userImage class="w-full object-cover object-center md:rounded-r-lg shadow-md"
             src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
@@ -83,7 +95,7 @@
     <picture>
       <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
       <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
-      <img class="h-32 mx-auto object-cover object-center rounded-full shadow-md"
+      <img class="h-48 mb-14 md:mb-0 md:h-32 mx-auto object-cover object-center rounded-full shadow-md"
         src="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
     </picture>
   </ng-container>

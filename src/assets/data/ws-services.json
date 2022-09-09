@@ -1,17 +1,5 @@
 [
   {
-    "id": "1",
-    "heading": "Web Design",
-    "body": "Design & planning have been my bread and butter for well over a decade. From structual site planning to storyboarding and graphics, this is something i love doing. <br /> I still cannot wait to open up my graphic software of choice or start planning a new user journey whenever the oppotunity presents itself. I have designed logos, email suites, brand guideline and full component libaraies.",
-    "footer": [
-      "Sketch",
-      "InVision",
-      "Illustrator"
-    ],
-    "url": "/web-design",
-    "imageName": "web-design"
-  },
-  {
     "id": "2",
     "heading": "Development",
     "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
@@ -36,6 +24,18 @@
     ],
     "url": "/ux-ui-design",
     "imageName": "ux-ui-design"
+  },
+  {
+    "id": "1",
+    "heading": "Web Design",
+    "body": "Design & planning have been my bread and butter for well over a decade. From structual site planning to storyboarding and graphics, this is something i love doing. <br /> I still cannot wait to open up my graphic software of choice or start planning a new user journey whenever the oppotunity presents itself. I have designed logos, email suites, brand guideline and full component libaraies.",
+    "footer": [
+      "Sketch",
+      "InVision",
+      "Illustrator"
+    ],
+    "url": "/web-design",
+    "imageName": "web-design"
   },
   {
     "id": "4",
