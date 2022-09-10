@@ -1,7 +1,6 @@
 <h4
-  class="heading_highlight inline bg-raw-600 text-white py-1 px-2 mr-2 mb-4 text-4xl font-bold leading-relaxed md:leading-none">
-  Eager to get
-  started?</h4>
+  class="heading_highlight bg-raw-600 text-white p-2 inline-block mr-2 mb-4 text-4xl font-bold leading-relaxed md:leading-none">
+  Eager to get started?</h4>
 
 <p class="text-xl pt-2 pb-3 leading-relaxed text-gray-600 font-semibold">
   Leave your details and i will get back to you as soon as I'm free. Is it urgent? You can try and catch me on <a
@@ -68,10 +67,10 @@
             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
         </svg>
 
-
         <div>
           <p *ngIf="contactName?.hasError('required')">
             Please supply a contact contactName.
+            <!-- {{ timer$ | async}} -->
           </p>
 
           <p>

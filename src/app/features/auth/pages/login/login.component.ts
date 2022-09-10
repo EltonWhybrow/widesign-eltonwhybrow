@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
   public unauthorisedMessage: string = '';
   public submitted: boolean = false; // true if form has attempted to be submitted (for validation)
   public disableSubmit: boolean = false; // set to true during login on button attempt (stops resending form)
-  // public formError: boolean = false;
-  // public formSuccess: boolean = false;
+  public formError: boolean = false;
+  public formSuccess: boolean = false;
 
   public loginCredentials!: ILogin;
 
@@ -98,6 +98,18 @@ export class LoginComponent implements OnInit {
     }
 
     this.submitted = true;
+    this.resetFormStates(10);
+  }
+
+
+  // Reset form states
+  resetFormStates(time: number) {
+    setTimeout(
+      () => {
+        this.formSuccess = false;
+        this.formError = false;
+        this.submitted = false;
+      }, time * 1000);
   }
 
 }

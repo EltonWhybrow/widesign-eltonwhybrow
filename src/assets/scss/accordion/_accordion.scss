@@ -1,0 +1,29 @@
+.active {
+  .question {
+    // @apply bg-tealy-500;
+  }
+  .answer {
+    max-height: 300px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+  }
+  .cross {
+    transform: rotate(135deg);
+    transition: transform 0.4s ease-out;
+    @apply text-raw-500;
+  }
+}
+
+// .number {
+//   // font-family: "Oswald-bold", Arial, Helvetica, sans-serif;
+// }
+
+.answer {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+.cross {
+  transform: rotate(0);
+  transition: transform 0.4s ease-out;
+}

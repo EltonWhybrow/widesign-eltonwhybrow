@@ -56,19 +56,20 @@
         {{skill}}
       </div>
 
-      <div card-more>
-        <a class="absolute bottom-0 right-0 p-2 text-sm border-t border-l hover:text-tealy-700 hover:border-tealy-700 border-tealy-300 text-tealy-300 rounded-tl transition duration-150 ease-in-out"
-          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a>
-        <!-- <button
-          class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-500 hover:bg-tealy-600 transition duration-200 ease-in-out rounded-md"
-          routerLink="{{service.url}}">Find out more
+      <div card-more class="text-right">
+        <!-- <a class="absolute bottom-0 right-0 p-2 text-sm border-t border-l hover:text-tealy-700 hover:border-tealy-700 border-tealy-300 text-tealy-300 rounded-tl transition duration-150 ease-in-out"
+          [routerLink]="['/contact']" routerLinkActive="is-active" aria-label="Contact Wide Sign">Get in touch</a> -->
+        <a class="inline-flex relative text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+          href="{{service.url}}" target="_blank">Find out more
           <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
               clip-rule="evenodd" />
           </svg>
-        </button> -->
+        </a>
       </div>
+
+
 
       <div *ngIf="!even" card-img-right class="md:w-1/2">
         <picture>
@@ -103,7 +104,6 @@
   <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
     <span class="font-serif heading_highlight bg-tealy-700 text-white py-2 pl-3 pr-2 mr-2">
       {{oneTestimonial.testimonialHighlight}}
-
     </span>
     {{oneTestimonial.testimonial}}
   </div>

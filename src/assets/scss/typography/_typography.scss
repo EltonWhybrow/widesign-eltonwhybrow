@@ -2,3 +2,7 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+.standard-paragraph {
+  @apply pb-3 leading-relaxed text-gray-600 relative;
+}

@@ -1,2 +1,136 @@
-<p>about works!</p>
-<!-- <router-outlet></router-outlet> -->
+<section class="container px-4 md:px-10 xl:px-0 mx-auto py-10 md:pt-10 max-w-5xl">
+
+  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif"><span
+      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">About</span> <span
+      class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">me.</span>
+    <span class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">Yawn!</span>
+  </h1>
+
+  <div class="border-t-2 border-teal pt-5 my-3 rounded-md">
+
+    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>Worked in the insurance sector for most of my coroporate life.
+
+    </p>
+    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>Before that I was self employed helping start-ups and businesses to gain a web presence & market their
+      products/skills.
+    </p>
+  </div>
+</section>
+
+<section class="xl:px-0 py-60 px-10 md:px-20 w-full relative overflow-hidden" style="
+background-image:url('../../../../assets/imgs/paralax/family-paralax.webp');
+background-repeat: no-repeat;
+background-position: top left;
+background-size: cover !important;
+background-attachment: fixed !important;
+    ">
+
+  <!-- <h1
+    class="mx-auto heading_highlight inline-block bg-raw-600 text-white py-1 px-20 mb-4 text-xl transform rotate-45 absolute -right-20 top-10 font-serif text-center">
+    Where I<br /> have worked?
+  </h1> -->
+  <h1
+    class="text-3xl font-serif heading_highlight bg-tealy-700 text-white py-3 pl-3 pr-2  top-20 absolute right-0 max-w-3xl mx-auto inline-block leading-relaxed">
+    Im a Web
+    Developer
+    with varied
+    development/design background spanning nearly <a class="underline"
+      href="http://web.archive.org/web/20070329040205/http://www.widesign.co.uk/" target="_blank">2 decades</a></h1>
+  <div class="flex flex-wrap md:flex-nowrap md:space-x-5 mx-auto max-w-5xl mt-20">
+    <div class="w-full py-10 md:py-0 md:w-1/3">
+      <picture>
+        <source srcset="../../../../assets/imgs/logos/companies/esure.webp" type="image/webp">
+        <source srcset="../../../../assets/imgs/logos/companies/esure.jpg" type="image/jpeg">
+        <img class="h-36 mx-auto object-cover object-center rounded shadow-md"
+          src="../../../../assets/imgs/logos/companies/esure.jpg" alt="esure Group">
+      </picture>
+    </div>
+    <div class="w-full py-10 md:py-0 md:w-1/3">
+      <picture>
+        <source srcset="../../../../assets/imgs/logos/companies/sheilaswheels.webp" type="image/webp">
+        <source srcset="../../../../assets/imgs/logos/companies/sheilaswheels.jpg" type="image/jpeg">
+        <img class="h-36 mx-auto object-cover object-center rounded shadow-md"
+          src="../../../../assets/imgs/logos/companies/sheilaswheels.jpg" alt="Sheilas Wheels">
+      </picture>
+    </div>
+    <div class="w-full py-10 md:py-0 md:w-1/3">
+      <picture>
+        <source srcset="../../../../assets/imgs/logos/companies/ingenie.webp" type="image/webp">
+        <source srcset="../../../../assets/imgs/logos/companies/ingenie.jpg" type="image/jpeg">
+        <img class="h-36 mx-auto object-cover object-center rounded shadow-md"
+          src="../../../../assets/imgs/logos/companies/ingenie.jpg" alt="ingenie Telematics">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="container px-4 md:px-10 xl:px-0 mx-auto py-10 md:pt-10 max-w-5xl">
+  <div class="t-5 my-3 rounded-md">
+    <div class="flex md:space-x-4 flex-wrap md:flex-nowrap py-5 my-3">
+      <div class="w-full md:w-3/4">
+        <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl mb-2 font-serif">How things developed</h3>
+        <p class="standard-paragraph">
+          First cut my teeth building a <a href="http://web.archive.org/web/20060813205737/http://www.wyzthreadz.co.uk/"
+            class="underline text-tealy-500" target="_blank">Urban clothing store</a> using FLASH and then ASP.net. I am
+          pretty
+          much a self
+          taught developer/designer and old enough to know pains of fixing bugs in earlier IE browsers. Ouch!
+        </p>
+        <p class="standard-paragraph">
+          After being an online mechant/webmaster for a while I took the plung into corporate web development and
+          started
+          working for the esure Group on their suite of applications which included Sheilas Wheels Home and Motor
+          Insurance products.
+        </p>
+        <p class="standard-paragraph">
+          Started as Web Designer, Progressed to Senior UI
+          Designer then was thrown to the wolves as a Full Stack Developer. See my <a [routerLink]="['/services']"
+            class="underline text-tealy-500">skills now.</a>
+        </p>
+        <p class="pb-0 leading-relaxed text-gray-600 relative">
+          I currently live with my wife and two daughters in sunny (wink emoji) Reigate in the South of Endland, along
+          with
+          our dog Woody.
+        </p>
+      </div>
+      <div class="w-full md:w-1/4 flex-none mt-5 md:mt-0">
+        <picture>
+          <source srcset="../../../../assets/imgs/woody.webp" type="image/webp">
+          <source srcset="../../../../assets/imgs/woody.jpg" type="image/jpeg">
+          <img class="object-cover object-center rounded-lg shadow-md" src="../../../../assets/imgs/woody.jpg"
+            alt="Elton Whybrow">
+        </picture>
+      </div>
+    </div>
+    <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl mb-2 font-serif">Brief History</h3>
+    <p class="standard-paragraph">
+      I grew up a 80-90's Skateboarder riding around London having the best time of my life. Ended up being one
+      of the original sponsored skaters on the FLIP Skateboard team when they formed in London many moons ago. Happy
+      times...
+    </p>
+    <p class="standard-paragraph">
+      After my Skating years, I worked in the food industry for a while and trained with a Chef who once made a cake for
+      the Queen (I believe it was her birthday cake), so I consider myself an accomplished baker/pastry chef (to some
+      degree). More recently I have taken to the guitar to quelch my ever lasting thirst to learn new things.
+    </p>
+    <p class="standard-paragraph">
+      Current day job is designing, developing and maintainging applications for a growing telematics insurance firm in
+      Leatherhead, Surrey. You can always check out my <a
+        href="https://drive.google.com/file/d/1WeB143naUZRurL7Kh9XtMwTYUiQ8vGq_/view?usp=sharing"
+        class="underline text-tealy-500" target="_blank">R&eacute;sum&eacute;</a> or socials if you want to find out
+      more.
+    </p>
+    <p class="standard-paragraph font-semibold">
+      That's more than enough about me...
+    </p>
+
+  </div>
+</section>

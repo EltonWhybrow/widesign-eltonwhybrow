@@ -15,10 +15,14 @@ import { CompaniesComponent } from './shared/components/companies/companies.comp
 import { PanelComponent } from './shared/components/panel/panel.component';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 import { CardLargeComponent } from './shared/components/card-large/card-large.component';
+import { AccordionComponent } from './shared/components/accordion/accordion.component';
+import { AccordionItemComponent } from './shared/components/accordion/accordion-item/accordion-item.component';
 
 
 @NgModule({
   declarations: [
+    AccordionComponent,
+    AccordionItemComponent,
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -30,7 +34,7 @@ import { CardLargeComponent } from './shared/components/card-large/card-large.co
     CallBackComponent,
     CompaniesComponent,
     PanelComponent,
-    SpinnerComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

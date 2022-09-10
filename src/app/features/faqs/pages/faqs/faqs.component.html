@@ -1,1 +1,48 @@
-<p>faqs works!</p>
+<section class="container px-4 md:px-10 xl:px-0 mx-auto py-10 md:pt-10 max-w-5xl">
+  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif"><span
+      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">F</span> <span
+      class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">A</span>
+    <span class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">Q's</span>
+  </h1>
+
+  <div class="border-t-2 border-teal pt-5 my-2 rounded-md">
+    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
+      </svg>Fingers crossed I got all your questions anwsered here! Else, its to the <a routerLink="/contact"
+        class="inline-block group transition duration-300 border-b border-b-raw-500">contact page<span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a> for you.
+    </p>
+  </div>
+</section>
+
+<app-accordion></app-accordion>
+
+<!-- testimonial section -->
+<app-testimonial *ngIf="oneTestimonial else loadingTestimonial">
+  <ng-container testimonial-image>
+    <picture>
+      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
+      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
+      <img class="h-48 mb-14 md:mb-0 md:h-32 mx-auto object-cover object-center rounded-full shadow-md"
+        src="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
+    </picture>
+  </ng-container>
+
+  <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
+    <span class="font-serif heading_highlight bg-tealy-700 text-white py-2 pl-3 pr-2 mr-2">
+      {{oneTestimonial.testimonialHighlight}}
+    </span>
+    {{oneTestimonial.testimonial}}
+  </div>
+  <div testimonial-client class="text-right pr-5">
+    <h2 class="text-tealy-200 text-base">{{oneTestimonial.name}} - {{oneTestimonial.company}}</h2>
+    <h3 class="text-tealy-200 text-xs">- {{oneTestimonial.location}}</h3>
+  </div>
+</app-testimonial>
+
+
+<ng-template #loadingTestimonial>
+  <app-spinner></app-spinner>
+</ng-template>

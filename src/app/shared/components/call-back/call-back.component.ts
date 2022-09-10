@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { timer } from 'rxjs';
+import { scan, takeWhile } from 'rxjs/operators';
 
 import { IEmail } from '../../models/emails-interface';
 import { EmailService } from '../../services/email-service.service';
@@ -25,6 +27,8 @@ export class CallBackComponent implements OnInit {
   public contactName: FormControl | undefined;
   public contactNumber: FormControl | undefined;
   public callBackForm!: FormGroup;
+  public timer$: any;
+  public timer2$: any;
 
   constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
@@ -87,6 +91,7 @@ export class CallBackComponent implements OnInit {
       );
     } else {
       this.submitted = true; // shows validation issues
+      this.resetFormStates(10);
     }
   }
 
@@ -100,5 +105,10 @@ export class CallBackComponent implements OnInit {
       }, time * 1000);
   }
 
-
+  // ngAfterViewInit(): void {
+  // Ten second timer to display feedback in errors
+  // this.timer$ = timer(0, 1000).pipe(
+  //   scan((acc) => --acc, 10),
+  //   takeWhile((x) => x >= 0)
+  // );
 }

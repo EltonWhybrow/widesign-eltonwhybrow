@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, tap, map, delay } from 'rxjs/operators';
+import { Observable, of, timer } from 'rxjs';
+import { catchError, tap, map, delay, scan, takeWhile } from 'rxjs/operators';
 import { IServices } from 'src/app/shared/models/service-interface';
 import { IClientsInfo } from 'src/app/shared/models/clients-interface';
 import { ITestmonial } from '../models/testimonials-interface';
+import { IFaq } from '../models/faq-interface';
 
 
 @Injectable({
@@ -48,11 +49,19 @@ export class HttpService {
     );
   }
 
+  getFaqs(): Observable<IFaq[]> {
+    return this.http.get<IFaq[]>('../../assets/data/ws-faqs.json').pipe(
+      tap(faqs => console.log("faqs: " + JSON.stringify(faqs))),
+      catchError(this.handleError<IFaq[]>([]))
+    );
+  }
+
   private handleError<T>(result = {} as T) {
     return (error: HttpErrorResponse): Observable<T> => {
       console.error(error);
       return of(result);
     };
   }
+
 
 }
