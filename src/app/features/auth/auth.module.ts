@@ -5,11 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import { CookieService } from 'ngx-cookie-service';
+import { NotAuthorisedComponent } from './pages/not-authorised/not-authorised.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    NotAuthorisedComponent
   ],
   imports: [
     CommonModule,
