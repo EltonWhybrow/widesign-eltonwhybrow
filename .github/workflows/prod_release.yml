@@ -1,0 +1,56 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install packages & build ssr/prod ng app
+        run: |
+          npm install
+          npm run build:prod
+          ls
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-folder
+          path: |
+            dist/widesign-elton/browser
+
+  deployment:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+    steps:
+      - name: Download dist folder
+        uses: actions/download-artifact@v2
+        with:
+          name: dist-folder
+
+      - name: Add to git
+        run: |
+          ls
+          git init
+          git config user.email "whybrow.elton@gmail.com"
+          git config user.name "Elton Whybrow"
+          git add -A && git commit -m "Add compiled build to git"
+          ls
+          git ftp push -v --force --user ${{ secrets.FTP_USER_PROD }} --passwd ${{ secrets.FTP_PWD_PROD }} ftp://ftps3.uk.cloudlogin.co

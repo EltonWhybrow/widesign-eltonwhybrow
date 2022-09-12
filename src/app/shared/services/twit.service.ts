@@ -11,7 +11,8 @@ export class TwitService {
   constructor(private http: HttpClient) { }
 
   getTweets(url: string) {
-    return this.http.get(`${this.NODE_BASE_URL}${url}`);
+    return this.http.get(`https://node.widesign.co.uk:80${url}`);
+    // return this.http.get(`${this.NODE_BASE_URL}${url}`);
 
   }
 }
