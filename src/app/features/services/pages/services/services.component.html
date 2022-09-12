@@ -42,10 +42,10 @@
     <app-card-large *ngFor="let service of allServicesData; let even=even">
       <div *ngIf="even" card-img class="md:w-1/3 flex-none">
         <picture>
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
+          <source srcset="assets/imgs/{{service.imageName}}.webp" type="image/webp">
+          <source srcset="assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
           <img #userImage class="h-60 object-cover object-center md:rounded-l-lg shadow-md"
-            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
+            src="assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
 
@@ -73,10 +73,10 @@
 
       <div *ngIf="!even" card-img-right class="md:w-1/3 flex-none">
         <picture>
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.webp" type="image/webp">
-          <source srcset="../../../../assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
+          <source srcset="assets/imgs/{{service.imageName}}.webp" type="image/webp">
+          <source srcset="assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
           <img #userImage class="h-60 object-cover object-center md:rounded-r-lg shadow-md"
-            src="../../../../assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
+            src="assets/imgs/{{service.imageName}}.jpg" alt="{{service.imageName}}">
         </picture>
       </div>
 
@@ -94,10 +94,10 @@
 <app-testimonial *ngIf="oneTestimonial else loadingTestimonial">
   <ng-container testimonial-image>
     <picture>
-      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
-      <source srcset="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
+      <source srcset="assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
+      <source srcset="assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
       <img class="h-48 mb-14 md:mb-0 md:h-32 mx-auto object-cover object-center rounded-full shadow-md"
-        src="../../../../assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
+        src="assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
     </picture>
   </ng-container>
 

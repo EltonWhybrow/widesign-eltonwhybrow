@@ -1,3 +1,9 @@
+.hero {
+  height: 400px;
+  @screen md {
+    height: 550px;
+  }
+}
 .hero__heading {
   font-family: "Style Script", sans-serif;
 }
