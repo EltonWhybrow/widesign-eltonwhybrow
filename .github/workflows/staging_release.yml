@@ -33,7 +33,7 @@ jobs:
         with:
           name: dist-folder
           path: |
-            dist/widesign-elton/browser
+            dist/widesign-eltonwhybrow
 
   deployment:
     needs: build
