@@ -17,6 +17,8 @@ import { SpinnerComponent } from './shared/components/spinner/spinner.component'
 import { CardLargeComponent } from './shared/components/card-large/card-large.component';
 import { AccordionComponent } from './shared/components/accordion/accordion.component';
 import { AccordionItemComponent } from './shared/components/accordion/accordion-item/accordion-item.component';
+import { ScrollTopComponent } from './shared/components/scroll-top/scroll-top.component';
+import { WINDOW_PROVIDERS } from './shared/services/window.service';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { AccordionItemComponent } from './shared/components/accordion/accordion-
     CallBackComponent,
     CompaniesComponent,
     PanelComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { AccordionItemComponent } from './shared/components/accordion/accordion-
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [
+  providers: [WINDOW_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
