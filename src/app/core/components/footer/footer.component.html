@@ -3,8 +3,8 @@
     class="container max-w-5xl md:space-x-16 mx-auto pt-5 md:pt-12 pb-10 w-full md:flex items-start justify-between text-center z-50">
 
     <!-- Alt menu and Admin -->
-    <div class="w-full md:w-80 flex-none mb-10 md:mb-0">
-      <div class="border-2 border-tealy-900 rounded">
+    <div class="w-full md:w-80 flex-none ">
+      <div class="border-2 border-tealy-900 rounded mb-10">
         <h2 class="font-serif bg-tealy-900 text-white mb-1 py-1 font-semibold text-2xl">Admin
         </h2>
         <ul class="text-lg px-3 pb-2 text-left">
@@ -12,7 +12,7 @@
             {{this.authService.nickname}}!</p>
           <li *ngIf="!authService.isLoggedIn">
             <a routerLink="/login" aria-label="Login"
-              class="inline-flex text-white my-1 p-1 pl-2 bg-tealy-500 hover:bg-tealy-600 transition duration-200 ease-in-out rounded-md items-center">
+              class="inline-flex text-white my-1 p-1 pl-2 bg-tealy-600 hover:bg-tealy-700 transition duration-200 ease-in-out rounded-md items-center">
               Login
               <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor">
@@ -24,7 +24,7 @@
           </li>
           <li *ngIf="authService.isLoggedIn">
             <a (click)="logout()" aria-label="Logout"
-              class="inline-flex text-white my-1 p-1 pl-2 bg-tealy-500 hover:bg-tealy-600 transition duration-200 ease-in-out rounded-md items-center">
+              class="inline-flex text-white my-1 p-1 pl-2 bg-tealy-600 hover:bg-tealy-700 transition duration-200 ease-in-out rounded-md items-center">
               Logout
               <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor">
@@ -33,6 +33,13 @@
               </svg>
             </a>
           </li>
+        </ul>
+      </div>
+
+      <div class="border-2 border-tealy-900 rounded mb-10">
+        <h2 class="font-serif bg-tealy-900 text-white mb-1 py-1 font-semibold text-2xl">Elsewhere
+        </h2>
+        <ul class="text-lg px-3 pb-2 text-left">
           <li>
             <a routerLink="/client-area" aria-label="Clients">Existing Clients</a>
           </li>
