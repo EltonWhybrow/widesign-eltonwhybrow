@@ -20,8 +20,8 @@
   </div>
 
   <div class="answer my-2 mx-4">
-    <p class="standard-paragraph">
-      {{ answer }}
+    <p class="standard-paragraph" [innerHTML]="[answer]">
     </p>
+    <!-- <a routerLink='/contact' class='underline'>contact me</a> -->
   </div>
 </div>
