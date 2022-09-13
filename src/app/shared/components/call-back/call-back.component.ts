@@ -50,7 +50,7 @@ export class CallBackComponent implements OnInit {
 
   onSubmit() {
     if (this.callBackForm.valid && !this.disableSubmit) {
-      console.warn(this.callBackForm?.value);
+      // console.warn(this.callBackForm?.value);
 
       this.disableSubmit = true;
       this.sending = true;
@@ -86,7 +86,7 @@ export class CallBackComponent implements OnInit {
           this.resetFormStates(10);
         }, () => {
           /* istanbul ignore next */
-          console.log('complete');
+          // console.log('complete');
         }
       );
     } else {
