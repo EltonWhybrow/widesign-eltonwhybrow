@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  nodeBaseUrl: 'http://node.widesign.co.uk'
+  nodeBaseUrl: 'https://node.widesign.co.uk:26962'
 };
