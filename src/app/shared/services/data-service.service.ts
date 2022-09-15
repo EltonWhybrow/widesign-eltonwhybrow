@@ -51,7 +51,7 @@ export class HttpService {
 
   getFaqs(): Observable<IFaq[]> {
     return this.http.get<IFaq[]>('../../assets/data/ws-faqs.json').pipe(
-      tap(faqs => console.log("faqs: " + JSON.stringify(faqs))),
+      // tap(faqs => console.log("faqs: " + JSON.stringify(faqs))),
       catchError(this.handleError<IFaq[]>([]))
     );
   }

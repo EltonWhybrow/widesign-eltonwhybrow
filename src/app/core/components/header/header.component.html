@@ -29,7 +29,7 @@
         </li>
         <li class="nav__item group relative" *ngIf="authService.isLoggedIn">
           <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-            [routerLink]="['/playground']" routerLinkActive="is-active">Playground</a>
+            [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Playground</a>
         </li>
         <li class="nav__item group relative">
           <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
@@ -150,7 +150,7 @@
           </li>
           <li class="nav__item group relative" *ngIf="authService.isLoggedIn">
             <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-              (click)="this.burgerActive = false;" [routerLink]="['/playground']"
+              (click)="this.burgerActive = false;" [routerLink]="['/playground/dashboard']"
               routerLinkActive="is-active">Playground</a>
           </li>
           <li class="nav__item group relative">

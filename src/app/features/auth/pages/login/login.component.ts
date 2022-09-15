@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
               // set token to cookie
               // moment js to expire cookie
               const expiresIn = moment().add(24, 'h').toDate()
-              console.log('cookie expires at: ', expiresIn);
+              // console.log('cookie expires at: ', expiresIn);
               this.cookieService.set('wsat', res.accessToken, { expires: expiresIn, path: '/' });
 
               // set nickname + localstoreage
@@ -77,7 +77,7 @@ export class LoginComponent implements OnInit {
               // set to logged in
               this.authService.setLoggedIn(true);
               // redirect on success
-              this.router.navigate(['/playground']);
+              this.router.navigate(['/playground/dashboard']);
             } else {
               console.log('Error login method >>');
               throw new Error

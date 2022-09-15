@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit {
         (data: any) => {
           const res: any = data;
           /* istanbul ignore next */
-          console.log(`This is sending email from ${this.contactCredentials.contactName}`);
+          // console.log(`This is sending email from ${this.contactCredentials.contactName}`);
 
           this.contactForm.reset();
 
@@ -91,7 +91,7 @@ export class ContactComponent implements OnInit {
           this.resetFormStates(10);
         }, () => {
           /* istanbul ignore next */
-          console.log('complete');
+          // console.log('complete');
         }
       );
     } else {

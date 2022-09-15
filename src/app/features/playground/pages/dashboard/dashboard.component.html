@@ -1,42 +1,99 @@
-<section class="container px-4 md:px-10 xl:px-0 mx-auto py-5 md:py-10 max-w-5xl">
-  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif">This is <span
-      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">my</span>
-    <span class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">playground</span>& <span
-      class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">dashboard</span>
-  </h1>
+<!-- Dashboard stuff -->
+<section class="container md:px-10 xl:px-0 mx-auto pb-5 mb-10 max-w-5xl">
+  <div class="grid md:grid-cols-2 gap-14">
 
-  <div class="border-t-2 border-teal pt-5 my-2 rounded-md">
+    <!-- Portfolio -->
+    <app-card>
+      <div card-img class="h-40">
+        <picture>
+          <source srcset="assets/imgs/portfolio.webp" type="image/webp">
+          <source srcset="assets/imgs/portfolio.jpg" type="image/jpeg">
+          <img #userImage class="w-full object-cover object-center rounded-lg shadow-md" src="assets/imgs/portfolio.jpg"
+            alt="webdesign">
+        </picture>
+      </div>
 
-    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>You can <a routerLink="/contact"
-        class="inline-block group transition duration-300 border-b border-b-raw-500">contact yourself 🤣<span
-          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
+      <ng-container card-header>Portfolio</ng-container>
+      <ng-container card-sub-header>Some previous work</ng-container>
+      <div card-body>Projects I have been involved in whilst working for ingenie, Sheilas Wheels and the esure Group.
+      </div>
 
-    </p>
-    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>Going to add corporate sensitive portfolio stuff. Storyboards and stuff from esure & ingenie etc.
+      <div card-more class="flex gap-x-2">
+        <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+          routerLink="/playground/portfolio">
+          Portfolio
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </app-card>
 
-    </p>
-    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>Ssome interview test stuff etc...
+    <!-- Interview -->
+    <app-card>
+      <div card-img class="h-40">
+        <picture>
+          <source srcset="assets/imgs/interview.webp" type="image/webp">
+          <source srcset="assets/imgs/interview.jpg" type="image/jpeg">
+          <img #userImage class="w-full object-cover object-center rounded-lg shadow-md" src="assets/imgs/interview.jpg"
+            alt="webdesign">
+        </picture>
+      </div>
 
-    </p>
-    <p class="text-xl pt-1 pb-0 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 -left-5 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>Work in
-      progress really...
+      <ng-container card-header>Interview stuff</ng-container>
+      <ng-container card-sub-header>WIP - just things I use</ng-container>
+      <div card-body>Keep it all in one place when I gather resources etc. to help with interviews
+      </div>
 
-    </p>
+      <div card-more class="flex gap-x-2">
+        <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+          routerLink="/playground/interview">
+          Interview
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </app-card>
+
+    <!-- Revision -->
+    <app-card>
+      <div card-img class="h-40">
+        <picture>
+          <source srcset="assets/imgs/revision.webp" type="image/webp">
+          <source srcset="assets/imgs/revision.jpg" type="image/jpeg">
+          <img #userImage class="w-full object-cover object-center rounded-lg shadow-md" src="assets/imgs/revision.jpg"
+            alt="webdesign">
+        </picture>
+      </div>
+
+      <ng-container card-header>Revision stuff</ng-container>
+      <ng-container card-sub-header>WIP - stuff I collected</ng-container>
+      <div card-body>Things I have collected and complied to help with revision (might budle into interviews?!)
+      </div>
+
+      <div card-more class="flex gap-x-2">
+        <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+          routerLink="/playground/revision">
+          Revision
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </app-card>
+
   </div>
 </section>
+
+
+
+<!-- <ng-template #loadingClientStuff>
+  <app-spinner></app-spinner>
+</ng-template> -->

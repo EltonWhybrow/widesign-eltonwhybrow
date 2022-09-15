@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
-import { CardComponent } from './shared/components/card/card.component';
 import { TestimonialComponent } from './shared/components/testimonial/testimonial.component';
 import { CallBackComponent } from './shared/components/call-back/call-back.component';
 import { CompaniesComponent } from './shared/components/companies/companies.component';
@@ -19,6 +18,7 @@ import { AccordionComponent } from './shared/components/accordion/accordion.comp
 import { AccordionItemComponent } from './shared/components/accordion/accordion-item/accordion-item.component';
 import { ScrollTopComponent } from './shared/components/scroll-top/scroll-top.component';
 import { WINDOW_PROVIDERS } from './shared/services/window.service';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -30,7 +30,6 @@ import { WINDOW_PROVIDERS } from './shared/services/window.service';
     FooterComponent,
     PageNotFoundComponent,
     TestimonialComponent,
-    CardComponent,
     CardLargeComponent,
     routingComponents,
     CallBackComponent,
@@ -40,6 +39,7 @@ import { WINDOW_PROVIDERS } from './shared/services/window.service';
     ScrollTopComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

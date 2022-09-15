@@ -18,13 +18,14 @@ const routes: Routes = [
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   },
   { path: '', component: HomepageComponent },
-  { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'faqs', component: FaqsComponent },
   { path: 'client-area', component: ClientAreaComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent },
+  { path: '', pathMatch: 'full', redirectTo: '' },
+
 ];
 
 
