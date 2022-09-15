@@ -1,8 +1,8 @@
 [
   {
     "private": false,
-    "heading": "Existing Website",
-    "subHeading": "Visit your web hosting account",
+    "heading": "Your Website Hosting",
+    "subHeading": "Visit your existing web hosting account",
     "imageName": "web-hosting",
     "description": "If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage domain name, add/modify email addresses.",
     "url": "https://uk.cloudlogin.co/login",
@@ -10,8 +10,8 @@
   },
   {
     "private": false,
-    "heading": "Webmail",
-    "subHeading": "Access you inbox",
+    "heading": "Your Emails",
+    "subHeading": "Access your webmail inbox",
     "imageName": "email-access",
     "description": "Access you email online anywhere, anytime. If you need to check junk or lost access on your devices, you can do it here. If you lost your login details you will need to get in touch with me.",
     "url": "https://webmail.supremecluster.com/",
@@ -19,8 +19,8 @@
   },
   {
     "private": false,
-    "heading": "Web Hosting Services",
-    "subHeading": "Need some new web hosting service",
+    "heading": "NEW! Web Hosting Service?",
+    "subHeading": "Check out what web hosting is available",
     "imageName": "web-hosting-new",
     "description": "I have been using these guys for over adecade and the servers and supports are second to none. We offer a 99.9% server uptime guarantee and a '30-day Free Trail'. We also offer daily backups as well",
     "url": "https://widesign.duoservers.com/",
@@ -28,8 +28,8 @@
   },
   {
     "private": false,
-    "heading": "Domain Name Finder",
-    "subHeading": "Search available domain names",
+    "heading": "NEW! Domain Name?",
+    "subHeading": "Search  for available domain names",
     "imageName": "domain-names",
     "description": "At WideSign, we don't simply provide domains. We provide outstanding domain management solutions. Plus, we supply you with a FREE domain name together with any one of our cloud hosting packages ",
     "url": "https://widesign.duoservers.com/get-a-domain/",

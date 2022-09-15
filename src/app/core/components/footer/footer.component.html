@@ -3,7 +3,7 @@
     class="container max-w-5xl md:space-x-16 mx-auto pt-5 md:pt-12 pb-10 w-full md:flex items-start justify-between text-center z-50">
 
     <!-- Alt menu and Admin -->
-    <div class="w-full md:w-80 flex-none ">
+    <div class="w-full md:w-80 flex-1">
       <div class="border-2 border-tealy-900 rounded mb-10">
         <h2 class="font-serif bg-tealy-900 text-white mb-1 py-1 font-semibold text-2xl">Admin
         </h2>
@@ -44,15 +44,38 @@
             <a routerLink="/client-area" aria-label="Clients">Existing Clients</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
-            <a routerLink="/playground" aria-label="Playground">Playground</a>
+            <a routerLink="/playground/dashboard" aria-label="Playground">Playground</a>
+          </li>
+          <li *ngIf="authService.isLoggedIn">
+            <a routerLink="/playground/portfolio" aria-label="Portfolio">Portfolio</a>
           </li>
 
+        </ul>
+      </div>
+
+
+      <!-- Instagram feed -->
+      <div class="border-2 border-tealy-900 rounded mb-10">
+        <h2 class="font-serif bg-tealy-900 text-white py-1 font-semibold text-2xl">@eltongram
+        </h2>
+        <ul class="flex flex-wrap items-center p-1">
+          <li class=" p-1 w-1/4 gap-1" *ngFor="let post of instaFeed">
+            <a href="{{post.permalink}}" target="_blank">
+              <img *ngIf="post.media_type === 'IMAGE'" src="{{post.media_url}}" alt="{{post.caption}}" width="100px"
+                height="100px" class="m-auto w-28 h-28 object-cover object-center">
+              <img *ngIf="post.thumbnail_url" src="{{post.thumbnail_url}}" alt="{{post.caption}}" width="100px"
+                height="100px" class="m-auto w-28 h-28 object-cover object-center">
+            </a>
+            <!-- {{post.permalink}}
+            {{post.media_url}}
+            {{post.caption}} -->
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- Twitter Feed API V2.0 -->
-    <div class="mt-6 md:mt-0">
+    <div class="mt-6 md:mt-0 flex-1">
       <div class="border-2 border-tealy-900 rounded">
         <h2 class="font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
           @eltonwhybrow

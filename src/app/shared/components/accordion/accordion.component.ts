@@ -18,7 +18,7 @@ export class AccordionComponent implements OnInit {
       .subscribe(
         (data: IFaq[]) => this.allFaqs = data,
         (error: any) => console.log(error),
-        () => console.log('completed')
+        // () => console.log('completed')
       );
   }
 
