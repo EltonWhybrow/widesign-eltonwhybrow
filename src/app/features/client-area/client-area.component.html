@@ -1,31 +1,18 @@
-<section class="container px-4 md:px-10 xl:px-0 mx-auto py-10 md:pt-10 max-w-5xl">
+<app-heading>
+  <ng-container text-one>Existing</ng-container>
+  <ng-container text-two>clients</ng-container>
+  <ng-container text-three></ng-container>
+</app-heading>
 
-  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif"><span
-      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">Existing</span> <span
-      class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">clients</span> find
-    <span class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">it here</span>
-  </h1>
-
-  <div class="border-t-2 border-teal pt-5 my-2">
-
-    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>You should be able to find what your looking for. 👀
-
-    </p>
-    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>Sign in to your existing hosting account, make an outstanding payment, add a new email address and more.
-    </p>
-  </div>
-</section>
+<app-sub-headings>
+  <ng-container sub-text-one>Sign in to your existing hosting account, make an outstanding payment, add a new email
+    address and more.</ng-container>
+  <ng-container sub-text-two></ng-container>
+  <ng-container sub-text-three></ng-container>
+</app-sub-headings>
 
 <!-- Client information info section -->
-<section *ngIf="allClientInfo else loadingClientStuff" class="container md:px-10 xl:px-0 mx-auto pb-5 mb-10 max-w-5xl">
+<section *ngIf="allClientInfo else loadingClientStuff" class="main-content">
 
   <div class="grid md:grid-cols-2 gap-14">
     <ng-container *ngFor="let client of allClientInfo">

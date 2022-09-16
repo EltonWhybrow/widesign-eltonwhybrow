@@ -1,42 +1,38 @@
-<!-- Blub section -->
-<section class="container px-4 md:px-10 xl:px-0 mx-auto py-7 md:py-12 max-w-5xl">
-  <h1 class="text-4xl font-semibold  text-gray-600 leading-relaxed font-serif">Hi my name is Elton and I <span
-      class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">build for the
-      web</span>. My goal is to create <span
+<section class="container pt-5 px-2 pb-4 md:px-10 xl:px-0 mx-auto md:pt-12 max-w-5xl">
+  <h1
+    class="text-2xl md:text-4xl font-semibold pb-2 text-gray-600 md:leading-normal leading-snug font-serif border-b border-raw-300">
+    Hi, Im Elton. I
+    <span class="heading_highlight inline bg-raw-500 text-white py-1 px-2 mr-2 mb-4 font-bold">build for the
+      web.</span> I create <span
       class="heading_highlight inline bg-raw-700 text-white py-1 px-2 mr-2 mb-4 font-bold">great user
       experiences</span> whilst <span
-      class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">delivering clients
-      requirements.</span> Plus, have some fun along the way...</h1>
-  <div class="border-t-2 border-teal pt-5 my-2">
-    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>
-      I am a Frontend Developer with a strong background in UX and design. I live in the South-East England with my
-      wife, two daughters and pet dog Woody.
-    </p>
-    <p class="text-xl pt-1 pb-0 pl-7 leading-relaxed text-gray-600 font-semibold relative">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4 absolute top-1 left-1 text-raw-500 font-bold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-      </svg>You can read <a routerLink="/about"
-        class="inline-block group transition duration-300 border-b border-b-raw-500">more
-        about
-        me<span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
-      and the skills, technologies <a routerLink="/services"
-        class="inline-block group transition duration-300 border-b border-b-raw-500">I work with.<span
-          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
-    </p>
-  </div>
+      class="heading_highlight inline bg-raw-900 text-white py-1 px-2 mr-2 mb-4 font-bold">delivering client
+      requirements.</span> Plus, a little fun along the way...
+  </h1>
 </section>
+
+<app-sub-headings>
+  <ng-container sub-text-one>I am a Frontend Developer with a strong background in UX and design. I live in the
+    South-East England with my
+    wife, two daughters and pet dog Woody.
+  </ng-container>
+  <ng-container sub-text-two>You can read <a routerLink="/about"
+      class="inline-block group transition duration-300 border-b border-b-raw-500">more
+      about
+      me<span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
+    and the skills, technologies <a routerLink="/services"
+      class="inline-block group transition duration-300 border-b border-b-raw-500">I work with.<span
+        class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
+  </ng-container>
+  <ng-container sub-text-three></ng-container>
+</app-sub-headings>
 
 <!-- Services panel -->
 <app-panel></app-panel>
 
 <!-- Call back from section -->
-<section class="container call-back px-10 xl:px-0 mx-auto py-8 md:py-20 max-w-5xl">
-  <div class="grid md:grid-cols-2 gap-14 px-0 md:px-10 xl:px-0 mx-auto py-20 max-w-5xl">
+<section class="container call-back px-2 pt-16 pb-20 md:px-10 xl:px-0 mx-auto md:py-32 max-w-5xl">
+  <div class="grid md:grid-cols-2 gap-14">
     <app-call-back></app-call-back>
     <picture>
       <source srcset="assets/imgs/profile.webp" type="image/webp">
