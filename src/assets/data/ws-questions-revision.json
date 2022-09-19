@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "question": "Why were client-side frameworks like Angular introduced",
+    "answer": "Client-side frameworks or SPA made it easier to pass data across different views or sections of the application. Separating chucks of code into components, services etc.. make complex javascript applications generally easier to maintain and manage."
+  },
+  {
+    "id": "2",
+    "question": "How does an Angular application work?",
+    "answer": "Config file named angular.json is used to build out the app via a main.ts file. The app.module then bootstraps the app and any components get loaded depending on projects requirements. Each component can consist of js file, html template and css file."
+  },
+  {
+    "id": "3",
+    "question": "Advantages of Angular over other frameworks",
+    "answer": "Has built-in features like,routing, state management, rxjs library and http services straight out of the box. It has had Long-term support from Google and has a large community and lots of documentation."
+  },
+  {
+    "id": "4",
+    "question": "Differences between AngularJS and Angular",
+    "answer": "Angualr used typescript AngularJS does not. AngularJS uses MVC while Angular relplaces the controller with components. Angular is much easier to maintain on larger project due to it structure."
+  },
+  {
+    "id": "5",
+    "question": "Explain Components, Modules and Services in Angular",
+    "answer": "Components are the basic building blocks, which control a part of the UI. A module is a place where we can group components, directives, services, and pipes. The main objective of a service is to share data, functions with different components of the  application. They get instantiated only once during the lifetime of an application"
+  },
+  {
+    "id": "6",
+    "question": "String interpolation and property binding in Angular",
+    "answer": "String interpolation uses the double curly braces {{ }} to display data from the component. An example of property binding would be passing a value to change the color of a heading like [ngStyle]=\"{color:paint}\" or img [src]=\"src\""
+  }
+]

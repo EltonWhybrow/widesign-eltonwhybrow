@@ -108,8 +108,15 @@
         </li>
       </ul>
     </app-tab>
+
+    <!-- Revsion helpers -->
     <app-tab [tabTitle]="'Cards / Revision'">
-      Cards / Revision
+      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Cards / Revision</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Helpers for interviews questions
+      </p>
+
+      <app-accordion [parentData]="allRevisionQuestions"></app-accordion>
     </app-tab>
   </app-tabs>
 

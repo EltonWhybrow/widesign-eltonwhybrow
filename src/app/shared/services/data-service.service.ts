@@ -73,6 +73,13 @@ export class HttpService {
     );
   }
 
+  getRevisionQuestions(): Observable<IFaq[]> {
+    return this.http.get<IFaq[]>('../../assets/data/ws-questions-revision.json').pipe(
+      // tap(faqs => console.log("faqs: " + JSON.stringify(faqs))),
+      catchError(this.handleError<IFaq[]>([]))
+    );
+  }
+
   private handleError<T>(result = {} as T) {
     return (error: HttpErrorResponse): Observable<T> => {
       console.error(error);

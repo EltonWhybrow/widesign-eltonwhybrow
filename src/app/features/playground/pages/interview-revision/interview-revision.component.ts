@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IFaq } from 'src/app/shared/models/faq-interface';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
@@ -9,6 +9,7 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
 })
 export class InterviewRevisionComponent implements OnInit {
   allQuestions: IFaq[] | undefined;
+  allRevisionQuestions!: IFaq[];
 
   constructor(private httpService: HttpService) { }
 
@@ -17,6 +18,13 @@ export class InterviewRevisionComponent implements OnInit {
     this.httpService.getJobQuestions()
       .subscribe(
         (data: IFaq[]) => this.allQuestions = data,
+        (error: any) => console.log(error),
+        // () => console.log('all questions in faq component', this.allQuestions)
+      );
+
+    this.httpService.getRevisionQuestions()
+      .subscribe(
+        (data: IFaq[]) => this.allRevisionQuestions = data,
         (error: any) => console.log(error),
         // () => console.log('all questions in faq component', this.allQuestions)
       );

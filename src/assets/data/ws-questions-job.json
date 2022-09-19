@@ -2,7 +2,7 @@
   {
     "id": "1",
     "question": "What is your general workflow when working on a feature or project. (SDLC)?",
-    "answer": "Lorem ipsum"
+    "answer": "Waterfall: Requirement analysis > Design > Implementation > Verification > Maintenance.<br /> In respect to Agile <ul><li>Project planning > Product roadmap creation > Release planning > Sprint planning >   Daily meetings > Sprint Review</li></ul>"
   },
   {
     "id": "2",
