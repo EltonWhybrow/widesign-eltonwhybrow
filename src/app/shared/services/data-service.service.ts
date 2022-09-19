@@ -6,6 +6,7 @@ import { IServices } from 'src/app/shared/models/service-interface';
 import { IClientsInfo } from 'src/app/shared/models/clients-interface';
 import { ITestmonial } from '../models/testimonials-interface';
 import { IFaq } from '../models/faq-interface';
+import { IPortfolio } from '../models/portfolio-interface';
 
 
 @Injectable({
@@ -21,6 +22,15 @@ export class HttpService {
       // delay(2000),
       // tap(services => console.log("services: " + JSON.stringify(services))),
       catchError(this.handleError<IServices[]>([]))
+    );
+  }
+
+  getPortfolioInfo(): Observable<IPortfolio[]> {
+    return this.http.get<IServices[]>('../../assets/data/ws-portfolio.json').pipe(
+      // TODO: temp deay to check resolve
+      // delay(2000),
+      // tap(services => console.log("services: " + JSON.stringify(services))),
+      catchError(this.handleError<IPortfolio[]>([]))
     );
   }
 

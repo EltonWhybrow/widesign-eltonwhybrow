@@ -6,16 +6,22 @@
         [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Playground</a>
     </li>
 
-    <span class="text-gray-500" *ngIf="router.url === '/playground/portfolio' || '/playground/inerview'"> > </span>
+    <span class="text-gray-500" *ngIf="router.url === '/playground/portfolio' || '/playground/interview-revision'"> >
+    </span>
 
     <li *ngIf="router.url === '/playground/portfolio'" class="breadcrumbs__item group relative">
       <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
         [routerLink]="['/playground/portfolio']" routerLinkActive="is-active">Portfolio</a>
     </li>
 
-    <li *ngIf="router.url === '/playground/interview'" class="breadcrumbs__item group relative">
+    <li *ngIf="router.url === '/playground/interview-revision'" class="breadcrumbs__item group relative">
       <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-        [routerLink]="['/playground/interview']" routerLinkActive="is-active">Interview</a>
+        [routerLink]="['/playground/interview-revision']" routerLinkActive="is-active">Interview/revision</a>
+    </li>
+
+    <li *ngIf="router.url === '/playground/side-projects'" class="breadcrumbs__item group relative">
+      <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+        [routerLink]="['/playground/side-projects']" routerLinkActive="is-active">Side projects</a>
     </li>
   </ul>
 
