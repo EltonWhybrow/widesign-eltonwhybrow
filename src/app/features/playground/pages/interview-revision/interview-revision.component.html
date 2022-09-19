@@ -8,8 +8,113 @@
 
 <section class="main-content">
 
-  <div class="flex justify-between">
+  <app-tabs>
+    <app-tab [tabTitle]="'My Background'">
+      <!-- ingenie experience -->
+      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">ingenie Telematics</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Last 3 years at ingenie telematics.
+      </p>
+      <ul class="list-disc list-inside">
 
+        <li class="standard-paragraph">
+          I was sole front end developer working on multiple projects and areas of the business alongside the marketing
+          team, collaboating with backend dev when necessary.
+        </li>
+        <li class="standard-paragraph">
+          Maintained legacy AngularJS apps, built new Angular apps for b2b and internal use.
+        </li>
+
+        <li class="standard-paragraph">
+          Maintained, then rebuilt their brochureware and B2B website (including custom WP theming, styleguides and
+          component library).
+        </li>
+        <li class="standard-paragraph">
+          Also built out internal and third party responsive emails suites
+        </li>
+        <li class="standard-paragraph">
+          Internal Angluar app to display customer telematics journeys journeys which was built to hanlde multi
+          brand/languages and used ngRX and OpenID authentication.
+        </li>
+      </ul>
+      <!-- esure experience -->
+      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">esure Group</h3>
+
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        7 Years at esure group in Reigate ofﬁce.
+      </p>
+      <ul class="list-disc list-inside">
+
+        <li class="standard-paragraph">
+          Started as Web Designer, then Senior UI Designer and progressed into development after the ﬁrst couple of
+          years.
+        </li>
+        <li class="standard-paragraph">
+          Helping with esure and Sheilas Wheels quote journeys. Anything from implementing new features, UX improvements
+          to complete rebrands.
+        </li>
+
+        <li class="standard-paragraph">
+          The last 3 years at esure I was working in the digital team on their Angular(4-7) customer portals
+          (myaccount).
+          Usual stuff like Login, change details, view documents, make some chnages to policy.
+        </li>
+        <li class="standard-paragraph">
+          Whilst working there i was experimenting with Javascript framework ionic using with headless CMS for creatng
+          their initial iOS/Android apps.
+        </li>
+        <li class="standard-paragraph">
+          This included releasing their first iOS and Android app for Sheilas Wheels customers. (Loyalty App)
+        </li>
+      </ul>
+    </app-tab>
+
+    <!-- Predicted questions -->
+    <app-tab [tabTitle]="'Predicted questions'">
+      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Questions I could be asked</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Add to this json list if asked any good ones that i need to cover
+      </p>
+      <app-accordion [parentData]="allQuestions"></app-accordion>
+    </app-tab>
+
+    <!-- Question to ask -->
+    <app-tab [tabTitle]="'Questions to ask'">
+      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Find out about compnay</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Ask only if you feel it relevant.
+      </p>
+      <ul class="list-decimal list-inside">
+
+        <li class="standard-paragraph">
+          Can you tell me more about the developemnt team? (size, broke into feature teams?, closly with
+          designer/back-end devs?)
+        </li>
+        <li class="standard-paragraph">
+          Whats the workﬂow of development team (Agile?, Do you use Jira, work in 2 week sprints etc…)
+        </li>
+
+        <li class="standard-paragraph">
+          Are there opportunities for training and progression within the role / company
+        </li>
+        <li class="standard-paragraph">
+          Can you tell me more about the day-to-day responsibilities of the role?
+        </li>
+        <li class="standard-paragraph">
+          Mac or PC's
+        </li>
+        <li class="standard-paragraph">
+          Are there any bonus Scheme, incentives in place.
+        </li>
+      </ul>
+    </app-tab>
+    <app-tab [tabTitle]="'Cards / Revision'">
+      Cards / Revision
+    </app-tab>
+  </app-tabs>
+
+  <!--
+  <div class="flex justify-between">
     <div class="hex hex-one">
       <div class="hex inner">
         <div class="hex inner2 flex items-center">
@@ -38,8 +143,6 @@
         </div>
       </div>
     </div>
-
-
-  </div>
+  </div> -->
 
 </section>

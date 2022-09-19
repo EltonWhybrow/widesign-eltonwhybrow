@@ -14,7 +14,9 @@
   <ng-container sub-text-three></ng-container>
 </app-sub-headings>
 
-<app-accordion></app-accordion>
+<section class="main-content">
+  <app-accordion [parentData]="allQuestions"></app-accordion>
+</section>
 
 <!-- testimonial section -->
 <app-testimonial *ngIf="oneTestimonial else loadingTestimonial">

@@ -1,5 +1,3 @@
-<section class="main-content">
-  <app-accordion-item class="faq-{{ faq.id }}" *ngFor="let faq of allFaqs"
-    [ngClass]="{ active: currentlySelectedFaq === faq }" (click)="activateFaq(faq)" id="{{ faq.id }}"
-    question="{{ faq.question }}" answer="{{ faq.answer }}"></app-accordion-item>
-</section>
+<app-accordion-item class="question-{{ question.id }}" *ngFor="let question of parentData"
+  [ngClass]="{ active: currentlySelectedQuestion === question }" (click)="activateQuestion(question)"
+  id="{{ question.id }}" question="{{ question.question }}" answer="{{ question.answer }}"></app-accordion-item>
