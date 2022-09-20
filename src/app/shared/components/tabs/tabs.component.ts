@@ -18,7 +18,7 @@ import { TabComponent } from '../tab/tab.component';
 
   <div class="nav nav-tabs justify-center items-center flex md:hidden text-center">
     <a *ngFor="let tab of tabs; let i = index" (click)="selectTab(tab)" [ngClass]="{
-        'active':tab.active,'bg-raw-700':tab.active,'text-white':tab.active, 'text-raw-500':!tab.active }" routerLink="playground/interview-revision" fragment="{{tab.fragment}}" class="p-2 tabs-{{i}} border-b border-r border-gray-200 flex-1 ">
+        'active':tab.active,'bg-raw-700':tab.active,'text-white':tab.active, 'text-raw-500':!tab.active }" routerLink="/playground/interview-revision" fragment="{{tab.fragment}}" class="p-2 tabs-{{i}} border-b border-r border-gray-200 flex-1 ">
           <span class="text-sm">{{tab.title}}</span>
     </a>
     </div>
