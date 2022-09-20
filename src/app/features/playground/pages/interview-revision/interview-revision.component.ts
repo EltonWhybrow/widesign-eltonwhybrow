@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { forkJoin, Observable } from 'rxjs';
 import { IFaq } from 'src/app/shared/models/faq-interface';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
@@ -8,26 +9,23 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
   styleUrls: ['./interview-revision.component.scss']
 })
 export class InterviewRevisionComponent implements OnInit {
-  allQuestions: IFaq[] | undefined;
-  allRevisionQuestions!: IFaq[];
+  allJobQuestions: IFaq[] = [];
+  allRevisionQuestions: IFaq[] = [];
 
   constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {
+    //Get all questions
+    let job = this.httpService.getJobQuestions()
+    let revision = this.httpService.getRevisionQuestions()
 
-    this.httpService.getJobQuestions()
-      .subscribe(
-        (data: IFaq[]) => this.allQuestions = data,
-        (error: any) => console.log(error),
-        // () => console.log('all questions in faq component', this.allQuestions)
-      );
-
-    this.httpService.getRevisionQuestions()
-      .subscribe(
-        (data: IFaq[]) => this.allRevisionQuestions = data,
-        (error: any) => console.log(error),
-        // () => console.log('all questions in faq component', this.allQuestions)
-      );
+    forkJoin([job, revision]).subscribe((results: any) => {
+      this.allJobQuestions = results[0];
+      this.allRevisionQuestions = results[1];
+    }),
+      (error: any) => console.log(error)
+    // () => console.log('all questions in forkJoin component')
   }
-
 }
+
+

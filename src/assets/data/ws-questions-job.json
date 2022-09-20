@@ -6,7 +6,7 @@
   },
   {
     "id": "2",
-    "question": "What do you know about SEO in Angualr apps?",
+    "question": "What do you know about SEO in angular apps?",
     "answer": "<strong>Some SEO benefits to using SSR or Universal:</strong> <ul class=\"list-decimal list-inside\"><li>Faster page loading</li><li>Search engine indexing/crawling</li><li>Better user experience generally</li></ul>"
   },
   {

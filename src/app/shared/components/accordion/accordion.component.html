@@ -1,14 +1,14 @@
-<div class="flex justify-between">
-  <div *ngIf="heading">
-    <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">{{heading}}</h3>
+<div class="flex justify-between flex-wrap">
+  <!-- <div *ngIf="heading" class="flex items-start md:pb-4 pr-10">
+    <h3 class="pt-2 text-raw-700 font-medium inline-block text-3xl mt-1 font-serif">{{heading}}</h3>
     <p class="standard-paragraph text-raw-400 text-lg font-thin">
       {{subHeading}}
     </p>
-  </div>
-  <div *ngIf="searchBar">
+  </div> -->
+  <div *ngIf="searchBar" class="w-full md:flex-1">
     <!-- <label for="search-text">Search</label> -->
     <div class="flex h-full items-center">
-      <div class="mt-2">
+      <div class="mt-2 w-full">
         <div class="input-group relative flex items-stretch w-full mb-2">
           <input type="search"
             class="form-control relative flex-auto min-w-0  w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-tealy-500 focus:outline-none inline-block"

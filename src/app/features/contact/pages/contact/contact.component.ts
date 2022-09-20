@@ -30,6 +30,16 @@ export class ContactComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
+  // scroll into view
+  private getItemInView(event: any) {
+    let anchor = event.target.parentNode.id;
+    console.log('something hit!!!', event.target.id)
+    const scrollToElement = window.document.getElementById(anchor);
+    setTimeout(() => {
+      scrollToElement?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }, 400);
+  }
+
   ngOnInit(): void {
     this.submitted = false;
     this.disableSubmit = false;
@@ -88,6 +98,7 @@ export class ContactComponent implements OnInit {
           this.submitted = false;
           this.disableSubmit = false;
           this.sending = false;
+          this.getItemInView(window.event)
           this.resetFormStates(10);
         }, () => {
           /* istanbul ignore next */
@@ -95,6 +106,7 @@ export class ContactComponent implements OnInit {
         }
       );
     } else {
+      this.getItemInView(window.event)
       this.submitted = true; // shows validation issues
       this.resetFormStates(10);
     }

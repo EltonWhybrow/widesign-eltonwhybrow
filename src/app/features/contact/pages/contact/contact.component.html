@@ -8,13 +8,17 @@
 <section class="main-content">
   <div class="grid md:grid-cols-2 gap-14 px-0 md:px-10 xl:px-0 mx-auto pb-0 max-w-5xl">
     <!-- TODO: make contact-form comp -->
-    <div>
+    <div id="form-top">
       <p class="heading_sub mb-4">
         Existing client? Please check the <a routerLink="/client-area"
           class="inline-block group transition duration-300 border-b border-b-raw-500">client area<span
             class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-raw-600"></span></a> first
         to see if that answers your question.
       </p>
+
+      <!-- <section class="contact-details">
+        <p>Mobile: <a href="tel:+7910742752">07910 742 752</a></p>
+      </section> -->
 
       <!-- Form global errors -->
       <ng-container *ngIf="!submitted">
@@ -48,7 +52,7 @@
 
       </ng-container>
 
-      <form [formGroup]="contactForm" class="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="contactForm" id="form" class="form" (ngSubmit)="onSubmit()">
         <div>
           <!-- Name Field -->
           <label class="relative py-2 block">
