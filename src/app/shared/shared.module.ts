@@ -11,6 +11,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { TabComponent } from './components/tab/tab.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionItemComponent } from './components/accordion/accordion-item/accordion-item.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { AccordionItemComponent } from './components/accordion/accordion-item/ac
     BreadcrumbsComponent,
     SpinnerComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     AccordionComponent,
@@ -39,8 +43,10 @@ import { AccordionItemComponent } from './components/accordion/accordion-item/ac
     BreadcrumbsComponent,
     SpinnerComponent,
     RouterModule,
+    FormsModule,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    FilterPipe
   ]
 })
 export class SharedModule { }

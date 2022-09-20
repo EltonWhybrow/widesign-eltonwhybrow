@@ -72,11 +72,8 @@
 
     <!-- Predicted questions -->
     <app-tab [tabTitle]="'Predicted questions'" [tabFragment]="'predicted-questions'">
-      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Questions I could be asked</h3>
-      <p class="standard-paragraph text-raw-400 text-lg font-thin">
-        Add to this json list if asked any good ones that i need to cover
-      </p>
-      <app-accordion [parentData]="allQuestions"></app-accordion>
+      <app-accordion [parentData]="allQuestions" [searchBar]="true" heading="Questions I could be asked"
+        subHeading=" Add to this json list if asked any good ones that i need to cover"></app-accordion>
     </app-tab>
 
     <!-- Question to ask -->
@@ -110,14 +107,11 @@
       </ul>
     </app-tab>
 
-    <!-- Revsion helpers -->
+    <!-- Revision helpers -->
     <app-tab [tabTitle]="'Cards / Revision'" [tabFragment]="'cards-revision'">
-      <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Cards / Revision</h3>
-      <p class="standard-paragraph text-raw-400 text-lg font-thin">
-        Helpers for interviews questions
-      </p>
-
-      <app-accordion [parentData]="allRevisionQuestions"></app-accordion>
+      <app-accordion [parentData]="allRevisionQuestions" [searchBar]="true" heading="Cards / Revision"
+        subHeading="Helpers for interviews questions">
+      </app-accordion>
     </app-tab>
   </app-tabs>
 

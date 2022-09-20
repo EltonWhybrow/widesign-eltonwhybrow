@@ -9,6 +9,10 @@ export class AccordionComponent {
 
   currentlySelectedQuestion: any;
   @Input() parentData: any | undefined;
+  searchText = '';
+  @Input() searchBar: boolean = false;
+  @Input() heading: string = '';
+  @Input() subHeading: string = '';
 
   constructor(private httpService: HttpService) { }
 
