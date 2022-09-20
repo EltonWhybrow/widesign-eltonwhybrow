@@ -11,6 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
   @Input('tabTitle') title?: string;
+  @Input('tabFragment') fragment?: string;
   @Input() active = false;
 
   constructor() { }

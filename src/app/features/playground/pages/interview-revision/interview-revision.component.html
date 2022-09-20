@@ -9,7 +9,7 @@
 <section class="main-content">
 
   <app-tabs>
-    <app-tab [tabTitle]="'My Background'">
+    <app-tab [tabTitle]="'My Background'" [tabFragment]="'my-background'">
       <!-- ingenie experience -->
       <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">ingenie Telematics</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
@@ -33,8 +33,9 @@
           Also built out internal and third party responsive emails suites
         </li>
         <li class="standard-paragraph">
-          Internal Angluar app to display customer telematics journeys journeys which was built to hanlde multi
-          brand/languages and used ngRX and OpenID authentication.
+          Set-up an Internal Angular app for the back end team to display customer telematics journeys. This needed to
+          handle multi
+          brand set up, multi languages. And required ngRX store and OpenID authentication implimentations.
         </li>
       </ul>
       <!-- esure experience -->
@@ -70,7 +71,7 @@
     </app-tab>
 
     <!-- Predicted questions -->
-    <app-tab [tabTitle]="'Predicted questions'">
+    <app-tab [tabTitle]="'Predicted questions'" [tabFragment]="'predicted-questions'">
       <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Questions I could be asked</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
         Add to this json list if asked any good ones that i need to cover
@@ -79,7 +80,7 @@
     </app-tab>
 
     <!-- Question to ask -->
-    <app-tab [tabTitle]="'Questions to ask'">
+    <app-tab [tabTitle]="'Questions to ask'" [tabFragment]="'question-to-ask'">
       <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Find out about compnay</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
         Ask only if you feel it relevant.
@@ -110,7 +111,7 @@
     </app-tab>
 
     <!-- Revsion helpers -->
-    <app-tab [tabTitle]="'Cards / Revision'">
+    <app-tab [tabTitle]="'Cards / Revision'" [tabFragment]="'cards-revision'">
       <h3 class="bg-tealy-500 p-2 text-white inline-block text-xl my-3 font-serif">Cards / Revision</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
         Helpers for interviews questions

@@ -17,12 +17,18 @@
   span {
     @apply text-raw-300;
   }
+  &.active {
+    @apply bg-tealy-500;
+  }
 }
 
 .hex-1 {
   @apply bg-raw-500;
   span {
     @apply text-raw-500;
+  }
+  &.active {
+    @apply bg-tealy-500;
   }
 }
 
@@ -31,12 +37,18 @@
   span {
     @apply text-raw-700;
   }
+  &.active {
+    @apply bg-tealy-500;
+  }
 }
 
 .hex-3 {
   @apply bg-raw-900;
   span {
     @apply text-raw-900;
+  }
+  &.active {
+    @apply bg-tealy-500;
   }
 }
 
@@ -47,19 +59,30 @@
   bottom: -60px;
 }
 
-.hex-0:before {
-  border-bottom: 60px solid;
-  @apply border-raw-300;
+.hex-0 {
+  &:before {
+    border-bottom: 60px solid;
+    @apply border-raw-300;
+  }
 }
+
 .hex-0:after {
   border-top: 60px solid;
   @apply border-raw-300;
 }
 
-.hex-1:before {
-  border-bottom: 60px solid;
-  @apply border-raw-500;
+.hex-1 {
+  &:before {
+    border-bottom: 60px solid;
+    @apply border-raw-500;
+  }
 }
+
+.active:before {
+  border-bottom: 60px solid;
+  @apply border-tealy-500;
+}
+
 .hex-1:after {
   border-top: 60px solid;
   @apply border-raw-500;
@@ -81,6 +104,18 @@
 .hex-3:after {
   border-top: 60px solid;
   @apply border-raw-900;
+}
+
+// Active borders
+.active {
+  &:before {
+    border-bottom: 60px solid;
+    @apply border-tealy-500;
+  }
+  &:after {
+    border-top: 60px solid;
+    @apply border-tealy-500;
+  }
 }
 
 .hex:before,
