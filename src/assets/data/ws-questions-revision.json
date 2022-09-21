@@ -208,5 +208,15 @@
     "id": "42",
     "question": "RXJS - Transformation Operators",
     "answer": "<strong>groupBy()</strong> - group by met condition and return as new observable<br/><strong>map(x => 10* x)</strong> -  it passes each source value through a transformation function to get corresponding output values<br/><strong>mapTo('newValue')</strong> - emits newValue each time a value is found ignoring the source value<br/><strong>partition()</strong> - like filter but returns values that did not meet the condition as separate observable in an array with the other one<br/><strong>pluck()</strong> - like map but plucks on nested property from the emmitted values<br/><strong>scan()</strong> - emits result form each accumulation<br/>"
+  },
+  {
+    "id": "43",
+    "question": "BEM & SMACSS vs CSS Modules",
+    "answer": "<ul class=\"list-disc list-inside\"><li><strong>BEM</strong> - XXXXXXX</li><li><strong>SMACSS</strong> - XXXXXXX</li><li><strong>CSS MODULES</strong> - A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component. Removing the inheirtance nightmare of cascading style sheets.</li></ul>"
+  },
+  {
+    "id": "44",
+    "question": "",
+    "answer": ""
   }
 ]
