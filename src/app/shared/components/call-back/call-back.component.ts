@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { timer } from 'rxjs';
-import { scan, takeWhile } from 'rxjs/operators';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { IEmail } from '../../models/emails-interface';
 import { EmailService } from '../../services/email-service.service';
@@ -24,13 +22,12 @@ export class CallBackComponent implements OnInit {
   public formSuccess: boolean = false;
   public sending: boolean | undefined;
 
-  public contactName: FormControl | undefined;
-  public contactNumber: FormControl | undefined;
-  public callBackForm!: FormGroup;
-  public timer$: any;
-  public timer2$: any;
+  public contactName: UntypedFormControl | undefined;
+  public contactNumber: UntypedFormControl | undefined;
+  public callBackForm!: UntypedFormGroup;
+  // public timer$: any;
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) { }
+  constructor(private fb: UntypedFormBuilder, private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.submitted = false;
@@ -39,8 +36,8 @@ export class CallBackComponent implements OnInit {
   }
 
   initForm() {
-    this.contactName = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
-    this.contactNumber = new FormControl('', [Validators.required, Validators.pattern(this.NUMS_REGEX)]);
+    this.contactName = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
+    this.contactNumber = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NUMS_REGEX)]);
 
     this.callBackForm = this.fb.group({
       contactName: this.contactName,

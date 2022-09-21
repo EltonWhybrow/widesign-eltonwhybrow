@@ -17,13 +17,13 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   },
-  { path: '', component: HomepageComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'faqs', component: FaqsComponent },
-  { path: 'client-area', component: ClientAreaComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '', component: HomepageComponent, title: 'Elton Whybrow - Web Development & Design - WideSign' },
+  { path: 'services', component: ServicesComponent, title: 'Services - Web Development & Design - WideSign' },
+  { path: 'about', component: AboutComponent, title: 'About - Web Development & Design - WideSign' },
+  { path: 'faqs', component: FaqsComponent, title: 'FAQs - Web Development & Design - WideSign' },
+  { path: 'client-area', component: ClientAreaComponent, title: 'Client area - Web Development & Design - WideSign' },
+  { path: 'contact', component: ContactComponent, title: 'Contact - Web Development & Design - WideSign' },
+  { path: '**', component: PageNotFoundComponent, title: 'Page not found - Web Development & Design - WideSign' },
   { path: '', pathMatch: 'full', redirectTo: '' },
 
 ];

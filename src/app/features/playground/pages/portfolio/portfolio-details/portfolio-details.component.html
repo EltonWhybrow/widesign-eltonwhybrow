@@ -1,2 +1,42 @@
-<p>portfolio-details works!</p>
-{{portfolioResult | json}}
+<section class="main-content-tighty mt-10">
+  <ul class="flex text-xs">
+    <li class="breadcrumbs__item group relative">
+      <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+        [routerLink]="['/playground/portfolio']" routerLinkActive="is-active">Back to portfolio</a>
+    </li>
+  </ul>
+</section>
+
+<section class="main-content">
+  <ng-container *ngIf="portfolioResult else loadingPortfolioDetails">
+    <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">{{portfolioResult.heading}} assets
+    </h3>
+    <p class="standard-paragraph text-raw-400 text-lg font-thin">
+      Some assets from the project.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-14">
+      <!-- Details -->
+      <ng-container *ngFor="let assets of portfolioResult.assets">
+        <a class="text-tealy-500" href="{{assets.url}}" target="_blank">
+          <app-card>
+            <div card-img class="h-44">
+              <picture>
+                <source srcset="{{assets.imgWebp}}" type="image/webp">
+                <source srcset="{{assets.imgJpg}}" type="image/jpeg">
+                <img #userImage class="w-full object-cover object-center rounded-lg shadow-md" src="{{assets.imgJpg}}"
+                  alt="webdesign">
+              </picture>
+            </div>
+            <ng-container card-sub-header>{{assets.name}}</ng-container>
+          </app-card>
+        </a>
+      </ng-container>
+
+    </div>
+  </ng-container>
+</section>
+
+<ng-template #loadingPortfolioDetails>
+  <app-spinner></app-spinner>
+</ng-template>

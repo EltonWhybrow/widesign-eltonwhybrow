@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { IPortfolio } from 'src/app/shared/models/portfolio-interface';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
@@ -9,11 +10,11 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
   styleUrls: ['./portfolio-details.component.scss']
 })
 export class PortfolioDetailsComponent implements OnInit {
-  portfolioResult: any;
+  portfolioResult: IPortfolio | any;
   allPortfolioData: any;
   portfolioId: string;
 
-  constructor(private route: ActivatedRoute, private httpService: HttpService) {
+  constructor(private route: ActivatedRoute, private httpService: HttpService, public router: Router) {
     // get route param to match data
     this.portfolioId = this.route.snapshot.paramMap.get('id') || ''
   }

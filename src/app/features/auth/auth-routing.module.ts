@@ -4,9 +4,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { NotAuthorisedComponent } from './pages/not-authorised/not-authorised.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent, title: 'Login - Web Development & Design - WideSign' },
   { path: '', pathMatch: 'full', redirectTo: '' },
-  { path: 'not-authorised', component: NotAuthorisedComponent },
+  { path: 'not-authorised', component: NotAuthorisedComponent, title: 'Unauthorised - Web Development & Design - WideSign' },
 ];
 
 @NgModule({
