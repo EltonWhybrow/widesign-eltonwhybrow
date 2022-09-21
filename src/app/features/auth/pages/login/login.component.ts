@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ILogin, ILoginStatus } from 'src/app/shared/models/login-interface';
@@ -27,19 +27,19 @@ export class LoginComponent implements OnInit {
 
   public loginCredentials!: ILogin;
 
-  public username: FormControl | undefined;
-  public password: FormControl | undefined;
-  public loginForm!: FormGroup;
+  public username: UntypedFormControl | undefined;
+  public password: UntypedFormControl | undefined;
+  public loginForm!: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router, private cookieService: CookieService) { }
+  constructor(private formBuilder: UntypedFormBuilder, private authService: AuthService, private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.initForm();
   }
 
   initForm() {
-    this.username = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
-    this.password = new FormControl('', [Validators.required, Validators.pattern(this.PASSWORD_REGEX)]);
+    this.username = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
+    this.password = new UntypedFormControl('', [Validators.required, Validators.pattern(this.PASSWORD_REGEX)]);
 
     this.loginForm = this.formBuilder.group({
       username: this.username,

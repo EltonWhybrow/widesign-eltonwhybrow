@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { IEmail } from 'src/app/shared/models/emails-interface';
 import { EmailService } from 'src/app/shared/services/email-service.service';
 
@@ -22,13 +22,13 @@ export class ContactComponent implements OnInit {
   public formSuccess: boolean = false;
   public sending: boolean | undefined;
 
-  public contactName: FormControl | undefined;
-  public contactNumber: FormControl | undefined;
-  public contactEmail: FormControl | undefined;
-  public contactMessage: FormControl | undefined;
-  public contactForm!: FormGroup;
+  public contactName: UntypedFormControl | undefined;
+  public contactNumber: UntypedFormControl | undefined;
+  public contactEmail: UntypedFormControl | undefined;
+  public contactMessage: UntypedFormControl | undefined;
+  public contactForm!: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) { }
+  constructor(private fb: UntypedFormBuilder, private emailService: EmailService) { }
 
   // scroll into view
   private getItemInView(event: any) {
@@ -48,10 +48,10 @@ export class ContactComponent implements OnInit {
 
 
   initForm() {
-    this.contactName = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
-    this.contactNumber = new FormControl('', [Validators.required, Validators.pattern(this.NUMS_REGEX)]);
-    this.contactEmail = new FormControl('', [Validators.required, Validators.email]);
-    this.contactMessage = new FormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
+    this.contactName = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
+    this.contactNumber = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NUMS_REGEX)]);
+    this.contactEmail = new UntypedFormControl('', [Validators.required, Validators.email]);
+    this.contactMessage = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
 
     this.contactForm = this.fb.group({
       contactName: this.contactName,

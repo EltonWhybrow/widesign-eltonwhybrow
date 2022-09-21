@@ -14,16 +14,16 @@ const routes: Routes = [
   {
     path: '', component: PlaygroundComponent, canActivate: [AuthGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent, title: 'Dashboard - Web Development & Design - WideSign' },
       {
         path: '', component: PortfolioComponent,
         children: [
-          { path: 'portfolio', component: PortfolioDashboardComponent },
-          { path: 'portfolio/:id', component: PortfolioDetailsComponent }
+          { path: 'portfolio', component: PortfolioDashboardComponent, title: 'Portfolio - Web Development & Design - WideSign' },
+          { path: 'portfolio/:id', component: PortfolioDetailsComponent, title: 'Portfolio assets - Web Development & Design - WideSign' }
         ]
       },
-      { path: 'interview-revision', component: InterviewRevisionComponent },
-      { path: 'side-projects', component: SideProjectsComponent },
+      { path: 'interview-revision', component: InterviewRevisionComponent, title: 'Revision - Web Development & Design - WideSign' },
+      { path: 'side-projects', component: SideProjectsComponent, title: 'Side Projects - Web Development & Design - WideSign' },
     ]
   },
   { path: '', pathMatch: 'full', redirectTo: '' },
