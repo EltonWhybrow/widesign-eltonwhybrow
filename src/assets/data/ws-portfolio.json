@@ -10,7 +10,33 @@
       "Typescript"
     ],
     "url": "ingenie-business",
-    "imageName": "ig-business-app"
+    "imageName": "ig-business-app",
+    "assets": [
+      {
+        "name": "Screencast of the app",
+        "url": "/assets/video/ingenie-business/ingenieBusiness-telematics.mp4",
+        "imgJpg": "/assets/imgs/ingenie-business/assets-ig-bus-maskhead.jpg",
+        "imgWebp": "/assets/imgs/ingenie-business/assets-ig-bus-maskhead.webp"
+      },
+      {
+        "name": "The maskhead animation",
+        "url": "/assets/video/ingenie-business/maskhead-animation.mp4",
+        "imgJpg": "/assets/imgs/ingenie-business/assets-ig-bus-animation.jpg",
+        "imgWebp": "/assets/imgs/ingenie-business/assets-ig-bus-animation.webp"
+      },
+      {
+        "name": "Sketch assets file",
+        "url": "/assets/imgs/ingenie-business/image-assets-sketch.jpg",
+        "imgJpg": "/assets/imgs/ingenie-business/assets-ig-bus-sketch.jpg",
+        "imgWebp": "/assets/imgs/ingenie-business/assets-ig-bus-sketch.webp"
+      },
+      {
+        "name": "An inline animation",
+        "url": "/assets/video/ingenie-business/why-it-works-animation.mp4",
+        "imgJpg": "/assets/imgs/ingenie-business/assets-ig-bus-animation2.jpg",
+        "imgWebp": "/assets/imgs/ingenie-business/assets-ig-bus-animation2.webp"
+      }
+    ]
   },
   {
     "id": "2",
@@ -22,7 +48,21 @@
       "Headless CMS"
     ],
     "url": "sw-loyalty-app",
-    "imageName": "sw-loyalty-app"
+    "imageName": "sw-loyalty-app",
+    "assets": [
+      {
+        "name": "Screencast of the app",
+        "url": "/assets/video/sheilas-wheels/sw-loyalty-app.mp4",
+        "imgJpg": "/assets/imgs/sheilas-wheels/assets-sw-app1.jpg",
+        "imgWebp": "/assets/imgs/sheilas-wheels/assets-sw-app1.webp"
+      },
+      {
+        "name": "PDF of screenshots",
+        "url": "/assets/imgs/sheilas-wheels/sw-app-screens.pdf",
+        "imgJpg": "/assets/imgs/sheilas-wheels/assets-sw-app2.jpg",
+        "imgWebp": "/assets/imgs/sheilas-wheels/assets-sw-app2.webp"
+      }
+    ]
   },
   {
     "id": "3",
@@ -35,7 +75,21 @@
       "CircleCI"
     ],
     "url": "ingenie-custom-library",
-    "imageName": "ingenie-custom-library"
+    "imageName": "ingenie-custom-library",
+    "assets": [
+      {
+        "name": "Current Site",
+        "url": "https://ingenie.com",
+        "imgJpg": "/assets/imgs/ingenie/assets-ig-wpsite.jpg",
+        "imgWebp": "/assets/imgs/ingenie/assets-ig-wpsite.webp"
+      },
+      {
+        "name": "PDF of styleguide/library",
+        "url": "/assets/imgs/ingenie/ingenie-styleguide.pdf",
+        "imgJpg": "/assets/imgs/ingenie/assets-ig-wpsite-styleguide.jpg",
+        "imgWebp": "/assets/imgs/ingenie/assets-ig-wpsite-styleguide.webp"
+      }
+    ]
   },
   {
     "id": "4",
@@ -48,7 +102,27 @@
       "Sketch"
     ],
     "url": "es-myaccount-app",
-    "imageName": "es-myaccount"
+    "imageName": "es-myaccount",
+    "assets": [
+      {
+        "name": "Current Site",
+        "url": "https://www.esure.com/my-account/auth/login",
+        "imgJpg": "/assets/imgs/esure/myaccount/assets-es-myaccount.jpg",
+        "imgWebp": "/assets/imgs/esure/myaccount/assets-es-myaccount.webp"
+      },
+      {
+        "name": "PDF 'My Account' self serve",
+        "url": "/assets/imgs/esure/myaccount/es-myaccount-manage.pdf",
+        "imgJpg": "/assets/imgs/esure/myaccount/assets-es-manage-storyboard.jpg",
+        "imgWebp": "/assets/imgs/esure/myaccount/assets-es-manage-storyboard.webp"
+      },
+      {
+        "name": "PDF 'My Account' sign in flow",
+        "url": "/assets/imgs/esure/myaccount/es-sign-in-flow.pdf",
+        "imgJpg": "/assets/imgs/esure/myaccount/assets-es-signin-storyboard.jpg",
+        "imgWebp": "/assets/imgs/esure/myaccount/assets-es-signin-storyboard.webp"
+      }
+    ]
   },
   {
     "id": "5",
@@ -59,6 +133,20 @@
       "x-code"
     ],
     "url": "esure-fnol-app",
-    "imageName": "es-fnol-app"
+    "imageName": "es-fnol-app",
+    "assets": [
+      {
+        "name": "Screens of the FNOL app",
+        "url": "/assets/imgs/esure/fnol/es-fnol-screens.jpg",
+        "imgJpg": "/assets/imgs/esure/fnol/assets-es-app-fnol2.jpg",
+        "imgWebp": "/assets/imgs/esure/fnol/assets-es-app-fnol2.webp"
+      },
+      {
+        "name": "Storyboards of the full toolkit",
+        "url": "/assets/imgs/esure/fnol/es-toolkit-screens.jpg",
+        "imgJpg": "/assets/imgs/esure/fnol/assets-es-app-fnol.jpg",
+        "imgWebp": "/assets/imgs/esure/fnol/assets-es-app-fnol.webp"
+      }
+    ]
   }
 ]

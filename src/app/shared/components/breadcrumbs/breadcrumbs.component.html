@@ -1,13 +1,16 @@
 <section class="main-content-tighty">
 
   <ul class="breadcumbs flex text-xs">
-    <li class="breadcrumbs__item group relative">
-      <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-        [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Playground</a>
-    </li>
+    <ng-container *ngIf="router.url === '/playground/portfolio' || '/playground/interview-revision'">
+      <li class="breadcrumbs__item group relative">
+        <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+          [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Dashboard</a>
+      </li>
 
-    <span class="text-gray-500" *ngIf="router.url === '/playground/portfolio' || '/playground/interview-revision'"> >
-    </span>
+      <span class="text-gray-500"> >
+      </span>
+    </ng-container>
+
 
     <li *ngIf="router.url === '/playground/portfolio'" class="breadcrumbs__item group relative">
       <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
