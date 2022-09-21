@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
-import { timer } from 'rxjs';
-import { scan, takeWhile } from 'rxjs/operators';
 
 import { IEmail } from '../../models/emails-interface';
 import { EmailService } from '../../services/email-service.service';
@@ -27,8 +25,7 @@ export class CallBackComponent implements OnInit {
   public contactName: UntypedFormControl | undefined;
   public contactNumber: UntypedFormControl | undefined;
   public callBackForm!: UntypedFormGroup;
-  public timer$: any;
-  public timer2$: any;
+  // public timer$: any;
 
   constructor(private fb: UntypedFormBuilder, private emailService: EmailService) { }
 
