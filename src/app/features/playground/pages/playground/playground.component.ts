@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './playground.component.html'

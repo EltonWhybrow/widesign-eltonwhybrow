@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IFaq } from 'src/app/shared/models/faq-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
@@ -11,8 +12,16 @@ export class FaqsComponent implements OnInit {
 
   constructor(private httpService: HttpService) { }
   oneTestimonial: ITestmonial | undefined;
+  allQuestions: IFaq[] | undefined;
 
   ngOnInit(): void {
+
+    this.httpService.getFaqs()
+      .subscribe(
+        (data: IFaq[]) => this.allQuestions = data,
+        (error: any) => console.log(error),
+        // () => console.log('all questions in faq component', this.allQuestions)
+      );
 
     /*
     Pass in index of which testimonial you want to get/display

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "heading": "ingenie Business",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "Angular",
+      "NodeJS",
+      "CD/CI",
+      "Typescript"
+    ],
+    "url": "ingenie-business",
+    "imageName": "ig-business-app"
+  },
+  {
+    "id": "2",
+    "heading": "esure FNOL App",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "Angular",
+      "Node",
+      "CD/CI",
+      "CMS",
+      "Typescript"
+    ],
+    "url": "esure-fnol-app",
+    "imageName": "es-fnol-app"
+  },
+  {
+    "id": "3",
+    "heading": "ingenie custom Library",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "Angular",
+      "Node",
+      "CD/CI",
+      "CMS",
+      "Typescript"
+    ],
+    "url": "ingenie-custom-library",
+    "imageName": "ingenie-custom-library"
+  },
+  {
+    "id": "4",
+    "heading": "esure My Account",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "Angular",
+      "Node",
+      "CD/CI",
+      "CMS",
+      "Typescript"
+    ],
+    "url": "es-myaccount-app",
+    "imageName": "es-myaccount"
+  },
+  {
+    "id": "5",
+    "heading": "Shelias' Wheels Loyalty",
+    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "footer": [
+      "Angular",
+      "Node",
+      "CD/CI",
+      "CMS",
+      "Typescript"
+    ],
+    "url": "sw-loyalty-app",
+    "imageName": "sw-loyalty-app"
+  }
+]

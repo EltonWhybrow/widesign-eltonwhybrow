@@ -1,3 +1,7 @@
 .main-content {
   @apply container px-2 md:px-10 xl:px-0 mx-auto pb-5 mb-10 max-w-5xl;
 }
+
+.main-content-tighty {
+  @apply container px-2 md:px-10 xl:px-0 mx-auto pb-4 mb-1 max-w-5xl;
+}

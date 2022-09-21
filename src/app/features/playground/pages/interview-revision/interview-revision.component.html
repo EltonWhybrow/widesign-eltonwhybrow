@@ -1,0 +1,150 @@
+<app-heading>
+  <ng-container text-one>Interview</ng-container>
+  <ng-container text-two>/</ng-container>
+  <ng-container text-three>Revision</ng-container>
+</app-heading>
+
+<app-breadcrumbs></app-breadcrumbs>
+
+<section class="main-content">
+
+  <app-tabs>
+    <app-tab [tabTitle]="'My Background'" [tabFragment]="'my-background'">
+      <!-- ingenie experience -->
+      <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">ingenie Telematics</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Last 3 years at ingenie telematics.
+      </p>
+      <ul class="list-disc list-inside">
+
+        <li class="standard-paragraph">
+          I was sole front end developer working on multiple projects and areas of the business alongside the marketing
+          team, collaboating with backend dev when necessary.
+        </li>
+        <li class="standard-paragraph">
+          Maintained legacy AngularJS apps, built new Angular apps for b2b and internal use.
+        </li>
+
+        <li class="standard-paragraph">
+          Maintained, then rebuilt their brochureware and B2B website (including custom WP theming, styleguides and
+          component library).
+        </li>
+        <li class="standard-paragraph">
+          Also built out internal and third party responsive emails suites
+        </li>
+        <li class="standard-paragraph">
+          Set-up an Internal Angular app for the back end team to display customer telematics journeys. This needed to
+          handle multi
+          brand set up, multi languages. And required ngRX store and OpenID authentication implimentations.
+        </li>
+      </ul>
+      <!-- esure experience -->
+      <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">esure Group</h3>
+
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        7 Years at esure group in Reigate ofﬁce.
+      </p>
+      <ul class="list-disc list-inside">
+
+        <li class="standard-paragraph">
+          Started as Web Designer, then Senior UI Designer and progressed into development after the ﬁrst couple of
+          years.
+        </li>
+        <li class="standard-paragraph">
+          Helping with esure and Sheilas Wheels quote journeys. Anything from implementing new features, UX improvements
+          to complete rebrands.
+        </li>
+
+        <li class="standard-paragraph">
+          The last 3 years at esure I was working in the digital team on their Angular(4-7) customer portals
+          (myaccount).
+          Usual stuff like Login, change details, view documents, make some chnages to policy.
+        </li>
+        <li class="standard-paragraph">
+          Whilst working there i was experimenting with Javascript framework ionic using with headless CMS for creatng
+          their initial iOS/Android apps.
+        </li>
+        <li class="standard-paragraph">
+          This included releasing their first iOS and Android app for Sheilas Wheels customers. (Loyalty App)
+        </li>
+      </ul>
+    </app-tab>
+
+    <!-- Predicted questions -->
+    <app-tab [tabTitle]="'Predicted questions'" [tabFragment]="'predicted-questions'">
+      <app-accordion [parentData]="allJobQuestions" [searchBar]="true" heading="Questions I could be asked"
+        subHeading=" Add to this json list if asked any good ones that i need to cover"></app-accordion>
+    </app-tab>
+
+    <!-- Question to ask -->
+    <app-tab [tabTitle]="'Questions to ask'" [tabFragment]="'question-to-ask'">
+      <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">Find out about company</h3>
+      <p class="standard-paragraph text-raw-400 text-lg font-thin">
+        Ask only if you feel it relevant.
+      </p>
+      <ul class="list-decimal list-inside">
+
+        <li class="standard-paragraph">
+          Can you tell me more about the developemnt team? (size, broke into feature teams?, closly with
+          designer/back-end devs?)
+        </li>
+        <li class="standard-paragraph">
+          Whats the workﬂow of development team (Agile?, Do you use Jira, work in 2 week sprints etc…)
+        </li>
+
+        <li class="standard-paragraph">
+          Are there opportunities for training and progression within the role / company
+        </li>
+        <li class="standard-paragraph">
+          Can you tell me more about the day-to-day responsibilities of the role?
+        </li>
+        <li class="standard-paragraph">
+          Mac or PC's
+        </li>
+        <li class="standard-paragraph">
+          Are there any bonus Scheme, incentives in place.
+        </li>
+      </ul>
+    </app-tab>
+
+    <!-- Revision helpers -->
+    <app-tab [tabTitle]="'Cards / Revision'" [tabFragment]="'cards-revision'">
+      <app-accordion [parentData]="allRevisionQuestions" [searchBar]="true" heading="Cards / Revision"
+        subHeading="Helpers for interviews questions">
+      </app-accordion>
+    </app-tab>
+  </app-tabs>
+
+  <!--
+  <div class="flex justify-between">
+    <div class="hex hex-one">
+      <div class="hex inner">
+        <div class="hex inner2 flex items-center">
+          <span class="inner-text text-3xl text-raw-300 font-semibold uppercase text-center">My Background</span>
+        </div>
+      </div>
+    </div>
+    <div class="hex hex-two">
+      <div class="hex inner">
+        <div class="hex inner2 flex items-center">
+          <span class="inner-text text-3xl text-raw-500 font-semibold uppercase text-center">Predicted questions</span>
+        </div>
+      </div>
+    </div>
+    <div class="hex hex-three">
+      <div class="hex inner">
+        <div class="hex inner2 flex items-center">
+          <span class="inner-text text-3xl text-raw-700 font-semibold uppercase text-center">Questions to ask</span>
+        </div>
+      </div>
+    </div>
+    <div class="hex hex-four">
+      <div class="hex inner">
+        <div class="hex inner2 flex items-center">
+          <span class="inner-text text-3xl text-raw-900 font-semibold uppercase text-center">Cards / Revision</span>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</section>
