@@ -2,7 +2,7 @@
   {
     "id": "1",
     "heading": "ingenie Business",
-    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "body": "This app was built when <strong>'ingenie Business'</strong> required a B2B site for marketing their core telematics technology that powered <strong>ingenie Insurance</strong> product it offered to its own customer. The App was built in the latest Angular version at the time and used a NodeJS backend using <strong>Nodemailer</strong> to handle mail requests and responses. Both apps were unit tested and run through <strong>CircleCI</strong> before being deployed to <strong>Azure Cloud hosting</strong>.",
     "footer": [
       "Angular",
       "NodeJS",
@@ -14,28 +14,25 @@
   },
   {
     "id": "2",
-    "heading": "esure FNOL App",
-    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "heading": "Shelias' Wheels Loyalty",
+    "body": "Sheilas Wheels first native app built using the <strong>ionic framework</strong> and headless CMS. Marketing could then update current discounts and incentives as well as offer add-on products and services. <strong>Drupal</strong> was used as a <strong>headless CMS</strong> for marketing to manage with as little developer input as possible. The app was deployed on both <strong>AppStore</strong> and <strong>Google Play</strong> during a phase where esure were going through a digital transformation.",
     "footer": [
-      "Angular",
-      "Node",
-      "CD/CI",
-      "CMS",
-      "Typescript"
+      "ionic",
+      "Drupal",
+      "Headless CMS"
     ],
-    "url": "esure-fnol-app",
-    "imageName": "es-fnol-app"
+    "url": "sw-loyalty-app",
+    "imageName": "sw-loyalty-app"
   },
   {
     "id": "3",
-    "heading": "ingenie custom Library",
-    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "heading": "ingenie custom rebuild and libraries",
+    "body": "Complete rebuild of the ingenie brochureware site in <strong>Wordpress</strong>. Custom themed from scratch and intergrated <strong>style/component library</strong>. This project was assigned to me to do whilst carring out mmy normal day to day business at ingenie. Continuous delivery was set up using CircleCI and deployed to a managed Wordpress hosting platform. The component library helped non-tech people within marketing manged content and add complex blocks of functionality, as well as keep the simple html element unifom throughout the site.",
     "footer": [
-      "Angular",
-      "Node",
-      "CD/CI",
-      "CMS",
-      "Typescript"
+      "Wordpress",
+      "Custom Theme",
+      "Component Library",
+      "CircleCI"
     ],
     "url": "ingenie-custom-library",
     "imageName": "ingenie-custom-library"
@@ -43,29 +40,25 @@
   {
     "id": "4",
     "heading": "esure My Account",
-    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "body": "Part of team involved in the <strong>digital transformation</strong> to allow customer to access their insurance products details online and self manage. Involved in coding and testing of various parts of the app from login & authentication to dash widgets displays. The <strong>'My Account'</strong> product was built for both <strong>Sheilas' Wheels</strong> and <strong>esure</strong> customers who could have home or motor <strong>insurance products</strong> with us. I was heavily involved in the design process as well as development.",
     "footer": [
       "Angular",
-      "Node",
-      "CD/CI",
-      "CMS",
-      "Typescript"
+      "NodeJS",
+      "Typescript",
+      "Sketch"
     ],
     "url": "es-myaccount-app",
     "imageName": "es-myaccount"
   },
   {
     "id": "5",
-    "heading": "Shelias' Wheels Loyalty",
-    "body": "Been building website in various languages for some time now. Mainly used Angualar in a commercial environment. Proficient in custom CMS theming in wordpress as well as using headless CMS to serve apps. <br /> Adhere to best practices and creating maintainable, tested code. Always willing to learn more and wanting to make web experiences as engaging, accessible and user friendly as possible for user/clients",
+    "heading": "esure FNOL App",
+    "body": "I was tasked with building this native hybrid app by a sponsor while working for the <strong>esure Group</strong>. After the success of the Sheilas' Wheels app and release, esure wanted to investigate oppotunities around savings with <strong>'First Notice of Loss'</strong> app. This was built using the <strong>ionic</strong> framework and had features such as capture images/details at the scene, with the ability to send to esure and store your insurance details to share with other driver involved.",
     "footer": [
-      "Angular",
-      "Node",
-      "CD/CI",
-      "CMS",
-      "Typescript"
+      "ionic",
+      "x-code"
     ],
-    "url": "sw-loyalty-app",
-    "imageName": "sw-loyalty-app"
+    "url": "esure-fnol-app",
+    "imageName": "es-fnol-app"
   }
 ]
