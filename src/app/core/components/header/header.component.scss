@@ -110,3 +110,10 @@ nav#burger-nav__list.open {
   left: calc(50% - 5px);
   top: 16px;
 }
+
+.nav__link,
+.nav__sublink {
+  &.is-active {
+    @apply text-tealy-500 bg-tealy-100 rounded;
+  }
+}

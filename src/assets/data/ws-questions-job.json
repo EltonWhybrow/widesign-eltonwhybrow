@@ -52,7 +52,7 @@
   {
     "id": "12",
     "question": "What projects are you working on at the moment?",
-    "answer": "<strong>Update where needed!</strong><ul class=\"list-disc list-inside\"><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as new features. dumb accordian, login, etc...</li></ul>"
+    "answer": "<strong>Update where needed!</strong><ul class=\"list-disc list-inside\"><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as looking at accessibilty issues andresolving lighthouse (axe & A11y helpers). Also - dumb accordian, login, etc...</li></ul>"
   },
   {
     "id": "13",
