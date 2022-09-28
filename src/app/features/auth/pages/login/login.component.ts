@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
 
               // set token to cookie
               // moment js to expire cookie
-              const expiresIn = moment().add(24, 'h').toDate()
+              const expiresIn = moment().add(1, 'h').toDate()
               // console.log('cookie expires at: ', expiresIn);
               this.cookieService.set('wsat', res.accessToken, { expires: expiresIn, path: '/' });
 

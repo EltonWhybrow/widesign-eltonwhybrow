@@ -207,10 +207,10 @@
   {
     "id": 42,
     "question": "BEM & SMACSS vs CSS Modules",
-    "answer": "<ul class='list-disc list-inside'><li><strong>BEM</strong> - XXXXXXX</li><li><strong>SMACSS</strong> - XXXXXXX</li><li><strong>CSS MODULES</strong> - A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component. Removing the inheirtance nightmare of cascading style sheets.</li></ul>"
+    "answer": "<ul class='list-disc list-inside'><li><strong>BEM</strong> - BEM is a front-end naming method for organizing and naming CSS classes. The Block, Element, Modifier methodology is a popular naming convention for class names in HTML and CSS. It helps to write clean CSS by following some simple rules.</li><li><strong>SMACSS</strong> - Smacss (Scalable and Modular Architecture for CSS) is a style guide that follows five simple categories. SMACSS is a way to examine your design process and to fit those rigid frameworks into a flexible thought process. It is an attempt to document a consistent approach to site development when using CSS. And really, who isn't building a site with CSS these days?! Which are these categories? Base / Layout / Module / State / Theme</li><li><strong>CSS MODULES</strong> - A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component. Removing the inheirtance nightmare of cascading style sheets.</li></ul>"
   },
   {
-    "id": "43",
+    "id": 43,
     "question": "What are CSS modules?",
     "answer": "<ul class='list-disc list-inside'><li>A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component.</li></ul>"
   }

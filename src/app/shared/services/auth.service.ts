@@ -19,6 +19,7 @@ export class AuthService {
   private loggedInStatus: boolean = JSON.parse(localStorage.getItem('loggedIn') || 'false')
   private NODE_BASE_URL = environment.nodeBaseUrl;
   public nickname: string = (localStorage.getItem('nickname') || 'Anonymous');
+  public currentRole: string = '';
 
   public setLoggedIn(value: boolean) {
     this.loggedInStatus = value;
@@ -41,10 +42,16 @@ export class AuthService {
     // this.router.navigate(['/'])
   }
 
-  public userRoles(): string {
-    const token = this.cookieService.get('wsat')
-    const decodedToken = helper.decodeToken(token)
-    return decodedToken.role
+  public getUserRole(): any {
+    if (this.cookieService.get('wsat')) {
+      const token = this.cookieService.get('wsat')
+      const decodedToken = helper.decodeToken(token)
+      return decodedToken.role
+    }
   }
+
+  // public setUserRoles(role: string): void {
+  //   this.role = role
+  // }
 
 }
