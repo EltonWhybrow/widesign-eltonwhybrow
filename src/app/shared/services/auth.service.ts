@@ -4,6 +4,10 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
 import { ILoginStatus } from '../models/login-interface';
+import { JwtHelperService } from "@auth0/angular-jwt";
+
+const helper = new JwtHelperService();
+
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +39,12 @@ export class AuthService {
     localStorage.removeItem('nickname');
     this.cookieService.delete('wsat');
     // this.router.navigate(['/'])
+  }
+
+  public userRoles(): string {
+    const token = this.cookieService.get('wsat')
+    const decodedToken = helper.decodeToken(token)
+    return decodedToken.role
   }
 
 }
