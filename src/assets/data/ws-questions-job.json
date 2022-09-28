@@ -53,5 +53,15 @@
     "id": "11",
     "question": "How do you build for accessibility?",
     "answer": "<strong>Implement the following</strong><ul class=\"list-disc list-inside\"><li>Try to meet WCAG 2.0, and ARIA 1.2, and pass axe and Lighthouse accessibility audits</li><li>Test during development using axe DevTools and lighthouse</li><li>Fix low-color contrast issues</li><li>Use semantic HTML</li><li>Add ARIA support for screen readers</li><li>Angular CDK a11y package</li></ul>"
+  },
+  {
+    "id": "12",
+    "question": "What steps do you take to mitigate preformance issues in Angular Application",
+    "answer": "<strong>Implement the following</strong><ul class=\"list-disc list-inside\"><li><strong>Webkit bundle Analyzer</strong> to help optimize your odules and see if there are any issues or stuff your not using.</li><li><strong>OnPush change detection strategy</strong> : we can tell Angular not to check each component, every time the change detection runs.</li><li><strong>Detach Change Detection/NgZone</strong> :This technique can save a lot of time and improves performance for the objects where we don't need to check for changes every time some change occurs.</li><li><strong>Pure Pipes</strong></li><li><strong>AOT Compilation</strong></li><li><strong>Lazy Loading Modules - Preloading Modules</strong></li><li><strong>AOT Compilation</strong></li><li>more yes...</li></ul>"
+  },
+  {
+    "id": "13",
+    "question": "SCRUM",
+    "answer": "Scrum Roles:<ul class='list-disc list-inside'><li><strong>Product Owner</strong></li><li><strong>Scrum Master</strong> </li><li><strong>Development Team</strong></ul><br />Scrum Artifacts:<ul class='list-disc list-inside'><li><strong>Product Backlog</strong></li><li><strong>Sprint Backlog</strong> </li><li><strong> Product Increment</strong></li></ul><br />Scrum Events:<ul class='list-disc list-inside'><li><strong>the Sprint</strong></li><li><strong>Sprint Planning</strong> </li><li><strong>Daily Scrum</strong></li><li><strong>Sprint Review</strong></li><li><strong>Sprint Retrospective</strong></li></ul>"
   }
 ]
