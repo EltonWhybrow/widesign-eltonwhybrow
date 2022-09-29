@@ -1,222 +1,217 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "question": "Why were client-side frameworks like Angular introduced",
     "answer": "Client-side frameworks or SPA made it easier to pass data across different views or sections of the application. Separating chucks of code into components, services etc.. make complex javascript applications generally easier to maintain and manage."
   },
   {
-    "id": "2",
+    "id": 2,
     "question": "How does an Angular application work?",
-    "answer": "Config file named angular.json is used to build out the app via a main.ts file. The app.module then bootstraps the app and any components get loaded depending on projects requirements. Each component can consist of js file, html template and css file."
+    "answer": "The config file named <strong>angular.json</strong> is used to build out the app via a <strong>main.ts</strong> file. The <strong>app.module then bootstraps</strong> the app and any components/services etc get loaded depending on projects requirements. <strong>Each component can consist of js file, html template and css file.</strong>"
   },
   {
-    "id": "3",
+    "id": 3,
     "question": "Advantages of Angular over other frameworks",
-    "answer": "Has built-in features like,routing, state management, rxjs library and http services straight out of the box. It has had Long-term support from Google and has a large community and lots of documentation."
+    "answer": "Has <strong>built-in features</strong> like, routing, state management, rxjs library and http services straight out of the box. It has had <strong>long-term support from Google</strong> and has a large community and lots of <strong>documentation.</strong>"
   },
   {
-    "id": "4",
+    "id": 4,
     "question": "Differences between AngularJS and Angular",
-    "answer": "angular used typescript AngularJS does not. AngularJS uses MVC while Angular relplaces the controller with components. Angular is much easier to maintain on larger project due to it structure."
+    "answer": "Angular uses typescript, AngularJS does not. <strong>AngularJS uses MVC</strong> while Angular relplaces the controller with components. Angular is much easier to maintain on larger project due to it structure."
   },
   {
-    "id": "5",
+    "id": 5,
     "question": "Explain Components, Modules and Services in Angular",
-    "answer": "Components are the basic building blocks, which control a part of the UI. A module is a place where we can group components, directives, services, and pipes. The main objective of a service is to share data, functions with different components of the  application. They get instantiated only once during the lifetime of an application"
+    "answer": "<strong>Components are the basic building blocks</strong>, which control a part of the UI. A <strong>module is a place where we can group components, directives, services, and pipes</strong>. The main objective of a <strong>service is to share data</strong>, functions with different components of the application. They get instantiated only once (singeltons) during the lifetime of an application"
   },
   {
-    "id": "6",
+    "id": 6,
     "question": "String interpolation and property binding in Angular",
-    "answer": "String interpolation uses the double curly braces {{ }} to display data from the component. An example of property binding would be passing a value to change the color of a heading like [ngStyle]=\"{color:paint}\" or img [src]=\"src\""
+    "answer": "<strong>String interpolation uses the double curly braces {{ }}</strong> to display data from the component. An example of property binding would be passing a value to change the color of a heading like <strong>[ngStyle]='{color:paint}'</strong> or img <strong>[src]='src'</strong>. The brackets, [], cause Angular to <strong>evaluate the right-hand side of the assignment.</strong>. Otherwise, its interprets the right side as a string literal"
   },
   {
-    "id": "7",
-    "question": "How Angular expressions different from JavaScript expressions",
-    "answer": "angular expressions cannot be accessed from outside its local scope. In Angular expressions we cannot use loops, conditionals and exceptions. Angular also has ability to use pipes were javascript exspessions dont."
+    "id": 7,
+    "question": "How are Observables different from Promises",
+    "answer": "<strong>Promises -</strong> Emits a single value, Eagerly and cannot be cancelled. <strong>Observable -</strong> Emit multiple values over time, Is lazy and is not called until we subscribe to it. Can be cancelled using <strong>unsubscribe()</strong>."
   },
   {
-    "id": "8",
-    "question": "How are observables different from promises",
-    "answer": "<strong>Promise -</strong> Emits a single value, Not Lazy, Cannot be cancelled. <strong>Observable -</strong> Emits multiple values over time, Is lazy and is not called until we subscribe to it. Can be cancelled using unsubscribe(). Also provides operators like map, forEach, filter, reduce, retry, retryWhen etc."
-  },
-  {
-    "id": "9",
+    "id": 8,
     "question": "Benefits of using Angular Universal",
-    "answer": "Server side rendering leads to better user experience, better SEO and faster loading views."
+    "answer": "Server side rendering leads to <strong>nicer user experience</strong>, <strong>SEO benefits</strong> and <strong>faster loading of views</strong>."
   },
   {
-    "id": "10",
+    "id": 9,
     "question": "What are directives in Angular?",
-    "answer": "A class that is declared with a @Directive decorator.<br />  <strong>Attribute Directives -</strong> change the look and behaviour of a DOM elements. <strong>Structural directives -</strong> used to manipulate DOM elements *ngFor , *ngIf (eg. hide /show)"
+    "answer": "A class that is declared with a <strong>@Directive decorator</strong>.<br />  <strong>Attribute Directives -</strong> change the look and behaviour of a DOM elements. <strong>Structural directives -</strong> are used to manipulate DOM elements *ngFor , *ngIf (eg. hide /show)"
   },
   {
-    "id": "11",
+    "id": 10,
     "question": "How does one share data between components in Angular?",
-    "answer": "<ul class=\"list-disc list-inside\"><li><strong>@Input -</strong> parent to child</li><li><strong> @ViewChild -</strong> from child to parent</li><li><strong>@Output & EventEmitter -</strong> emit event from child to parent.</li></ul>"
+    "answer": "<ul class='list-disc list-inside'><li><strong>@Input -</strong> parent to child</li><li><strong> @ViewChild -</strong> from child to parent (included getting methods, properties from a comp. inside the child component.)</li><li><strong>@Output & EventEmitter -</strong> emit event from child to parent.</li></ul>"
   },
   {
-    "id": "12",
-    "question": "Explain the concept of Dependency Injection?",
+    "id": 11,
+    "question": "Explain the concept of 'Dependency Injection' in Angular",
     "answer": "<strong>@Injectable decorator </strong>allows services to be injected in components and directive etc.. across the app"
   },
   {
-    "id": "13",
-    "question": "Explain MVVM architecture",
-    "answer": "<ul class=\"list-decimal list-inside\"><li>Model - data</li><li>View - html template</li><li>ViewModel is an abstract layer and handles the logic of the application. View and ViewModel are connected with data-binding</li></ul>"
+    "id": 12,
+    "question": "Explain Angular Model-View-ViewModel architecture",
+    "answer": "<ul class='list-decimal list-inside'><li><strong>Model -</strong> data</li><li><strong>View</strong> - html template</li><li><strong>ViewModel</strong> is an abstract layer and handles the logic of the application. View and ViewModel are connected with data-binding</li></ul>"
   },
   {
-    "id": "14",
-    "question": "Authentication and Authorization",
-    "answer": "Login credentials are passed to an authenticate API (server). credentials are validated and a JWT is returned. The JWT has information or attributes regarding the current user. User is then identifyable by JWT. This is called authentication. Different users have a different level of access. The level of access is authorization."
+    "id": 13,
+    "question": "Authentication and Authorization: Security",
+    "answer": "<strong>Authentication -</strong> Login credentials are passed to an authenticate API (server, database). Credentials are validated and a JWT is returned for example. The JWT has information or attributes regarding the current user. User is then identifyable by JWT. This is called authentication.<br /> <strong>Autorization -</strong> Different users can have a different level of access, (roles, claims). The level of access is authorization."
   },
   {
-    "id": "15",
+    "id": 14,
     "question": "What is TypeScript?",
-    "answer": "TypeScript is a typed superset of JavaScript. >> EXPAND >>"
+    "answer": "TypeScript is a <strong>strict syntactical superset of JavaScript</strong>. Its add optional static typing to the language and is compiled down to javascript."
   },
   {
-    "id": "16",
-    "question": "Can you give an example of built-in validators?",
-    "answer": "<ul class=\"list-decimal list-inside\"><li>required</li><li>minlength(3)</li><li>maxLength(20)</li><li></ul><strong>NOTE:</strong> Rarely use template driven forms, only reactive forms as they are more powerful and easier to use."
+    "id": 15,
+    "question": "Can you give an example of built-in form validators in Angular?",
+    "answer": "<ul class='list-decimal list-inside'><li>required</li><li>minlength(3)</li><li>maxLength(20)</li><li></ul><strong>NOTE:</strong> Rarely use template driven forms, only reactive forms as they are more powerful and easier to use."
   },
   {
-    "id": "17",
+    "id": 16,
     "question": "Benefits of OOP? Encapsulation",
-    "answer": "We can group related variables and methods together <br />Reduce complexity + increase usability"
+    "answer": "We can group related variables and methods together <br /><strong>Reduce complexity</strong> + <strong>increase usability</strong>"
   },
   {
-    "id": "18",
+    "id": 17,
     "question": "Benefits of OOP? Abstraction",
-    "answer": "Hide the detail and complexity -  show only essentials. Simpler interface. Which can isolate the impact of changes"
+    "answer": "Hide the detail and complexity - <strong>show only essentials</strong>. Simpler interface. Which <strong>can isolate the impact of changes</strong>"
   },
   {
-    "id": "19",
+    "id": 18,
     "question": "Benefits of OOP? Inheritance",
-    "answer": "Eliminate redundant code and stay DRY"
+    "answer": "Eliminate redundant code and <strong>stay DRY</strong>"
   },
   {
-    "id": "20",
+    "id": 19,
     "question": "Benefits of OOP? Polymorphism",
-    "answer": "Refactor switch/case statements.<br />The concept of being able to prefrom a single action but in different forms.<br />Basically call a single method on multiple objects."
+    "answer": "Refactor switch/case statements.<br />The concept of being able to preform a single action but in different forms.<br />Basically call a single method on multiple objects."
   },
   {
-    "id": "21",
-    "question": "Get…/Set… - Example",
+    "id": 20,
+    "question": "Ge/Set Example - Javascript",
     "answer": "class CoffeeMachine {<br />_waterAmount = 0;<br />setWaterAmount(value) {<br />if (value < 0) value = 0;<br />this._waterAmount = value;<br />}<br />getWaterAmount() {<br />return this._waterAmount;<br /><br />}<br />}<br />new CoffeeMachine().setWaterAmount(100);"
   },
   {
-    "id": "22",
-    "question": "Angular Recommended Modules",
+    "id": 21,
+    "question": "Angular recommended Modules",
     "answer": "<strong>App Module -</strong> Required<br /><strong>Core Module -</strong> Singleton Services, App Level components (nav bar eg)<br/><strong>Shared Module -</strong>Shared components, directives and pipes (loading spinner eg)<br/><strong>Feature Module -</strong> Feature-level services, components, directives and pipes"
   },
   {
-    "id": "23",
-    "question": "Give a few examples of NgModules?",
-    "answer": "Angular libraries such as FormsModule, HttpClientModule, and RouterModule<br /> Many third-party libraries such as Material Design, Ionic, and ngRx store"
+    "id": 22,
+    "question": "Give a few examples of Angualr NgModules?",
+    "answer": "Angular libraries such as <strong>FormsModule</strong>, <strong>HttpClientModule</strong>, and <strong>RouterModule</strong>.<br /> Many third-party libraries such as <strong>Angular Material</strong>, <strong>ngRx</strong> store. etc..."
   },
   {
-    "id": "24",
+    "id": 23,
     "question": "What is the precedence between pipe and ternary operators?",
-    "answer": "The pipe operator has a higher precedence than the ternary operator (?:). For example, the expression first ? second : third | fourth is parsed as first ? second : (third | fourth)."
+    "answer": "The <strong>pipe operator has a higher precedence</strong> than the ternary operator (?:). For example, the expression first ? second : third | fourth is parsed as first ? second : (third | fourth)."
   },
   {
-    "id": "25",
+    "id": 24,
     "question": "Explain change detection in Angular?",
-    "answer": "Angular can detect when component data changes and renders view automatically.<br /> Zone.js add its own event listeners that runChangeDetection().<br/>(Runs on all) - Browser Events (click, mouseover, keyup, etc.) - SetTimeout() (asynchronous functions) - HTTP requests (AJAX)"
+    "answer": "Angular can detect when component data changes and renders view automatically.<br /> Zone.js add its own event listeners that runChangeDetection().<br/>(Runs on all) - <strong>Browser Events (click, mouseover, keyup, etc.)</strong> - <strong>SetTimeout() (asynchronous functions)</strong> - <strong>HTTP requests (AJAX)</strong>"
   },
   {
-    "id": "26",
+    "id": 25,
     "question": "Explain Transclusion in Angular?",
-    "answer": "app-card component has <strong>ng-content</strong> tag inside. Anything can be rendered inside.<br /> You can also name one or more transclusion parts to pass in other components etc.."
+    "answer": "Imagine app-card tag has <strong>ng-content</strong> tag inside. This will be rendered insode the app-card view and data passed in.<br /> You can also <strong>name one or more transclusion parts</strong> to pass in other components, sections, etc.."
   },
   {
-    "id": "27",
-    "question": "What is ngFor?",
-    "answer": "Can handle data collections and is a structural directive in Angular.<br/> div *ngFor=\"let movie of Movies; let i = index\" <br/>{{ i + 1 }} : {{ movie.name }}<br/>You can do other thing like set first,last item and nest ngFor as well and use of the trackBy method"
+    "id": 26,
+    "question": "What is ngFor in Angular view?",
+    "answer": "Can handle data collections (arrays) and is a <strong>structural directive</strong> in Angular.<br/> <strong>div *ngFor='let movie of Movies; let i = index' <br/>{{ i + 1 }} : {{ movie.name }}</strong><br/>You can do other things like set <strong>first,last item</strong> and nest ngFor inside each other as well and use of the trackBy method (index)"
   },
   {
-    "id": "28",
-    "question": "OOP difference between Private and Protected methods/members?",
-    "answer": "Private methods/members are accessible only from inside the class.<br/>Protected methods/members are accessible from inside the class and extending class as well."
+    "id": 27,
+    "question": "OOP difference between Private and Protected methods/members in Javascript?",
+    "answer": "<strong>Private methods/members are accessible only from inside the class</strong>.<br/><strong>Protected methods/members are accessible from inside the class and extending class as well</strong>."
   },
   {
-    "id": "29",
+    "id": 28,
     "question": "Explain Node Event loop? ",
-    "answer": "Your code will run on a single event loop, write code with this thing in mind to avoid blocking it.<br/>The <strong>event loop</strong> continuously checks the call stack (LastIn, FirstOut) and runs functions, executing in order.<br/>Anything like asyc functions are added the <strong>message queue</strong> and picked up after the call stack is finished. <br/>NOTE: ES6 <strong>Job Queue</strong> allows promises to be picked up in the call stack as soon as they are ready"
+    "answer": "Your code will run on a <strong>single event loop</strong>, write code with this thing in mind to avoid blocking it.<br/>The <strong>event loop</strong> continuously checks the call stack <strong>(LastIn, FirstOut)</strong> and runs functions, executing in order.<br/>Anything like asyc functions are added the <strong>message queue</strong> and picked up after the call stack is finished. <br/>NOTE: ES6 <strong>Job Queue</strong> allows promises to be picked up in the call stack as soon as they are ready"
   },
   {
-    "id": "30",
-    "question": "Resolving promises in order?",
-    "answer": "Using .then() to execute a promise only after a previous promise is done.<br/>Reduce and map are good for looping through promises.<br/> >> EXPAND >>"
+    "id": 29,
+    "question": "Javascript: Resolving promises in order?",
+    "answer": "Using .then() to execute a promise only after a previous promise is done.<br/>Reduce and map are good for looping through promises.<br/> Promise.all will return an array of promises once they all resolve."
   },
   {
-    "id": "31",
-    "question": "Explain immutablility",
-    "answer": "- Pure functions.<br />- Object does not change things outside its own scope and inout and returned value stays the same."
+    "id": 30,
+    "question": "Javascript: Explain immutablility",
+    "answer": "<strong>Pure functions.</strong><br />- Object does not change things outside its own scope and input and returned value stays the same. No side effects."
   },
   {
-    "id": "32",
-    "question": "JWT in a nutshell",
-    "answer": "Consists of a header, payload and signature.<br/>A digitally signed way to securley transmit information between parties using JSON.<br/>Authorization: Bearer <strong>token</strong>"
+    "id": 31,
+    "question": "JWT in a nutshell - Security",
+    "answer": "<strong>Consists of a header, payload and verify signature(secret)</strong>.<br/>A digitally signed token-based stateless authentication mechanism. Way to securely transmit information between parties using JSON.<br/>Authorization: Bearer <strong>token</strong>"
   },
   {
-    "id": "33",
-    "question": "SOLID: 5 pinciples of OOD",
-    "answer": "S - Single-responsiblity Principle<br/>O - Open-closed Principle<br/>L - Liskov Substitution Principle<br/>I - Interface Segregation Principle<br/>D - Dependency Inversion Principle"
+    "id": 32,
+    "question": "Javascript: SOLID: 5 pinciples of OOD",
+    "answer": "<strong>S</strong> - Single-responsiblity Principle<br/><strong>O</strong> - Open-closed Principle<br/><strong>L</strong> - Liskov Substitution Principle<br/><strong>I</strong> - Interface Segregation Principle<br/><strong>D</strong> - Dependency Inversion Principle"
   },
   {
-    "id": "34",
-    "question": "LIFT: Best practices",
-    "answer": "L - Locating our code is easy<br/>I - Identify code at a glance<br/>F - Flat structure as long as we can<br/>T - Try to stay dry"
+    "id": 33,
+    "question": "Javascript: LIFT: Best practices",
+    "answer": "<strong>L</strong> - Locating our code is easy<br/><strong>I</strong> - Identify code at a glance<br/><strong>F</strong> - Flat structure as long as we can<br/><strong>T</strong> - Try to stay dry"
   },
   {
-    "id": "35",
+    "id": 34,
     "question": "Angular - Interceptors",
-    "answer": "Help us modify the HTTP Request by intercepting it before it goes to/from server.<br/>Used for thing like adding headers.<br/>Authorisation tokens / JWT<br/>Content-Type"
+    "answer": "Help us modify the <strong>HTTP Request by intercepting it before it goes to/from server</strong>.<br/>Used for things like <strong>adding headers</strong>.<br/><strong>Authorisation tokens / JWT</strong>"
   },
   {
-    "id": "36",
-    "question": "angular - Guards",
-    "answer": "- CanActivate Checks to see if a user can visit a route.<br/>- CanActivateChild Checks to see if a user can visit a routes children.<br/>- CanDeactivate Checks to see if a user can exit a route.<br/>- Resolve Performs route data retrieval before route activation.<br/>- CanLoad Checks to see if a user can route to a module that lazy loaded.<br/>"
+    "id": 35,
+    "question": "Angular - Guards",
+    "answer": "<strong>CanActivate</strong> Checks to see if a user can visit a route.<br/><strong>CanActivateChild</strong> Checks to see if a user can visit a routes children.<br/><strong> CanDeactivate</strong> Checks to see if a user can exit a route.<br/><strong>Resolve</strong> Performs route data retrieval before route activation.<br/><strong>CanLoad</strong> Checks to see if a user can route to a module thats lazy loaded.<br/>"
   },
   {
-    "id": "37",
+    "id": 36,
     "question": "Angular - Resolvers",
-    "answer": "Route Resolver is used for pre-fetching some of the data when the user is navigating from one route to another."
+    "answer": "Route Resolver is used for <strong>pre-fetching some data</strong> when the user is navigating from one route to another. Reduces FOUC etc..."
   },
   {
-    "id": "38",
-    "question": "HTTP request methods",
-    "answer": "GET -<br/>PUT -<br/>POST -<br/>PATCH -<br/>DELETE -"
+    "id": 37,
+    "question": "HTTP Request Methods",
+    "answer": "<strong>GET</strong><br/><strong>PUT</strong><br/><strong>POST</strong><br/><strong>PATCH</strong><br/><strong>DELETE</strong>"
   },
   {
-    "id": "39",
-    "question": "angular - Subject Observable (differences)",
-    "answer": "Subject - get next first value and future values<br/>SubjectBehaviour - Get the last value and all future values<br/>SubjectReplay('3') - Passes a value and can get that many previous values and any future values."
+    "id": 38,
+    "question": "Angular - Subject Observable (differences)",
+    "answer": "<strong>Subject</strong> - get next first value and future values<br/><strong>SubjectBehaviour</strong> - Get the last value and all future values<br/><strong>SubjectReplay('3')</strong> - Passes a value and can get that many previous values and any future values."
   },
   {
-    "id": "40",
-    "question": "RXJS - Creation Operators",
+    "id": 39,
+    "question": "Javascript: RXJS - Creation Operators",
     "answer": "<strong>defer()</strong> - Lazily creates observables when subscribed to (on event click for example)<br/><strong>empty()</strong> - emits complete EMPTY as empty deprecated<br/><strong>from()</strong> - coverts ALMOST anything to an observable<br/><strong>fromEvent()</strong> - Like it says from DOM events, node eventEmitters and such<br/><strong>interval(1000)</strong> - emits sequence of numbers at specified time in the interval<br/><strong>of()</strong> - emis each argument separately callable by the next function<br/><strong>throwError()</strong> - Pushed a error to the consumer who subscribed if an error is hit<br />"
   },
   {
-    "id": "41",
-    "question": "RXJS - JOIN Creation Operators",
-    "answer": "<strong>combineLatest()</strong> - combine multiple observables to create new one from latest values from each input observable<br/><strong>forkJoin()</strong> - combine last values emitted from observables once completed<br/><strong>merge()</strong> - outputs a observable that has merged value from given observable<br/><strong>partition()</strong> - splits observable base on conditionh<br/><strong>race()</strong> - return the first observable subscribed to unsubscribing from other sources.<br/><strong>zip()</strong> <br/>import { zip, of } from 'rxjs';<br/>import { map } from 'rxjs/operators';<br/><br/>let age$ = of(27, 25, 29);<br/>let name$ = of('Foo', 'Bar', 'Beer');<br/>let isDev$ = of(true, true, false);<br/><br/>zip(age$, name$, isDev$).pipe(<br/>map(([age, name, isDev]) => ({ age, name, isDev }))<br/>)<br/>.subscribe(x => console.log(x));<br/><br/>// Outputs<br/>// { age: 27, name: 'Foo', isDev: true }<br/>// { age: 25, name: 'Bar', isDev: true }<br/>// { age: 29, name: 'Beer', isDev: false }"
+    "id": 40,
+    "question": "Javascript: RXJS - JOIN Creation Operators",
+    "answer": "<strong>combineLatest()</strong> - combine multiple observables to create new one from latest values from each input observable<br/><strong>forkJoin()</strong> - combine last values emitted from observables once completed<br/><strong>merge()</strong> - outputs a observable that has merged value from given observable<br/><strong>partition()</strong> - splits observable base on condition<br/><strong>race()</strong> - return the first observable subscribed to unsubscribing from other sources.<br/><strong>zip()</strong> <br/>import { zip, of } from 'rxjs';<br/>import { map } from 'rxjs/operators';<br/><br/>let age$ = of(27, 25, 29);<br/>let name$ = of('Foo', 'Bar', 'Beer');<br/>let isDev$ = of(true, true, false);<br/><br/>zip(age$, name$, isDev$).pipe(<br/>map(([age, name, isDev]) => ({ age, name, isDev }))<br/>)<br/>.subscribe(x => console.log(x));<br/><br/>// Outputs<br/>// { age: 27, name: 'Foo', isDev: true }<br/>// { age: 25, name: 'Bar', isDev: true }<br/>// { age: 29, name: 'Beer', isDev: false }"
   },
   {
-    "id": "42",
-    "question": "RXJS - Transformation Operators",
+    "id": 41,
+    "question": "Javascript: RXJS - Transformation Operators",
     "answer": "<strong>groupBy()</strong> - group by met condition and return as new observable<br/><strong>map(x => 10* x)</strong> -  it passes each source value through a transformation function to get corresponding output values<br/><strong>mapTo('newValue')</strong> - emits newValue each time a value is found ignoring the source value<br/><strong>partition()</strong> - like filter but returns values that did not meet the condition as separate observable in an array with the other one<br/><strong>pluck()</strong> - like map but plucks on nested property from the emmitted values<br/><strong>scan()</strong> - emits result form each accumulation<br/>"
   },
   {
-    "id": "43",
+    "id": 42,
     "question": "BEM & SMACSS vs CSS Modules",
-    "answer": "<ul class=\"list-disc list-inside\"><li><strong>BEM</strong> - XXXXXXX</li><li><strong>SMACSS</strong> - XXXXXXX</li><li><strong>CSS MODULES</strong> - A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component. Removing the inheirtance nightmare of cascading style sheets.</li></ul>"
+    "answer": "<ul class='list-disc list-inside'><li><strong>BEM</strong> - BEM is a front-end naming method for organizing and naming CSS classes. The Block, Element, Modifier methodology is a popular naming convention for class names in HTML and CSS. It helps to write clean CSS by following some simple rules.</li><li><strong>SMACSS</strong> - Smacss (Scalable and Modular Architecture for CSS) is a style guide that follows five simple categories. SMACSS is a way to examine your design process and to fit those rigid frameworks into a flexible thought process. It is an attempt to document a consistent approach to site development when using CSS. And really, who isn't building a site with CSS these days?! Which are these categories? Base / Layout / Module / State / Theme</li><li><strong>CSS MODULES</strong> - A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component. Removing the inheirtance nightmare of cascading style sheets.</li></ul>"
   },
   {
-    "id": "44",
-    "question": "",
-    "answer": ""
+    "id": 43,
+    "question": "What are CSS modules?",
+    "answer": "<ul class='list-disc list-inside'><li>A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component.</li></ul>"
   }
 ]

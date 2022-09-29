@@ -62,33 +62,29 @@ export class LoginComponent implements OnInit {
             const res = data;
             // console.log('Data from node server', res);
             if (res.success) {
-              // TODO: localStorage.setItem('tempToken', res.accessToken);
-
               // set token to cookie
               // moment js to expire cookie
-              const expiresIn = moment().add(24, 'h').toDate()
+              const expiresIn = moment().add(1, 'd').toDate()
               // console.log('cookie expires at: ', expiresIn);
               this.cookieService.set('wsat', res.accessToken, { expires: expiresIn, path: '/' });
-
-              // set nickname + localstoreage
+              // set nickname + localstorage
               this.authService.nickname = res.username;
               localStorage.setItem('nickname', res.username);
-
               // set to logged in
               this.authService.setLoggedIn(true);
               // redirect on success
               this.router.navigate(['/playground/dashboard']);
             } else {
-              console.log('Error login method >>');
+              console.error('Error login failed >>');
               throw new Error
             }
           },
           (err: HttpErrorResponse) => {
-            console.error('error caught in trying to login', err.error.type)
+            console.error('Error caught trying to login', err.error.type)
             if (err.error.type === "error") {
               this.unauthorisedMessage = 'Seems the node server is down, the webmaster should really look at this.'
             }
-            this.unauthorisedMessage = err.error.message; // TODO:handle no message!!!!!!
+            this.unauthorisedMessage = err.error.message; // TODO: handle no message!!!!!!
           },
           () => {
             // this.loginForm.reset();

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/app/shared/guards/auth.guard';
+import { RoleGuard } from 'src/app/shared/guards/role.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { InterviewRevisionComponent } from './pages/interview-revision/interview-revision.component';
 import { PlaygroundComponent } from './pages/playground/playground.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
           { path: 'portfolio/:id', component: PortfolioDetailsComponent, title: 'Portfolio assets - Web Development & Design - WideSign' }
         ]
       },
-      { path: 'interview-revision', component: InterviewRevisionComponent, title: 'Revision - Web Development & Design - WideSign' },
+      { path: 'interview-revision', component: InterviewRevisionComponent, canActivate: [RoleGuard], title: 'Revision - Web Development & Design - WideSign' },
       { path: 'side-projects', component: SideProjectsComponent, title: 'Side Projects - Web Development & Design - WideSign' },
     ]
   },

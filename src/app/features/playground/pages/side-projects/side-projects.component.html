@@ -5,3 +5,36 @@
 </app-heading>
 
 <app-breadcrumbs></app-breadcrumbs>
+
+
+<section class="main-content">
+
+  <!-- <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">Stranget Things -Quiz Night</h3>
+  <p class="standard-paragraph text-raw-400 text-lg font-thin">
+    A project created for 'Stranger Things' fans. (and my kids)
+  </p> -->
+
+  <div class="grid md:grid-cols-3 gap-14">
+
+
+    <a class="text-tealy-500" href="https://eltonwhybrow.github.io/stranger-things-quiz/" target="_blank">
+      <app-card>
+        <div card-img class="h-44">
+          <picture>
+            <source srcset="/assets/imgs/side-projects/stranger-things.webp" type="image/webp">
+            <source srcset="/assets/imgs/side-projects/stranger-things.jpg" type="image/jpeg">
+            <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
+              src="/assets/imgs/side-projects/stranger-things.jpg" alt="webdesign">
+          </picture>
+        </div>
+
+        <ng-container card-sub-header>A project created for 'Stranger Things' fans. (and my kids)</ng-container>
+        <!-- <ng-container card-sub-header>Hosted on GitHub Pages - Has info about show/character along with a quiz. Theres a
+          extra game to play if you get all questions right. (WIP)</ng-container> -->
+      </app-card>
+    </a>
+
+
+  </div>
+
+</section>

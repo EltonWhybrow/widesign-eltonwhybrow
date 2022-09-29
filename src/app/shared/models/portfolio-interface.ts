@@ -1,3 +1,10 @@
+export interface IAssets {
+  name: string;
+  url: string;
+  imgJpg: string;
+  imgWebp: string;
+}
+
 export interface IPortfolio {
   id: number;
   heading: string;
@@ -5,13 +12,5 @@ export interface IPortfolio {
   footer: string;
   url: string;
   imageName: string;
-  assetNameOne?: string,
-  assetUrlOne?: string,
-  assetNameTwo?: string,
-  assetUrlTwo?: string,
-  assetNameThree?: string,
-  assetUrlThree?: string,
-  assetNameFour?: string,
-  assetUrlFour?: string,
-
+  assets?: IAssets[];
 }

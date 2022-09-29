@@ -1,38 +1,43 @@
 [
   {
+    "id": "12",
+    "question": "What projects are you working on at the moment?",
+    "answer": "<strong>Update where needed!</strong><ul class='list-disc list-inside'><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as looking at accessibilty issues and resolving lighthouse (axe & A11y helpers). Also - dumb accordian, login, etc...</li></ul>"
+  },
+  {
     "id": "1",
     "question": "What is your general workflow when working on a feature or project. (SDLC)?",
-    "answer": "<strong>Waterfall:</strong> <ul class=\"list-decimal list-inside\"><li>Requirement analysis ></li><li>Design ></li><li>Implementation ></li><li>Verification ></li><li>Maintenance ></li></ul><br /> <strong>In respect to Agile</strong> <ul class=\"list-decimal list-inside\"><li>Project planning ></li><li>Product roadmap creation ></li><li>Release planning ></li><li>Sprint planning ></li><li>Daily meetings ></li><li>Sprint Review</li></ul>"
+    "answer": "<strong>Waterfall:</strong> <ul class='list-decimal list-inside'><li>Requirement analysis ></li><li>Design ></li><li>Implementation ></li><li>Verification ></li><li>Maintenance ></li></ul><br /> <strong>In respect to Agile</strong> <ul class='list-decimal list-inside'><li>Project planning ></li><li>Product roadmap creation ></li><li>Release planning ></li><li>Sprint planning ></li><li>Daily meetings ></li><li>Sprint Review</li></ul>"
   },
   {
     "id": "2",
     "question": "What do you know about SEO in angular apps?",
-    "answer": "<strong>Some SEO benefits to using SSR or Universal:</strong> <ul class=\"list-decimal list-inside\"><li>Faster page loading</li><li>Search engine indexing/crawling</li><li>Better user experience generally</li></ul>"
+    "answer": "<strong>Some SEO benefits to using SSR or Universal:</strong> <ul class='list-decimal list-inside'><li>Faster page loading</li><li>Search engine indexing/crawling</li><li>Better user experience generally</li></ul>"
   },
   {
     "id": "3",
     "question": "How would you handle CSRF security issues in SPA apps?",
-    "answer": "<strong>Cross-site Request Forgery</strong><ul class=\"list-disc list-inside\"><li>Passing CSRF tokens cookie on each request</li><li>Check on server side to authenticate token and allow form submission.</li></ul>"
+    "answer": "<strong>Cross-site Request Forgery</strong><ul class='list-disc list-inside'><li>Passing CSRF tokens cookie on each request</li><li>Check on server side to authenticate token and allow form submission.</li></ul>"
   },
   {
     "id": "5",
     "question": "Why Did You Choose a Career in Software Development?",
-    "answer": "<strong>Example anwser</strong><ul class=\"list-disc list-inside\"><li>I like solving problems and I feel that development gives me the oppotunity to do that daily and enjoy the rewards that come from solving problems. I gain satisfaction in helping clients, companies, and organizations find solutions to there requirements. Additionally, I have experience with a variety of programming languages and enjoy working with them. For example, while I was at esure, I built their first native app for the Sheilas Wheels brand using the hybrid framework ionic. This used a headless CMS that the marketing department was able to update the content of th app from without developer input.</li></ul>"
+    "answer": "<strong>Problem solving</strong><ul class='list-disc list-inside'><li>I like solving problems and I feel that development gives me the oppotunity to do that daily and enjoy the rewards that come fro that. I gain satisfaction in helping clients, companies, and organizations find solutions to there requirements. Additionally, I have experience with a variety of programming languages and enjoy working with them. For example, while I was at esure, I built their first native app for the Sheilas Wheels brand using the hybrid framework ionic. This used a headless CMS that the marketing department was able to update the content of th app from without developer input.</li></ul>"
   },
   {
     "id": "6",
     "question": "What Programming Languages Are You Proficient In?",
-    "answer": "<strong>Example anwser</strong><ul class=\"list-disc list-inside\"><li>I first learned how to use JavaScript, CSS, and HTML whilst working in my previous career and building small sites from local businesses and friends. I built a e-commerce site in FLASHMX in my earlier days too and went on to rebuild that site in ASP to improve SEO. Moving on, I started using things like, jQuery, PHP, SCSS as well as learning to the ionic framework to build out a native app for a previous employer. Currently spending most of my time on the Angular framework.”</li></ul>"
+    "answer": "<strong>Example anwser</strong><ul class='list-disc list-inside'><li>I first learned how to use JavaScript, CSS, and HTML whilst working in my previous career and building small sites from local businesses and friends. I built a e-commerce site in FLASHMX in my earlier days too and went on to rebuild that site in ASP to improve SEO. Moving on, I started using things like, jQuery, PHP, SCSS as well as learning to the ionic framework to build out a native app for a previous employer. Currently spending most of my time on the Angular framework.”</li></ul>"
   },
   {
     "id": "7",
     "question": "Can You Describe the Steps Involved in Software Development?",
-    "answer": "<strong>Example anwser</strong><ul class=\"list-disc list-inside\"><li>Initial planning and brainstorming is the first step in software development. I would take part in the working out of the purpose/functionality required.</li><li>Next, involves team analysis, including the time frame and which tools and team members are needed if not working lone.</li><li> Then comes the design stage, where a program is designed by a team of software engineers/UI Designers before moving on to the development stage. </li><li>Once in development, I step in to transform the design into functional software. </li><li>It's then off to quality assurance to identify any defects or bugs.</li><li>Lastly, the software is officially installed and deployed using a planned CI/CD strategy.</li></ul>"
+    "answer": "<strong>Example anwser</strong><ul class='list-disc list-inside'><li>Initial planning and brainstorming is the first step in software development. I would take part in the working out of the purpose/functionality required.</li><li>Next, involves team analysis, including the time frame and which tools and team members are needed if not working lone.</li><li> Then comes the design stage, where a program is designed by a team of software engineers/UI Designers before moving on to the development stage. </li><li>Once in development, I step in to transform the design into functional software. </li><li>It's then off to quality assurance to identify any defects or bugs.</li><li>Lastly, the software is officially installed and deployed using a planned CI/CD strategy.</li></ul>"
   },
   {
     "id": "8",
     "question": "Tell Me About a Software Development Project You Completed Successfully?",
-    "answer": "<strong>Example anwser</strong><ul class=\"list-disc list-inside\"><li>At esure, where I worked as a full stack developer, we developed the first My account dashboard for our insurance customer to be able to update parts of their policy with us and access documents pertaining to each policy. I took part in coding the dashboard widgets and other parts of the site and implementing unit tests and E2E tests along the way. Mainly working Angular 4+ and the NodeJs middle for constructiong data coming from the legacy backend. The final product helped customer to access information and make changes to their policy, which otherwise, they would have had to call the call center to achieve.</li></ul>"
+    "answer": "<strong>Example anwser</strong><ul class='list-disc list-inside'><li>At esure, where I worked as a full stack developer, we developed the first My account dashboard for our insurance customer to be able to update parts of their policy with us and access documents pertaining to each policy. I took part in coding the dashboard widgets and other parts of the site and implementing unit tests and E2E tests along the way. Mainly working Angular 4+ and the NodeJs middle for constructiong data coming from the legacy backend. The final product helped customer to access information and make changes to their policy, which otherwise, they would have had to call the call center to achieve.</li></ul>"
   },
   {
     "id": "9",
@@ -51,12 +56,12 @@
   },
   {
     "id": "12",
-    "question": "What projects are you working on at the moment?",
-    "answer": "<strong>Update where needed!</strong><ul class=\"list-disc list-inside\"><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as new features. dumb accordian, login, etc...</li></ul>"
+    "question": "What steps do you take to mitigate preformance issues in Angular Application",
+    "answer": "<strong>Implement the following</strong><ul class=\"list-disc list-inside\"><li><strong>Webkit bundle Analyzer</strong> to help optimize your odules and see if there are any issues or stuff your not using.</li><li><strong>OnPush change detection strategy</strong> : we can tell Angular not to check each component, every time the change detection runs.</li><li><strong>Detach Change Detection/NgZone</strong> :This technique can save a lot of time and improves performance for the objects where we don't need to check for changes every time some change occurs.</li><li><strong>Pure Pipes</strong></li><li><strong>AOT Compilation</strong></li><li><strong>Lazy Loading Modules - Preloading Modules</strong></li><li><strong>AOT Compilation</strong></li><li>more yes...</li></ul>"
   },
   {
     "id": "13",
-    "question": "What are CSS modules?",
-    "answer": "<ul class=\"list-disc list-inside\"><li>A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component.</li></ul>"
+    "question": "SCRUM",
+    "answer": "Scrum Roles:<ul class='list-disc list-inside'><li><strong>Product Owner</strong></li><li><strong>Scrum Master</strong> </li><li><strong>Development Team</strong></ul><br />Scrum Artifacts:<ul class='list-disc list-inside'><li><strong>Product Backlog</strong></li><li><strong>Sprint Backlog</strong> </li><li><strong> Product Increment</strong></li></ul><br />Scrum Events:<ul class='list-disc list-inside'><li><strong>the Sprint</strong></li><li><strong>Sprint Planning</strong> </li><li><strong>Daily Scrum</strong></li><li><strong>Sprint Review</strong></li><li><strong>Sprint Retrospective</strong></li></ul>"
   }
 ]

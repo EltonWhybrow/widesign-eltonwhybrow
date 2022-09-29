@@ -9,7 +9,7 @@
     <!-- <label for="search-text">Search</label> -->
     <div class="flex h-full items-center justify-center">
       <div class="mt-2 w-full md:w-1/2">
-        <div class="input-group relative flex items-stretch w-full mb-6">
+        <div class="input-group relative flex items-stretch w-full mb-4">
           <input type="search"
             class="form-control relative flex-auto min-w-0  w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-tealy-500 focus:outline-none inline-block"
             placeholder="Search" aria-label="Search" aria-describedby="search-text" [(ngModel)]="searchText"
@@ -29,6 +29,28 @@
     </div>
   </div>
 </div>
+
+<div *ngIf="searchButtons" class="flex w-full pb-6 justify-center flex-wrap">
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'Angular'">Angular</button>
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'CSS'">CSS</button>
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'Node'">Node</button>
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'RXJS'">RXJS</button>
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'Javascript'">Javascript</button>
+  <button
+    class="inline-flex items-center text-white pl-5 pr-4 py-2 bg-tealy-500 mx-1 mb-1 md:mb-0 hover:bg-tealy-600 transition duration-150 ease-in-out rounded-md"
+    (click)="searchText = 'Modules'">Modules</button>
+</div>
+
 
 <app-accordion-item class="question-{{ question.id }}" *ngFor="let question of parentData | appFilter: searchText"
   [ngClass]="{ active: currentlySelectedQuestion === question }" (click)="activateQuestion(question)"

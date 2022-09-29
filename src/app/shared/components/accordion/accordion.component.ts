@@ -11,6 +11,7 @@ export class AccordionComponent {
   @Input() parentData: any | undefined;
   searchText = '';
   @Input() searchBar: boolean = false;
+  @Input() searchButtons: boolean = false;
   @Input() heading: string = '';
   @Input() subHeading: string = '';
 
