@@ -2,7 +2,7 @@
   {
     "id": "12",
     "question": "What projects are you working on at the moment?",
-    "answer": "<strong>Update where needed!</strong><ul class='list-disc list-inside'><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as looking at accessibilty issues andresolving lighthouse (axe & A11y helpers). Also - dumb accordian, login, etc...</li></ul>"
+    "answer": "<strong>Update where needed!</strong><ul class='list-disc list-inside'><li>I am building a <strong>'Stranger Things'</strong> Quiz in latest Angular. After watching the TV show with my daughters I want to let them test there knowledge - probably deploy it up on gitpages. I am also working through my personal site bringing test levels up and adding some E2E tests and well as looking at accessibilty issues and resolving lighthouse (axe & A11y helpers). Also - dumb accordian, login, etc...</li></ul>"
   },
   {
     "id": "1",
@@ -22,7 +22,7 @@
   {
     "id": "5",
     "question": "Why Did You Choose a Career in Software Development?",
-    "answer": "<strong>Example anwser</strong><ul class='list-disc list-inside'><li>I like solving problems and I feel that development gives me the oppotunity to do that daily and enjoy the rewards that come from solving problems. I gain satisfaction in helping clients, companies, and organizations find solutions to there requirements. Additionally, I have experience with a variety of programming languages and enjoy working with them. For example, while I was at esure, I built their first native app for the Sheilas Wheels brand using the hybrid framework ionic. This used a headless CMS that the marketing department was able to update the content of th app from without developer input.</li></ul>"
+    "answer": "<strong>Problem solving</strong><ul class='list-disc list-inside'><li>I like solving problems and I feel that development gives me the oppotunity to do that daily and enjoy the rewards that come fro that. I gain satisfaction in helping clients, companies, and organizations find solutions to there requirements. Additionally, I have experience with a variety of programming languages and enjoy working with them. For example, while I was at esure, I built their first native app for the Sheilas Wheels brand using the hybrid framework ionic. This used a headless CMS that the marketing department was able to update the content of th app from without developer input.</li></ul>"
   },
   {
     "id": "6",
