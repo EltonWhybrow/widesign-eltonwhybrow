@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ISideProjects } from 'src/app/shared/models/sideprojects-interface';
+import { HttpService } from 'src/app/shared/services/data-service.service';
 
 @Component({
   selector: 'app-side-projects',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideProjectsComponent implements OnInit {
 
-  constructor() { }
+  sideProjects: ISideProjects[] = [];
+
+  constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {
+
+    /*
+      Getting the side projects data
+      */
+    this.httpService.getSideProjects()
+      .subscribe(
+        (data: ISideProjects[]) => this.sideProjects = data,
+        (error: any) => console.log(error),
+        // () => console.log('completed')
+      );
   }
 
 }
