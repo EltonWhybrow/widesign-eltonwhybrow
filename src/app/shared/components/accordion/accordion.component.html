@@ -51,7 +51,8 @@
     (click)="searchText = 'Modules'">Modules</button>
 </div>
 
-
-<app-accordion-item class="question-{{ question.id }}" *ngFor="let question of parentData | appFilter: searchText"
-  [ngClass]="{ active: currentlySelectedQuestion === question }" (click)="activateQuestion(question)"
-  id="{{ question.id }}" question="{{ question.question }}" answer="{{ question.answer }}"></app-accordion-item>
+<div>
+  <app-accordion-item class="question-{{ question.id }}" *ngFor="let question of parentData | appFilter: searchText"
+    id="{{ question.id }}" question="{{ question.question }}" answer="{{ question.answer }}" ScrollViewDirective>
+  </app-accordion-item>
+</div>
