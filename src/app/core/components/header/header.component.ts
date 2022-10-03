@@ -29,7 +29,14 @@ export class HeaderComponent {
     Toggle class on mobile burger
   */
   public toggleBurgerNav() {
-    this.burgerActive = !this.burgerActive
+    if (this.burgerActive === false) {
+      this.burgerActive = true
+      document.body.style.position = 'fixed';
+    } else {
+      this.burgerActive = false
+      document.body.style.position = '';
+    }
+    // this.burgerActive = !this.burgerActive
   }
 
 
