@@ -10,13 +10,13 @@ export class ScrollViewDirective {
 
   @HostListener('click', ['$event.target'])
   async scrollIntoView() {
-    if (this._elementRef.nativeElement.classList.contains('active')) {
-      this.renderer.removeClass(this._elementRef.nativeElement, "active");
-      for (let child of this._elementRef.nativeElement.parentNode.children) {
+    if (this._elementRef.nativeElement.parentNode.parentNode.classList.contains('active')) {
+      this.renderer.removeClass(this._elementRef.nativeElement.parentNode.parentNode, "active");
+      for (let child of this._elementRef.nativeElement.parentNode.parentNode.parentNode.children) {
         this.renderer.removeClass(child, 'active');
       }
     } else {
-      this.renderer.addClass(this._elementRef.nativeElement, "active");
+      this.renderer.addClass(this._elementRef.nativeElement.parentNode.parentNode, "active");
       setTimeout(() => {
         this._elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
       }, 400)

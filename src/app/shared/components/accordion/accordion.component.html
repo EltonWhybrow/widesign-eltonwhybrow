@@ -53,6 +53,6 @@
 
 <div>
   <app-accordion-item class="question-{{ question.id }}" *ngFor="let question of parentData | appFilter: searchText"
-    id="{{ question.id }}" question="{{ question.question }}" answer="{{ question.answer }}" ScrollViewDirective>
+    id="{{ question.id }}" question="{{ question.question }}" answer="{{ question.answer }}">
   </app-accordion-item>
 </div>
