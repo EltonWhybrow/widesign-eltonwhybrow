@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IClients, IClientsInfo } from 'src/app/shared/models/clients-interface';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { CanonicalService } from 'src/app/shared/services/canonical.service';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
 @Component({
@@ -8,11 +9,11 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
   templateUrl: './client-area.component.html',
   styleUrls: ['./client-area.component.scss']
 })
-export class ClientAreaComponent implements OnInit {
+export class ClientAreaComponent implements OnInit, OnDestroy {
   allClientInfo: IClientsInfo[] | undefined;
   privateInfo: [] | undefined;
   ;
-  constructor(public httpService: HttpService, public authService: AuthService) { }
+  constructor(public httpService: HttpService, public authService: AuthService, private canonical: CanonicalService) { }
 
   // private loogedInInfo() {
   //   let newArray: any = []
@@ -39,7 +40,15 @@ export class ClientAreaComponent implements OnInit {
 
   ngOnInit(): void {
     this.getServicesData()
+    this.createLinkForCanonicalURL();
+  }
 
+  ngOnDestroy(): void {
+    this.canonical.destroyLinkForCanonicalURL();
+  }
+
+  createLinkForCanonicalURL() {
+    this.canonical.createLinkForCanonicalURL();
   }
 
 }
