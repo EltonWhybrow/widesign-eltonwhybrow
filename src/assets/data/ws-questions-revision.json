@@ -213,5 +213,25 @@
     "id": 43,
     "question": "What are CSS modules?",
     "answer": "<ul class='list-disc list-inside'><li>A CSS file in which all class names and animation names are scoped locally by default. Like how Angular allows you to write CSS roe each component and webpack assigns them locally to that component.</li></ul>"
+  },
+  {
+    "id": 44,
+    "question": "What are decorators in Angular?",
+    "answer": "<p>Decorators are a <strong>design pattern or functions</strong> that define how Angular features work. They are used to make <strong>prior modifications to a class, service, or filter</strong>. Angular supports four types of decorators, they are:</p><ul class='list-disc list-inside'><li>Class Decorators</li><li>Property Decorators</li><li>Method Decorators</li><li>Parameter Decorators</li></ul>"
+  },
+  {
+    "id": 45,
+    "question": "What is NgRx?",
+    "answer": "<p>NgRx is a framework for building reactive applications in Angular. <strong>NgRx provides state management</strong>, <strong>isolation of side effects</strong>, entity collection management, router bindings, code generation, and <strong>developer tools</strong> that enhance developers experience when building many different types of applications</p>"
+  },
+  {
+    "id": 46,
+    "question": "What are benefits of using store (ngrx)?",
+    "answer": "<p><strong>Centralized, Immutable State</strong> / <strong>Performance</strong> - Since state is centralized at the top of your application, data updates can flow down through your components relying on slices of store / <strong>Testability</strong> -All state updates are handled in reducers, which are pure functions. Pure functions are extremely simple to test, as it is simply input in, assert against output.</p>"
+  },
+  {
+    "id": 46,
+    "question": "OWASP Top Ten",
+    "answer": "<ul class='list-disc list-inside'><li>Broken Access Control</li><li>Cryptographic Failures</li><li>Injection</li><li>Insecure Design</li><li>Security Misconfiguration </li><li>Vulnerable and Outdated Components</li><li>Identification and Authentication Failures</li><li>Software and Data Integrity Failures </li><li>Security Logging and Monitoring Failures</li><li>Server-Side Request Forgery</li></ul><p><a class='underline text-tealy-500' href='https://owasp.org/www-project-top-ten/' target='_blank'>Read more</p>"
   }
 ]
