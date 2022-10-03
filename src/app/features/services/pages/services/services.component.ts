@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IServices } from 'src/app/shared/models/service-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
+import { CanonicalService } from 'src/app/shared/services/canonical.service';
 import { HttpService } from 'src/app/shared/services/data-service.service';
 
 @Component({
@@ -8,13 +9,14 @@ import { HttpService } from 'src/app/shared/services/data-service.service';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent implements OnInit, OnDestroy {
   oneTestimonial: ITestmonial | undefined;
   allServicesData: IServices[] | undefined;
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService, private canonical: CanonicalService) { }
 
   ngOnInit(): void {
+    this.createLinkForCanonicalURL();
     /*
     Getting the offered services data
     */
@@ -35,6 +37,14 @@ export class ServicesComponent implements OnInit {
         (error: any) => console.log(error),
         // () => console.log('completed')
       );
+  }
+
+  ngOnDestroy(): void {
+    this.canonical.destroyLinkForCanonicalURL();
+  }
+
+  createLinkForCanonicalURL() {
+    this.canonical.createLinkForCanonicalURL();
   }
 
 }

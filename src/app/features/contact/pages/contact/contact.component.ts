@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { IEmail } from 'src/app/shared/models/emails-interface';
+import { CanonicalService } from 'src/app/shared/services/canonical.service';
 import { EmailService } from 'src/app/shared/services/email-service.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { EmailService } from 'src/app/shared/services/email-service.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
 
 
   readonly NUMS_REGEX = '^[0-9-\\s]*$';
@@ -28,7 +29,7 @@ export class ContactComponent implements OnInit {
   public contactMessage: UntypedFormControl | undefined;
   public contactForm!: UntypedFormGroup;
 
-  constructor(private fb: UntypedFormBuilder, private emailService: EmailService) { }
+  constructor(private fb: UntypedFormBuilder, private emailService: EmailService, private canonical: CanonicalService) { }
 
   // scroll into view
   private getItemInView(event: any) {
@@ -44,6 +45,16 @@ export class ContactComponent implements OnInit {
     this.submitted = false;
     this.disableSubmit = false;
     this.initForm();
+    this.createLinkForCanonicalURL();
+  }
+
+  ngOnDestroy(): void {
+    this.canonical.destroyLinkForCanonicalURL();
+  }
+
+
+  createLinkForCanonicalURL() {
+    this.canonical.createLinkForCanonicalURL();
   }
 
 
