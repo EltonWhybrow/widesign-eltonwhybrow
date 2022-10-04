@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { Component, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from '../../services/window.service';
 import { debounce } from '../../../shared/decorators';
@@ -7,7 +7,7 @@ import { debounce } from '../../../shared/decorators';
   selector: 'app-scroll-top',
   templateUrl: './scroll-top.component.html'
 })
-export class ScrollTopComponent implements OnInit {
+export class ScrollTopComponent {
   windowScrolled: boolean = false;
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -30,5 +30,5 @@ export class ScrollTopComponent implements OnInit {
       }
     })();
   }
-  ngOnInit() { }
+
 }

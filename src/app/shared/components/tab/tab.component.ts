@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
@@ -9,14 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 `,
   styleUrls: ['./tab.component.scss']
 })
-export class TabComponent implements OnInit {
-  @Input('tabTitle') title?: string;
-  @Input('tabFragment') fragment?: string;
+export class TabComponent {
+  @Input() title?: string;
+  @Input() fragment?: string;
   @Input() active = false;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+
 
 }

@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[ScrollViewDirective]'
+  selector: '[appScrollViewDirective]'
 })
 export class ScrollViewDirective {
 

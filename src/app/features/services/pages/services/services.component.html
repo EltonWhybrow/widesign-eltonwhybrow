@@ -18,8 +18,9 @@
 
   <!-- Card / Large -->
   <div class="grid grid-cols-1 gap-20">
-    <app-card-large *ngFor="let service of allServicesData; let even=even">
-      <div *ngIf="even" card-img class="md:w-1/3 flex-none">
+    <app-card-large *ngFor="let service of allServicesData; let even=even" class="group">
+      <div *ngIf="even" card-img
+        class="md:w-1/3 flex-none transition ease-in-out group-hover:scale-105 scale-100 duration-300 group-hover:translate-y-4 transform-gpu">
         <picture>
           <source srcset="assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">
@@ -48,9 +49,8 @@
         </a>
       </div>
 
-
-
-      <div *ngIf="!even" card-img-right class="md:w-1/3 flex-none">
+      <div *ngIf="!even" card-img-right
+        class="md:w-1/3 flex-none transition ease-in-out group-hover:scale-105 scale-100 duration-300 group-hover:translate-y-4 transform-gpu">
         <picture>
           <source srcset="assets/imgs/{{service.imageName}}.webp" type="image/webp">
           <source srcset="assets/imgs/{{service.imageName}}.jpg" type="image/jpeg">

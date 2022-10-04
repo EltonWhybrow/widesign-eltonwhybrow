@@ -9,7 +9,7 @@
 <section class="main-content">
 
   <app-tabs>
-    <app-tab [tabTitle]="'My Background'" [tabFragment]="'my-background'">
+    <app-tab [title]="'My Background'" [fragment]="'my-background'">
       <!-- ingenie experience -->
       <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">ingenie Telematics</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
@@ -95,13 +95,13 @@
     </app-tab>
 
     <!-- Predicted questions -->
-    <app-tab [tabTitle]="'Predicted questions'" [tabFragment]="'predicted-questions'">
+    <app-tab [title]="'Predicted questions'" [fragment]="'predicted-questions'">
       <app-accordion [parentData]="allJobQuestions" [searchBar]="true" heading="Questions I could be asked"
         subHeading="Add to this json list if asked any good ones that i need to cover"></app-accordion>
     </app-tab>
 
     <!-- Question to ask -->
-    <app-tab [tabTitle]="'Questions to ask'" [tabFragment]="'question-to-ask'">
+    <app-tab [title]="'Questions to ask'" [fragment]="'question-to-ask'">
       <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">Find out about company</h3>
       <p class="standard-paragraph text-raw-400 text-lg font-thin">
         Ask only if you feel it relevant.
@@ -132,7 +132,7 @@
     </app-tab>
 
     <!-- Revision helpers -->
-    <app-tab [tabTitle]="'Cards / Revision'" [tabFragment]="'cards-revision'">
+    <app-tab [title]="'Cards / Revision'" [fragment]="'cards-revision'">
       <app-accordion [parentData]="allRevisionQuestions" [searchBar]="true" [searchButtons]="true"
         heading="Cards / Revision" subHeading="Helpers for interviews questions">
       </app-accordion>
