@@ -88,7 +88,7 @@
             <ng-container *ngIf="tweet?.entities?.urls;">
               <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">
                 <a href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
-                  <img *ngIf="i==1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
+                  <img *ngIf="i===1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
               </div>
             </ng-container>
 
