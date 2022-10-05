@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { IFaq } from '../models/faq-interface';
 
 @Pipe({ name: 'appFilter' })
 export class FilterPipe implements PipeTransform {
@@ -9,17 +10,18 @@ export class FilterPipe implements PipeTransform {
    * @param searchText search string
    * @returns list of elements filtered by search text or []
    */
-  transform(items: any[], searchText: string): any[] {
+  transform(items: IFaq[], searchText: string): any[] {
     if (!items) {
       return [];
     }
     if (!searchText) {
       return items;
     }
+
     searchText = searchText.toLocaleLowerCase();
 
-    return items.filter(it => {
-      return it.question.toLocaleLowerCase().includes(searchText);
+    return items.filter(item => {
+      return item.question.toLocaleLowerCase().includes(searchText);
     });
 
   }
