@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start-lint": "ng lint && ng serve",
-    "build": "ng lint && ng test --watch=false && ng build",
+    "start:lint": "ng lint && ng serve",
+    "build": "ng lint && ng test --watch=false --browsers=ChromeHeadless && ng build",
     "watch": "ng build --watch --configuration development",
-    "build:prod": "ng lint && ng test --watch=false && ng build --configuration production",
+    "build:prod": "ng lint && ng test --watch=false --browsers=ChromeHeadless && ng build --configuration production",
     "build:stats": "ng build --stats-json",
     "analyze": "webpack-bundle-analyzer dist/widesign-eltonwhybrow/stats.json",
     "test": "ng test --code-coverage",
