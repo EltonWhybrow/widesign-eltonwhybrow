@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IClients, IClientsInfo } from 'src/app/shared/models/clients-interface';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-client-area',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 import { IFaq } from 'src/app/shared/models/faq-interface';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-interview-revision',

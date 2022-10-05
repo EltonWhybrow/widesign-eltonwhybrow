@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPortfolio } from 'src/app/shared/models/portfolio-interface';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-portfolio-dashboard',

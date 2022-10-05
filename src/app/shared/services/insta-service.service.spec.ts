@@ -1,13 +1,15 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-
-import { InstaServiceService } from './insta-service.service';
+import { InstaService } from './insta-service.service';
 
 describe('InstaServiceService', () => {
-  let service: InstaServiceService;
+  let service: InstaService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(InstaServiceService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule]
+    });
+    service = TestBed.inject(InstaService);
   });
 
   it('should be created', () => {

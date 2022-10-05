@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IServices } from 'src/app/shared/models/service-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-services',

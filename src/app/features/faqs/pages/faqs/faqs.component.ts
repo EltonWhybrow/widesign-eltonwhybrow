@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IFaq } from 'src/app/shared/models/faq-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-faqs',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-portfolio',
