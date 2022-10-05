@@ -27,7 +27,7 @@ export class HttpService {
   }
 
   getSideProjects(): Observable<ISideProjects[]> {
-    return this.http.get<IServices[]>('../../assets/data/ws-side-projects.json').pipe(
+    return this.http.get<ISideProjects[]>('../../assets/data/ws-side-projects.json').pipe(
       // TODO: temp deay to check resolve
       // delay(2000),
       // tap(services => console.log("services: " + JSON.stringify(services))),
@@ -36,7 +36,7 @@ export class HttpService {
   }
 
   getPortfolioInfo(): Observable<IPortfolio[]> {
-    return this.http.get<IServices[]>('../../assets/data/ws-portfolio.json').pipe(
+    return this.http.get<IPortfolio[]>('../../assets/data/ws-portfolio.json').pipe(
       // TODO: temp deay to check resolve
       // delay(2000),
       // tap(services => console.log("services: " + JSON.stringify(services))),
