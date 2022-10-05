@@ -13,16 +13,6 @@ export class InstaService {
   constructor(private http: HttpClient) { }
 
   getInstaFeed(url: string) {
-    return this.http.get(`${this.NODE_BASE_URL}${url}`).pipe(
-      // tap(timeline => console.log("timeline in Service: ", timeline)),
-      catchError(this.handleError<any>())
-    )
-  }
-
-  private handleError<T>(result = {} as T) {
-    return (error: HttpErrorResponse): Observable<T> => {
-      console.error(error);
-      return of(result);
-    };
+    return this.http.get(`${this.NODE_BASE_URL}${url}`)
   }
 }

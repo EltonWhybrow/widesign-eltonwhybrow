@@ -24,14 +24,15 @@
     <picture>
       <source srcset="assets/imgs/testimonials/{{oneTestimonial.image}}.webp" type="image/webp">
       <source srcset="assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" type="image/jpeg">
-      <img class="h-48 mb-14 md:mb-0 md:h-32 mx-auto object-cover object-center rounded-full shadow-md"
+      <img data-testid="testiImage"
+        class="h-48 mb-14 md:mb-0 md:h-32 mx-auto object-cover object-center rounded-full shadow-md"
         src="assets/imgs/testimonials/{{oneTestimonial.image}}.jpg" alt="Steve Corio">
     </picture>
   </ng-container>
 
   <div testimonial-comment class="testimonial text-white text-2xl pb-5 leading-relaxed">
-    <span class="font-serif heading_highlight bg-tealy-700 text-white py-2 pl-3 pr-2 mr-2">
-      {{oneTestimonial.testimonialHighlight}}
+    <span class="font-serif heading_highlight bg-tealy-700 text-white py-2 pl-3 pr-2 mr-2" data-testid="highLightTesti"
+      [innerHTML]="oneTestimonial.testimonialHighlight">
     </span>
     {{oneTestimonial.testimonial}}
   </div>

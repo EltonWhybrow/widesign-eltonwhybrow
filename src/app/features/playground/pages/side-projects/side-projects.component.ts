@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ISideProjects } from 'src/app/shared/models/sideprojects-interface';
-import { HttpService } from 'src/app/shared/services/data-service.service';
+import { HttpService } from 'src/app/shared/services/http-service.service';
 
 @Component({
   selector: 'app-side-projects',

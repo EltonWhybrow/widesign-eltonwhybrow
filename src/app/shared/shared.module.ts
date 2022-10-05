@@ -13,7 +13,7 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionItemComponent } from './components/accordion/accordion-item/accordion-item.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
-import { ScrollViewDirective } from './directive/scroll-view.directive';
+import { ScrollViewDirective } from './directives/scroll-view.directive';
 
 @NgModule({
   declarations: [

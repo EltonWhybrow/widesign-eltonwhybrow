@@ -23,12 +23,12 @@
         <picture>
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.webp" type="image/webp">
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.jpg" type="image/jpeg">
-          <img #userImage class="object-cover object-center md:rounded-l-lg shadow-md"
+          <img #userImage data-testid="portfolioImage" class="object-cover object-center md:rounded-l-lg shadow-md"
             src="assets/imgs/portfolio/{{item.imageName}}.jpg" alt="{{item.imageName}}">
         </picture>
       </div>
 
-      <ng-container card-header>{{item.heading}}</ng-container>
+      <div data-testid="header" card-header>{{item.heading}}</div>
       <div card-body [innerHtml]="item.body"></div>
       <div card-footer *ngFor="let skill of item.footer"
         class="inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-sm rounded-md mx-1 mt-3">
