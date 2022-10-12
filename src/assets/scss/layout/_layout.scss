@@ -5,3 +5,7 @@
 .main-content-tighty {
   @apply container px-2 md:px-10 xl:px-0 mx-auto pb-4 mb-1 max-w-5xl;
 }
+
+.ws-radius {
+  @apply rounded-r-lg rounded-tl-lg;
+}
