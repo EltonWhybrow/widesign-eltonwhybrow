@@ -72,7 +72,7 @@
   {
     "id": 15,
     "question": "Can you give an example of built-in form validators in Angular?",
-    "answer": "<ul class='list-decimal list-inside'><li>required</li><li>minlength(3)</li><li>maxLength(20)</li><li></ul><strong>NOTE:</strong> Rarely use template driven forms, only reactive forms as they are more powerful and easier to use."
+    "answer": "<ul class='list-decimal list-inside'><li>required</li><li>minlength(3)</li><li>maxLength(20)</li><li>Pattern(Regex)</li><li>Min</li><li>Max</li></ul><strong>NOTE:</strong> Rarely use template driven forms, only reactive forms as they are more powerful and easier to use."
   },
   {
     "id": 16,
@@ -96,7 +96,7 @@
   },
   {
     "id": 20,
-    "question": "Ge/Set Example - Javascript",
+    "question": "Get/Set Example - Javascript",
     "answer": "class CoffeeMachine {<br />_waterAmount = 0;<br />setWaterAmount(value) {<br />if (value < 0) value = 0;<br />this._waterAmount = value;<br />}<br />getWaterAmount() {<br />return this._waterAmount;<br /><br />}<br />}<br />new CoffeeMachine().setWaterAmount(100);"
   },
   {
@@ -232,6 +232,6 @@
   {
     "id": 46,
     "question": "OWASP Top Ten",
-    "answer": "<ul class='list-disc list-inside'><li>Broken Access Control</li><li>Cryptographic Failures</li><li>Injection</li><li>Insecure Design</li><li>Security Misconfiguration </li><li>Vulnerable and Outdated Components</li><li>Identification and Authentication Failures</li><li>Software and Data Integrity Failures </li><li>Security Logging and Monitoring Failures</li><li>Server-Side Request Forgery</li></ul><p><a class='underline text-tealy-500' href='https://owasp.org/www-project-top-ten/' target='_blank'>Read more</p>"
+    "answer": "<ul class='list-disc list-inside'><li>Broken Access Control</li><li>Cryptographic Failures</li><li>Injection</li><li>Insecure Design</li><li>Security Misconfiguration </li><li>Vulnerable and Outdated Components</li><li>Identification and Authentication Failures</li><li>Software and Data Integrity Failures </li><li>Security Logging and Monitoring Failures</li><li>Server-Side Request Forgery</li></ul><p><a class='underline text-tealy-500' href='https://owasp.org/www-project-top-ten/' target='_blank'>Read more</a></p>"
   }
 ]
