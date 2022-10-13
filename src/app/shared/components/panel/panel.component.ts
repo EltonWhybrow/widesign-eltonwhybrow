@@ -17,7 +17,7 @@ export class PanelComponent {
     "footer": "& planning"
   },
   {
-    "heading": "Im a web",
+    "heading": "I'm a web",
     "main": "Dev",
     "footer": "Engineer"
   },
