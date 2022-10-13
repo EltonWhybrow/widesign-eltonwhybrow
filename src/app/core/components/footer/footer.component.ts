@@ -24,7 +24,8 @@ export class FooterComponent implements OnInit {
         // console.log(this.twitterFeed);
       },
       (err: any) => {
-        console.log('There has been a error getting twits >>>', err);
+        this.twitterFeed = false;
+        // console.log('There has been a error getting twits >>>', err);
 
       }, () => {
         /* istanbul ignore next */
@@ -39,7 +40,8 @@ export class FooterComponent implements OnInit {
         // console.log(this.instaFeed);
       },
       (err: any) => {
-        console.log('There has been a error getting insta timeline >>>', err);
+        this.instaFeed = false;
+        // console.log('There has been a error getting insta timeline >>>', err);
 
       }, () => {
         /* istanbul ignore next */

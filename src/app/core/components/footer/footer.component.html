@@ -55,58 +55,64 @@
 
 
       <!-- Instagram feed -->
-      <div class="border-2 border-tealy-900 rounded mb-10">
-        <h2 class="instagram font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
-          <span>eltongram</span>
-        </h2>
-        <ul class="flex flex-wrap items-center p-1">
-          <li class=" p-1 w-1/4 gap-1" *ngFor="let post of instaFeed">
-            <a href="{{post.permalink}}" target="_blank">
-              <img *ngIf="post.media_type === 'IMAGE'" src="{{post.media_url}}" alt="{{post.caption}}" width="100px"
-                height="100px" class="m-auto w-28 h-28 object-cover object-center">
-              <img *ngIf="post.thumbnail_url" src="{{post.thumbnail_url}}" alt="{{post.caption}}" width="100px"
-                height="100px" class="m-auto w-28 h-28 object-cover object-center">
-            </a>
-            <!-- {{post.permalink}}
+      <ng-container *ngIf="instaFeed">
+        <div class="border-2 border-tealy-900 rounded mb-10">
+          <h2 class="instagram font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
+            <span>eltongram</span>
+          </h2>
+          <ul class="flex flex-wrap items-center p-1">
+            <li class=" p-1 w-1/4 gap-1" *ngFor="let post of instaFeed">
+              <a href="{{post.permalink}}" target="_blank">
+                <img *ngIf="post.media_type === 'IMAGE'" src="{{post.media_url}}" alt="{{post.caption}}" width="100px"
+                  height="100px" class="m-auto w-28 h-28 object-cover object-center">
+                <img *ngIf="post.thumbnail_url" src="{{post.thumbnail_url}}" alt="{{post.caption}}" width="100px"
+                  height="100px" class="m-auto w-28 h-28 object-cover object-center">
+              </a>
+              <!-- {{post.permalink}}
             {{post.media_url}}
             {{post.caption}} -->
-          </li>
-        </ul>
-      </div>
+            </li>
+          </ul>
+        </div>
+      </ng-container>
+
     </div>
 
     <!-- Twitter Feed API V2.0 -->
-    <div class="mt-6 md:mt-0 flex-1">
-      <div class="border-2 border-tealy-900 rounded">
-        <h2 class="twitter font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
-          <span>@eltonwhybrow</span>
-        </h2>
-        <ul>
-          <li *ngFor="let tweet of twitterFeed?.data"
-            class="border-b rounded border-tealy-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
+    <ng-container *ngIf="twitterFeed">
+      <div class="mt-6 md:mt-0 flex-1">
+        <div class="border-2 border-tealy-900 rounded">
+          <h2 class="twitter font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">
+            <span>@eltonwhybrow</span>
+          </h2>
+          <ul>
+            <li *ngFor="let tweet of twitterFeed?.data"
+              class="border-b rounded border-tealy-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
 
-            <ng-container *ngIf="tweet?.entities?.urls;">
-              <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">
-                <a href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
-                  <img *ngIf="i===1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
-              </div>
-            </ng-container>
+              <ng-container *ngIf="tweet?.entities?.urls;">
+                <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">
+                  <a href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
+                    <img *ngIf="i===1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
+                </div>
+              </ng-container>
 
-            <p>
-              <a class="hover:underline" href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
-                {{tweet.text}}
-              </a>
-            </p>
+              <p>
+                <a class="hover:underline" href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
+                  {{tweet.text}}
+                </a>
+              </p>
 
-            <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">
-              Likes {{tweet.public_metrics.like_count}} /
-              Retweets {{tweet.public_metrics.retweet_count}}</span>
+              <span class="absolute -bottom-2 right-5 bg-raw-900 rounded-md text-sm h-5 w-auto px-2">
+                Likes {{tweet.public_metrics.like_count}} /
+                Retweets {{tweet.public_metrics.retweet_count}}</span>
 
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
       </div>
+    </ng-container>
 
-    </div>
   </div>
 
 
