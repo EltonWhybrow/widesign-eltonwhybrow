@@ -48,6 +48,8 @@ export class AuthService {
       const decodedToken = helper.decodeToken(token)
       return decodedToken.role
     }
+    return console.log('>>> Get user role : failed >>>');
+
   }
 
   // public setUserRoles(role: string): void {
