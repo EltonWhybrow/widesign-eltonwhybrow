@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   public contactCredentials!: IEmail;
 
-  public submitted: boolean | undefined; // true if form has attempted to be submitted (for validation)
+  public submitted: boolean | undefined; // true if form has attempted to be submitted for validation)
   public disableSubmit: boolean | undefined; // set to true during login attempt (stops resending form)
   public formError: boolean = false;
   public formSuccess: boolean = false;
@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   public contactMessage: UntypedFormControl | undefined;
   public contactForm!: UntypedFormGroup;
 
-  constructor(private fb: UntypedFormBuilder, private emailService: EmailService, private canonical: CanonicalService) { }
+  constructor(private fb: UntypedFormBuilder, private emailService: EmailService, private canonicalService: CanonicalService) { }
 
   // scroll into view
   private getItemInView(event: any) {
@@ -49,12 +49,12 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.canonical.destroyLinkForCanonicalURL();
+    this.canonicalService.destroyLinkForCanonicalURL();
   }
 
 
   createLinkForCanonicalURL() {
-    this.canonical.createLinkForCanonicalURL();
+    this.canonicalService.createLinkForCanonicalURL();
   }
 
 

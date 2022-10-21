@@ -31,6 +31,16 @@ export function expectText<T>(
   expect(actualText).toBe(text);
 }
 
+export function expectInputText<T>(
+  fixture: ComponentFixture<T>,
+  testId: string,
+  text: string,
+): void {
+  const element = findEl(fixture, testId);
+  const actualText = element.nativeElement.value;
+  expect(actualText).toBe(text);
+}
+
 export function click<T>(
   fixture: ComponentFixture<T>,
   testId: string
