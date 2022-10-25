@@ -11,7 +11,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { SideProjectsComponent } from './pages/side-projects/side-projects.component';
 
 const routes: Routes = [
-
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: '', component: PlaygroundComponent, canActivate: [AuthGuard],
     children: [

@@ -7,7 +7,7 @@ import { TabComponent } from '../tab/tab.component';
   selector: 'app-tabs',
   template: `
   <div class="nav nav-tabs justify-between hidden md:flex">
-    <a *ngFor="let tab of tabs; let i = index" (click)="selectTab(tab)" routerLink="/playground/interview-revision" fragment="{{tab.fragment}}" [class.active]="tab.active" class="hex hex-{{i}}">
+    <a *ngFor="let tab of tabs; let i = index" (click)="selectTab(tab)" routerLink="/playground/interview-revision" fragment="{{tab.fragment}}" [class.active]="tab.active" class="hex hex-{{i}}" data-testid="tab-anchor">
       <div class="hex inner">
         <div class="hex inner2 flex items-center">
           <span class="inner-text text-3xl font-semibold uppercase text-center">{{tab.title}}</span>
@@ -37,7 +37,6 @@ import { TabComponent } from '../tab/tab.component';
   ]
 })
 export class TabsComponent implements AfterContentInit {
-
 
   @ContentChildren(TabComponent) tabs?: QueryList<ITabs>;
 

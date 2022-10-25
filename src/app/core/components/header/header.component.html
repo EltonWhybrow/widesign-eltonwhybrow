@@ -103,7 +103,7 @@
     <div id="burger-nav" class="md:hidden flex items-center overflow-hidden">
       <button
         class="burger__toggler border-0 bg-tealy-700 p-2 text-white leading-none text-xl absolute transition-right duration-200 top-4 -right-1 hover:right-0 z-20 w-16 h-12 rounded-l-sm"
-        type="button" aria-label="Toggle navigation" (click)="toggleBurgerNav()">
+        type="button" aria-label="Toggle navigation" (click)="toggleBurgerNav()" data-testid="burger-button">
         <span class="sr-only">Open main menu</span>
         <div id="nav-burger-ani" [ngClass]="{
         'open':burgerActive}">

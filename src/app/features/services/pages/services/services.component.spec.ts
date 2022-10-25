@@ -14,6 +14,8 @@ import { CardLargeComponent } from 'src/app/shared/components/card-large/card-la
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { IServices } from 'src/app/shared/models/service-interface';
 
+import { findElAll } from 'src/app/testing-functions'
+
 const testServices: IServices[] = [
   {
     id: 1,
@@ -29,7 +31,7 @@ const testServices: IServices[] = [
   },
   {
     id: 2,
-    heading: "Desgin",
+    heading: "Design",
     body: "Lorem ipsum",
     footer: [
       "Sketch",
@@ -140,6 +142,7 @@ describe('ServicesComponent', () => {
     })
   );
 
+
   it('verify html for services data',
     waitForAsync(() => {
       fixture.whenStable().then(() => {
@@ -147,8 +150,10 @@ describe('ServicesComponent', () => {
         getTestScheduler().flush(); // flush the observables
         fixture.detectChanges();
         // Act
-        const headerElements = fixture.debugElement.queryAll(By.css('[data-testid="header"]'));
-        const imageElements = fixture.debugElement.queryAll(By.css('[data-testid="serviceImg"]'));
+        const headerElements = findElAll(fixture, 'header')
+        // fixture.debugElement.queryAll(By.css('[data-testid="header"]'));
+        const imageElements = findElAll(fixture, 'serviceImg')
+        // fixture.debugElement.queryAll(By.css('[data-testid="serviceImg"]'));
         // console.log('>>>headerElements>>>', headerElements);
         // console.log('>>>debugElement>>>', fixture.debugElement);
         // console.log('>>>fixture>>>', fixture);
@@ -156,7 +161,7 @@ describe('ServicesComponent', () => {
         // console.log('>>>componentInstance>>>', fixture.componentInstance);
         // Assert
         headerElements.forEach((element, index) => {
-          expect(element.nativeElement.textContent).toContain(testServices[index].heading);
+          expect(element.nativeElement.textContent).toBe(testServices[index].heading);
         });
         imageElements.forEach((element, index) => {
           expect(element.nativeElement.src).toContain(testServices[index].imageName);
