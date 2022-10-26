@@ -19,10 +19,22 @@ export class AuthService {
   private NODE_BASE_URL = environment.nodeBaseUrl;
   public nickname: string = (localStorage.getItem('nickname') || 'Anonymous');
   public currentRole: string = '';
+  public userRole: string = '';
+
+  private getUserRole(): any {
+    if (this.cookieService.get('wsat')) {
+      const token = this.cookieService.get('wsat')
+      const decodedToken = helper.decodeToken(token)
+      this.userRole = decodedToken.role;
+    }
+    // return console.log('>>> Get user role : failed >>>');
+
+  }
 
   public setLoggedIn(value: boolean) {
     this.loggedInStatus = value;
     localStorage.setItem('loggedIn', 'true')
+    this.getUserRole();
   }
 
   get isLoggedIn() {
@@ -38,16 +50,11 @@ export class AuthService {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('nickname');
     this.cookieService.delete('wsat');
+    this.userRole = '';
     // this.router.navigate(['/'])
   }
 
-  public getUserRole(): any {
-    if (this.cookieService.get('wsat')) {
-      const token = this.cookieService.get('wsat')
-      const decodedToken = helper.decodeToken(token)
-      return decodedToken.role
-    }
-  }
+
 
   // public setUserRoles(role: string): void {
   //   this.role = role
