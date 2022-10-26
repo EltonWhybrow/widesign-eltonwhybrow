@@ -18,8 +18,9 @@
 <section *ngIf="allPortfolioData else loadingServices" class="main-content">
   <!-- Card / Large -->
   <div class="grid grid-cols-1 gap-20">
-    <app-card-large *ngFor="let item of allPortfolioData; let even=even">
-      <div *ngIf="even" card-img class="w-1/3">
+    <app-card-large *ngFor="let item of allPortfolioData; let even=even" class="group">
+      <div *ngIf="even" card-img
+        class="w-1/3 group-hover:scale-105 scale-100 duration-300 group-hover:translate-y-4 transform-gpu">
         <picture>
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.webp" type="image/webp">
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.jpg" type="image/jpeg">
@@ -48,9 +49,8 @@
         </a>
       </div>
 
-
-
-      <div *ngIf="!even" card-img-right class="w-1/3">
+      <div *ngIf="!even" card-img-right
+        class="w-1/3 group-hover:scale-105 scale-100 duration-300 group-hover:translate-y-4 transform-gpu">
         <picture>
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.webp" type="image/webp">
           <source srcset="assets/imgs/portfolio/{{item.imageName}}.jpg" type="image/jpeg">
