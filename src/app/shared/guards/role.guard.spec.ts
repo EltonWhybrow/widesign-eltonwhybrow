@@ -27,7 +27,7 @@ describe('RoleGuard', () => {
   });
 
   it('allow access through guard if role is admin', () => {
-    mockAuthService.getUserRole.and.returnValue('ROLE_ADMIN');
+    mockAuthService.userRole = 'ROLE_ADMIN';
     const res = guard.canActivate();
     expect(res).toBeTruthy();
   });
