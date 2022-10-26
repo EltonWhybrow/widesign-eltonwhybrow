@@ -1,11 +1,16 @@
 [
   {
-    "heading": "Quiz/Game created for 'Stranger Things' fans",
+    "heading": "Home Tutoring - Custom WP Theme",
+    "url": "https://staging.redhilltutoring.co.uk/",
+    "imageName": "side-projects-redhill-tutoring"
+  },
+  {
+    "heading": "Stranger Things Quiz - Angular 13",
     "url": "https://eltonwhybrow.github.io/stranger-things-quiz/",
     "imageName": "side-projects-stranger-things"
   },
   {
-    "heading": "Garden Landscape Company - Custom Theme",
+    "heading": "Garden Landscaping - Custom Theme",
     "url": "https://budlandscapes.co.uk",
     "imageName": "side-projects-budlandscapes"
   },
@@ -15,7 +20,12 @@
     "imageName": "side-projects-bt-roofing"
   },
   {
-    "heading": "Lawn Mower Spares E-commerce",
+    "heading": "Legacy - Widesign Site",
+    "url": "https://legacy.widesign.co.uk/2013/",
+    "imageName": "side-projects-legacy-widesign"
+  },
+  {
+    "heading": "Mower Spares - E-Commerce",
     "url": "https://spares4mowers.co.uk",
     "imageName": "side-projects-spares-mowers"
   }
