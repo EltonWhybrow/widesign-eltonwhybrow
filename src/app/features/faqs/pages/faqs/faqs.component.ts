@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { IFaq } from 'src/app/shared/models/faq-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
@@ -11,11 +12,14 @@ import { HttpService } from 'src/app/shared/services/http-service.service';
 })
 export class FaqsComponent implements OnInit, OnDestroy {
 
-  constructor(private httpService: HttpService, private canonical: CanonicalService) { }
+  constructor(private meta: Meta, private httpService: HttpService, private canonical: CanonicalService) { }
   oneTestimonial: ITestmonial | undefined;
   allQuestions: IFaq[] | undefined;
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Faqs regarding design and development here at wideSign' })
+    this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
+    this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
     this.createLinkForCanonicalURL();
     this.httpService.getFaqs()
       .subscribe(

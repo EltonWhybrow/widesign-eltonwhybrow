@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { IServices } from 'src/app/shared/models/service-interface';
 import { ITestmonial } from 'src/app/shared/models/testimonials-interface';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
@@ -13,9 +14,12 @@ export class ServicesComponent implements OnInit, OnDestroy {
   oneTestimonial: ITestmonial | undefined;
   allServicesData: IServices[] | undefined;
 
-  constructor(private httpService: HttpService, private canonical: CanonicalService) { }
+  constructor(private meta: Meta, private httpService: HttpService, private canonical: CanonicalService) { }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Development and Design services at WideSign - AKA Elton Whybrow ' })
+    this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
+    this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
     this.createLinkForCanonicalURL();
     /*
     Getting the offered services data
