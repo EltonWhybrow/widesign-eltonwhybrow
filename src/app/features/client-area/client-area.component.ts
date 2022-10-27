@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { IClients, IClientsInfo } from 'src/app/shared/models/clients-interface';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
@@ -13,7 +14,7 @@ export class ClientAreaComponent implements OnInit, OnDestroy {
   allClientInfo: IClientsInfo[] | undefined;
   privateInfo: [] | undefined;
   ;
-  constructor(public httpService: HttpService, public authService: AuthService, private canonical: CanonicalService) { }
+  constructor(private meta: Meta, public httpService: HttpService, public authService: AuthService, private canonical: CanonicalService) { }
 
   // private loogedInInfo() {
   //   let newArray: any = []
@@ -39,7 +40,11 @@ export class ClientAreaComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Client information and dashboard at WideSign' })
+    this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
+    this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
     this.getServicesData()
+    this.authService.getUserRole();
     this.createLinkForCanonicalURL();
   }
 
