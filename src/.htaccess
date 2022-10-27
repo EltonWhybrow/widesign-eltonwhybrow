@@ -44,4 +44,11 @@ RewriteRule (.*) http://%{SERVER_NAME}/unsupported [R=301,L,E=nocache:1]
 
 </IfModule>
 
+# # //  Staging ONLY !!!!!!!!!!
+# Order deny,allow
+# Deny from all
+
+# # Elton home
+# Allow from 86.25.139.33
+
 

@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -26,6 +26,8 @@ jobs:
         run: |
           npm install
           npm run build:prod
+          ls
+          cd dist
           ls
 
       - name: Archive production artifacts
@@ -46,12 +48,20 @@ jobs:
         with:
           name: dist-folder
 
-      - name: Add to git
+      - name: Where am i
         run: |
           ls
-          git init
-          git config user.email "whybrow.elton@gmail.com"
-          git config user.name "Elton Whybrow"
-          git add -A && git commit -m "Add compiled build to git"
-          ls
-          git ftp push -v --force --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PWD }} ftp://ftps3.uk.cloudlogin.co
+          pwd
+
+      - name: Upload
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        with:
+          ftp_host: ftp://ftps3.uk.cloudlogin.co
+          ftp_username: ${{ secrets.FTP_USER }}
+          ftp_password: ${{ secrets.FTP_PWD }}
+          local_source_dir: "/github/workspace/"
+          dist_target_dir: "/"
+          delete: "true"
+          exclude: "'^.htaccess' '^ngsw.json'"
+          only_newer: true
+          ignore_time: false
