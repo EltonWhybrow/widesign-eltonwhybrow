@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Elton Playground for logged in fun and games' })
     this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
     this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
+    this.authService.getUserRole();
   }
 
 }

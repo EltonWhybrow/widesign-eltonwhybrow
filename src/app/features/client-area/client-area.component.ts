@@ -44,6 +44,7 @@ export class ClientAreaComponent implements OnInit, OnDestroy {
     this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
     this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
     this.getServicesData()
+    this.authService.getUserRole();
     this.createLinkForCanonicalURL();
   }
 
