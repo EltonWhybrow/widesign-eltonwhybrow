@@ -21,7 +21,7 @@ export class AuthService {
   public currentRole: string = '';
   public userRole: string = '';
 
-  private getUserRole(): any {
+  public getUserRole(): any {
     if (this.cookieService.get('wsat')) {
       const token = this.cookieService.get('wsat')
       const decodedToken = helper.decodeToken(token)
@@ -53,11 +53,5 @@ export class AuthService {
     this.userRole = '';
     // this.router.navigate(['/'])
   }
-
-
-
-  // public setUserRoles(role: string): void {
-  //   this.role = role
-  // }
 
 }

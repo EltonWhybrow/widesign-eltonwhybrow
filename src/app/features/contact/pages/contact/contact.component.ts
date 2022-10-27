@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { Meta } from '@angular/platform-browser';
 import { IEmail } from 'src/app/shared/models/emails-interface';
 import { CanonicalService } from 'src/app/shared/services/canonical.service';
 import { EmailService } from 'src/app/shared/services/email-service.service';
@@ -29,7 +30,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   public contactMessage: UntypedFormControl | undefined;
   public contactForm!: UntypedFormGroup;
 
-  constructor(private fb: UntypedFormBuilder, private emailService: EmailService, private canonicalService: CanonicalService) { }
+  constructor(private meta: Meta, private fb: UntypedFormBuilder, private emailService: EmailService, private canonicalService: CanonicalService) { }
 
   // scroll into view
   private getItemInView(event: any) {
@@ -42,6 +43,9 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Contact form to find out more about SEO, Design and Development services' })
+    this.meta.updateTag({ name: 'image', content: './assets/meta/link-share-image.png' })
+    this.meta.updateTag({ name: 'site', content: 'widesign.co.uk' })
     this.submitted = false;
     this.disableSubmit = false;
     this.initForm();
