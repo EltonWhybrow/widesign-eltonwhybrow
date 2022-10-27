@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -45,12 +45,28 @@ jobs:
         with:
           name: dist-folder
 
-      - name: Add to git
+      - name: Where am i
         run: |
           ls
-          git init
-          git config user.email "whybrow.elton@gmail.com"
-          git config user.name "Elton Whybrow"
-          git add -A && git commit -m "Add compiled build to git"
-          ls
-          git ftp push -v --force --user ${{ secrets.FTP_USER_PROD }} --passwd ${{ secrets.FTP_PWD_PROD }} ftp://ftps3.uk.cloudlogin.co
+          pwd
+
+      - name: Upload
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        with:
+          ftp_host: ftp://ftps3.uk.cloudlogin.co
+          ftp_username: ${{ secrets.FTP_USER_PROD }}
+          ftp_password: ${{ secrets.FTP_PWD_PROD }}
+          local_source_dir: "/github/workspace/"
+          dist_target_dir: "/"
+          delete: "true"
+          exclude: "'^.htaccess' '^ngsw.json'"
+
+      # - name: Add to git
+      #   run: |
+      #     ls
+      #     git init
+      #     git config user.email "whybrow.elton@gmail.com"
+      #     git config user.name "Elton Whybrow"
+      #     git add -A && git commit -m "Add compiled build to git"
+      #     ls
+      #     git ftp push -v --force --user ${{ secrets.FTP_USER_PROD }} --passwd ${{ secrets.FTP_PWD_PROD }} ftp://ftps3.uk.cloudlogin.co

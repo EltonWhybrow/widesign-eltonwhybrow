@@ -75,7 +75,7 @@
     </app-card>
 
     <!-- Interview -->
-    <ng-container *ngIf="this.authService.getUserRole() === 'ROLE_ADMIN'">
+    <ng-container *ngIf="this.authService.userRole === 'ROLE_ADMIN'">
       <app-card>
         <div card-img class="h-40">
           <picture>

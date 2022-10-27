@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   public disableSubmit: boolean = false; // set to true during login on button attempt (stops resending form)
   public formError: boolean = false;
   public formSuccess: boolean = false;
+  public revealed: boolean = false
 
   public loginCredentials!: ILogin;
 
@@ -37,7 +38,11 @@ export class LoginComponent implements OnInit {
     this.initForm();
   }
 
-  initForm() {
+  reveal() {
+    this.revealed = !this.revealed
+  }
+
+  private initForm() {
     this.username = new UntypedFormControl('', [Validators.required, Validators.pattern(this.NAMES_REGEX)]);
     this.password = new UntypedFormControl('', [Validators.required, Validators.pattern(this.PASSWORD_REGEX)]);
 

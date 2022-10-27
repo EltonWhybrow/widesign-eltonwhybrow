@@ -66,7 +66,7 @@
         </app-card>
 
         <!-- Show my admin helpers/tools if logged in -->
-        <app-card *ngIf="client.private && this.authService.getUserRole() === 'ROLE_ADMIN'">
+        <app-card *ngIf="client.private && this.authService.userRole === 'ROLE_ADMIN'">
           {{client.private}}
           <div card-img class="h-52 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>

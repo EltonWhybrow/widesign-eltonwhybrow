@@ -1,3 +1,10 @@
+
+
+
+| Staging                                                                                                                  | Production                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| [![Staging](https://github.com/EltonWhybrow/widesign-eltonwhybrow/actions/workflows/staging_release.yml/badge.svg?branch=staging)](https://github.com/EltonWhybrow/widesign-eltonwhybrow/actions/workflows/staging_release.yml)| [![Production](https://github.com/EltonWhybrow/widesign-eltonwhybrow/actions/workflows/prod_release.yml/badge.svg)](https://github.com/EltonWhybrow/widesign-eltonwhybrow/actions/workflows/prod_release.yml) |
+
 # WidesignEltonwhybrow
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
