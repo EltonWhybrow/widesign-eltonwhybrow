@@ -41,6 +41,9 @@
         </h2>
         <ul class="text-lg px-3 pb-2 text-left">
           <li>
+            <a routerLink="/login" aria-label="Login">Login</a>
+          </li>
+          <li>
             <a routerLink="/client-area" aria-label="Clients">Existing Clients</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
