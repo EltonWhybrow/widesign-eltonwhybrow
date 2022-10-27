@@ -62,6 +62,6 @@ jobs:
           local_source_dir: "/github/workspace/"
           dist_target_dir: "/"
           delete: "true"
-          exclude: "'^.htaccess' '^ngsw.json'"
+          exclude: "'^.htaccess'"
           only_newer: true
           ignore_time: false

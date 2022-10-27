@@ -59,7 +59,7 @@ jobs:
           local_source_dir: "/github/workspace/"
           dist_target_dir: "/"
           delete: "true"
-          exclude: "'^.htaccess' '^ngsw.json'"
+          exclude: "'^.htaccess'"
 
       # - name: Add to git
       #   run: |
