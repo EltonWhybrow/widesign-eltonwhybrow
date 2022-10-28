@@ -14,27 +14,28 @@
   </h1>
 </section>
 
-<app-sub-headings>
-  <ng-container sub-text-one>I am a Frontend Developer with a strong background in UX and design. I live in the
-    South-East England with my
-    wife, two daughters and pet dog Woody.
-  </ng-container>
-  <ng-container sub-text-two>You can read <a routerLink="/about"
-      class="inline-block group transition duration-300 text-raw-600">more
-      about
-      me<span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
-    and the skills, technologies <a routerLink="/services"
-      class="inline-block group transition duration-300 text-raw-600">I work with.<span
-        class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
-  </ng-container>
-  <ng-container sub-text-three></ng-container>
-</app-sub-headings>
-
 <!-- Services panel -->
 <app-panel></app-panel>
 
 <!-- Call back from section -->
 <section class="container call-back px-2 pt-16 pb-20 md:px-10 xl:px-0 mx-auto md:py-32 max-w-5xl">
+
+  <app-sub-headings>
+    <ng-container sub-text-one>I am a <strong>Frontend Developer</strong> with a strong background in <strong>UX and
+        Design</strong>. I live in the
+      <strong>South-East England</strong> with my wife, two daughters.
+    </ng-container>
+    <ng-container sub-text-two>You can read <a routerLink="/about"
+        class="inline-block group transition duration-300 text-raw-600">more
+        about
+        me<span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
+      and where i've worked as well as the skills, technologies <a routerLink="/services"
+        class="inline-block group transition duration-300 text-raw-600">I work with.<span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-raw-600"></span></a>
+    </ng-container>
+    <ng-container sub-text-three></ng-container>
+  </app-sub-headings>
+
   <div class="grid md:grid-cols-2 gap-14">
     <app-call-back></app-call-back>
     <picture>
