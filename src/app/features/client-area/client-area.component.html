@@ -22,7 +22,8 @@
 
 
         <app-card *ngIf="!client.private">
-          <div card-img class="h-52 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+          <div card-img
+            class="h-52 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>
               <source srcset="assets/imgs/{{client.imageName}}.webp" type="image/webp">
               <source srcset="assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">
@@ -69,7 +70,8 @@
         <!-- Show my admin helpers/tools if logged in -->
         <app-card *ngIf="client.private && this.authService.userRole === 'ROLE_ADMIN'">
           {{client.private}}
-          <div card-img class="h-52 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+          <div card-img
+            class="h-52 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>
               <source srcset="assets/imgs/{{client.imageName}}.webp" type="image/webp">
               <source srcset="assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">

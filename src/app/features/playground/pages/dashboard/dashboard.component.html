@@ -19,7 +19,7 @@
     <!-- playground dashboard -->
     <a routerLink="/playground/portfolio" class="group">
       <app-card>
-        <div card-img class="h-40 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+        <div card-img class="h-40 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
           <picture>
             <source srcset="assets/imgs/portfolio.webp" type="image/webp">
             <source srcset="assets/imgs/portfolio.jpg" type="image/jpeg">
@@ -51,7 +51,7 @@
     <!-- Side Projects -->
     <a routerLink="/playground/side-projects" class="group">
       <app-card>
-        <div card-img class="h-40 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+        <div card-img class="h-40 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
           <picture>
             <source srcset="assets/imgs/revision.webp" type="image/webp">
             <source srcset="assets/imgs/revision.jpg" type="image/jpeg">
@@ -83,7 +83,8 @@
     <ng-container *ngIf="this.authService.userRole === 'ROLE_ADMIN'">
       <a routerLink="/playground/interview-revision" class="group">
         <app-card>
-          <div card-img class="h-40 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+          <div card-img
+            class="h-40 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>
               <source srcset="assets/imgs/interview.webp" type="image/webp">
               <source srcset="assets/imgs/interview.jpg" type="image/jpeg">
