@@ -1,5 +1,8 @@
 .main-content {
-  @apply container px-2 md:px-10 xl:px-0 mx-auto pb-5 mb-10 max-w-5xl;
+  @apply container px-2 md:px-10 xl:px-0 mx-auto pb-5 mb-10 mt-1 max-w-5xl;
+  @screen md {
+    @apply mt-5;
+  }
 }
 
 .main-content-tighty {

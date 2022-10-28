@@ -6,6 +6,7 @@ import { AboutComponent } from './features/about/pages/about/about.component';
 import { ClientAreaComponent } from './features/client-area/client-area.component';
 import { ContactComponent } from './features/contact/pages/contact/contact.component';
 import { FaqsComponent } from './features/faqs/pages/faqs/faqs.component';
+import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
 import { ServicesComponent } from './features/services/pages/services/services.component';
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent, title: 'Elton Whybrow - Web Development & Design - WideSign' },
   { path: 'services', component: ServicesComponent, title: 'Services - Web Development & Design - WideSign' },
   { path: 'about', component: AboutComponent, title: 'About - Web Development & Design - WideSign' },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy / Cookies - Web Development & Design - WideSign' },
   { path: 'faqs', component: FaqsComponent, title: 'FAQs - Web Development & Design - WideSign' },
   { path: 'client-area', component: ClientAreaComponent, title: 'Client area - Web Development & Design - WideSign' },
   { path: 'contact', component: ContactComponent, title: 'Contact - Web Development & Design - WideSign' },

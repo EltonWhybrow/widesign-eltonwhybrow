@@ -17,6 +17,7 @@ import { WINDOW_PROVIDERS } from './shared/services/window.service';
 import { SharedModule } from './shared/shared.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { environment } from '../environments/environment';
     CallBackComponent,
     CompaniesComponent,
     PanelComponent,
-    ScrollTopComponent
+    ScrollTopComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     SharedModule,
