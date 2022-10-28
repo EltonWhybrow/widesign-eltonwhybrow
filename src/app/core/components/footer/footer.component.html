@@ -39,21 +39,21 @@
       <div class="border-2 border-tealy-900 rounded mb-10">
         <h2 class="font-serif heading_highlight bg-tealy-900 text-white p-2 mb-4 font-semibold text-2xl">Elsewhere
         </h2>
-        <ul class="text-lg px-3 pb-2 text-left">
+        <ul class="px-3 pb-2 text-left">
           <li>
-            <a routerLink="/login" aria-label="Login">Login</a>
+            <a class="secondary-link" routerLink="/login" aria-label="Login">Login</a>
           </li>
           <li>
-            <a routerLink="/client-area" aria-label="Clients">Clients</a>
+            <a class="secondary-link" routerLink="/client-area" aria-label="Clients">Clients</a>
           </li>
           <li>
-            <a routerLink="/privacy-policy" aria-label="Clients">Privacy policy</a>
+            <a class="secondary-link" routerLink="/privacy-policy" aria-label="Clients">Privacy policy</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
-            <a routerLink="/playground/dashboard" aria-label="Playground">Playground</a>
+            <a class="secondary-link" routerLink="/playground/dashboard" aria-label="Playground">Playground</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
-            <a routerLink="/playground/portfolio" aria-label="Portfolio">Portfolio</a>
+            <a class="secondary-link" routerLink="/playground/portfolio" aria-label="Portfolio">Portfolio</a>
           </li>
 
         </ul>
@@ -157,7 +157,7 @@
   <p class="text-xs w-full text-center pt-3">&copy; WideSign Ltd {{ year }} | Registered in England and Wales |
     Company No. 14047437</p>
   <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-  <p class="text-xs w-full text-center pt-1"><a href="#" id="open_preferences_center" class="hover:underline">Cookies
+  <p class="text-xs w-full text-center pt-1"><a href="#" id="open_preferences_center" class="secondary-link">Cookies
       preferences</a></p>
 
 </footer>
