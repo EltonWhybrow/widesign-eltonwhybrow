@@ -9,12 +9,27 @@
   <div class="grid md:grid-cols-2 gap-14">
     <!-- TODO: make contact-form comp -->
     <div id="form-top">
-      <p class="heading_sub mb-4">
+      <!-- Existing clients text -->
+      <div class="notification notification--is-note flex items-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-2 h-6 w-6 flex-none" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <p>
+          Existing client? looking for something, try the <a class="underline" [routerLink]="['/client-area']"
+            routerLinkActive="is-active">clients area</a> first before reaching out. Thanks.
+        </p>
+      </div>
+
+
+      <!-- <p class="heading_sub mb-4">
         Existing client? Please check the <a routerLink="/client-area"
-          class="inline-block group transition duration-300 border-b border-b-raw-500">client area<span
+          class="inline-block group transition duration-300 text-raw-600">client area<span
             class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-raw-600"></span></a> first
         to see if that answers your question.
-      </p>
+      </p> -->
 
       <!-- <section class="contact-details">
         <p>Mobile: <a href="tel:+7910742752">07910 742 752</a></p>

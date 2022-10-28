@@ -4,12 +4,13 @@
   <ng-container text-three></ng-container>
 </app-heading>
 
-<app-sub-headings>
-  <ng-container sub-text-one>Sign in to your existing hosting account, make an outstanding payment, add a new email
+<!-- <app-sub-headings>
+  <ng-container sub-text-one>Sign in to your existing hosting account, make an outstanding payment, view or add a new
+    email
     address and more.</ng-container>
   <ng-container sub-text-two></ng-container>
   <ng-container sub-text-three></ng-container>
-</app-sub-headings>
+</app-sub-headings> -->
 
 <!-- Client information info section -->
 <section *ngIf="allClientInfo else loadingClientStuff" class="main-content">
@@ -21,7 +22,8 @@
 
 
         <app-card *ngIf="!client.private">
-          <div card-img class="h-52 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+          <div card-img
+            class="h-52 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>
               <source srcset="assets/imgs/{{client.imageName}}.webp" type="image/webp">
               <source srcset="assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">
@@ -68,7 +70,8 @@
         <!-- Show my admin helpers/tools if logged in -->
         <app-card *ngIf="client.private && this.authService.userRole === 'ROLE_ADMIN'">
           {{client.private}}
-          <div card-img class="h-52 transition ease-in-out group-hover:scale-105 scale-100 duration-300 transform-gpu">
+          <div card-img
+            class="h-52 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
             <picture>
               <source srcset="assets/imgs/{{client.imageName}}.webp" type="image/webp">
               <source srcset="assets/imgs/{{client.imageName}}.jpg" type="image/jpeg">

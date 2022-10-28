@@ -9,7 +9,7 @@
 
 <section class="main-content">
   <ng-container *ngIf="portfolioResult else loadingPortfolioDetails">
-    <h3 class="pt-2 text-tealy-500 font-medium inline-block text-3xl mt-1 font-serif">{{portfolioResult.heading}} assets
+    <h3 class="heading-3">{{portfolioResult.heading}} assets
     </h3>
     <p class="standard-paragraph text-raw-400 text-lg font-thin">
       Some assets from the project.
@@ -21,7 +21,7 @@
         <a class="text-tealy-500 group" href="{{assets.url}}" target="_blank">
           <app-card>
             <div card-img
-              class="h-44 group-hover:scale-105 scale-100 duration-300 group-hover:translate-y-4 transform-gpu">
+              class="h-44 md:group-hover:scale-105 scale-100 duration-300 md:group-hover:translate-y-4 transform-gpu">
               <picture>
                 <source srcset="{{assets.imgWebp}}" type="image/webp">
                 <source srcset="{{assets.imgJpg}}" type="image/jpeg">

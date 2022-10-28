@@ -4,7 +4,7 @@
 }
 
 .notification {
-  @apply p-3 my-2 rounded text-sm;
+  @apply p-3 mb-2 rounded text-sm;
   // opacity: 0;
   // transition: opacity 3s ease-in-out;
   &--is-warning {
