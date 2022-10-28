@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   // scroll into view
   private getItemInView(event: any) {
     let anchor = event.target.parentNode.id;
-    console.log('something hit!!!', event.target.id)
+    // console.log('something hit!!!', event.target.id)
     const scrollToElement = window.document.getElementById(anchor);
     setTimeout(() => {
       scrollToElement?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
