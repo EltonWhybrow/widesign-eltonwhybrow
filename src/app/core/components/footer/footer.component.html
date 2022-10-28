@@ -41,19 +41,23 @@
         </h2>
         <ul class="px-3 pb-2 text-left">
           <li>
-            <a class="secondary-link" routerLink="/login" aria-label="Login">Login</a>
+            <a class="secondary-link" routerLink="/login" routerLinkActive="is-active" aria-label="Login">Login</a>
           </li>
           <li>
-            <a class="secondary-link" routerLink="/client-area" aria-label="Clients">Clients</a>
+            <a class="secondary-link" routerLink="/client-area" routerLinkActive="is-active"
+              aria-label="Clients">Clients</a>
           </li>
           <li>
-            <a class="secondary-link" routerLink="/privacy-policy" aria-label="Clients">Privacy policy</a>
+            <a class="secondary-link" routerLink="/privacy-policy" routerLinkActive="is-active"
+              aria-label="Clients">Privacy policy</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
-            <a class="secondary-link" routerLink="/playground/dashboard" aria-label="Playground">Playground</a>
+            <a class="secondary-link" routerLink="/playground/dashboard" routerLinkActive="is-active"
+              aria-label="Playground">Playground</a>
           </li>
           <li *ngIf="authService.isLoggedIn">
-            <a class="secondary-link" routerLink="/playground/portfolio" aria-label="Portfolio">Portfolio</a>
+            <a class="secondary-link" routerLink="/playground/portfolio" routerLinkActive="is-active"
+              aria-label="Portfolio">Portfolio</a>
           </li>
 
         </ul>
