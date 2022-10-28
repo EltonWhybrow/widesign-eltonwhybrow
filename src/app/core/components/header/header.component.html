@@ -118,7 +118,7 @@
 
       <nav id="burger-nav__list" role="navigation" aria-label="Main" [ngClass]="{
           'open':burgerActive}"
-        class="fixed overflow-scroll top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700 pb-10">
+        class="fixed overflow-scroll top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700 pb-20">
         <div id="logo" routerLink="/" routerLinkActive="is-active" (click)="this.toggleBurgerNav()"
           class="cursor-pointer block mb-4">
           <svg class="w-24 ml-9 my-4" viewBox="0 10 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@
               (click)="this.toggleBurgerNav()" [routerLink]="['/client-area']" routerLinkActive="is-active">Existing
               Clients</a>
           </li>
-          <div class="my-4 border-t border-tealy-500"></div>
+          <div class="my-2 border-t border-tealy-500"></div>
 
         </ul>
 
@@ -183,7 +183,7 @@
             </a>
           </li>
 
-          <div class="my-4 border-t border-tealy-500"></div>
+          <div class="my-2 border-t border-tealy-500"></div>
           <p *ngIf="authService.isLoggedIn" class="text-center block font-semibold text-base text-tealy-900">Welcome
             back,
             {{this.authService.nickname}}!</p>
