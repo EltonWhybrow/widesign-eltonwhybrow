@@ -100,7 +100,7 @@
     </nav>
 
     <!-- Hamburger menu -->
-    <div id="burger-nav" class="md:hidden flex items-start overflow-hidden">
+    <div id="burger-nav" class="md:hidden flex items-start overflow-scroll">
       <button
         class="burger__toggler border-0 bg-tealy-700 p-2 text-white leading-none text-xl absolute transition-right duration-200 top-4 -right-1 hover:right-0 z-20 w-16 h-12 rounded-l-sm"
         type="button" aria-label="Toggle navigation" (click)="toggleBurgerNav()" data-testid="burger-button">
@@ -118,10 +118,10 @@
 
       <nav id="burger-nav__list" role="navigation" aria-label="Main" [ngClass]="{
           'open':burgerActive}"
-        class="absolute top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700">
+        class="fixed overflow-scroll top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700 pb-10">
         <div id="logo" routerLink="/" routerLinkActive="is-active" (click)="this.toggleBurgerNav()"
           class="cursor-pointer block mb-4">
-          <svg class="w-24 m-10 mb-4" viewBox="0 10 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          <svg class="w-24 ml-9 my-4" viewBox="0 10 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="logo_web" fill="none" transform="translate(-10.000000, -10.000000)">
               <rect id="Rectangle" x="0" y="0" width="140" height="140"></rect>
