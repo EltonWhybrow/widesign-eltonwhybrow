@@ -18,6 +18,7 @@ import { SharedModule } from './shared/shared.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
+import { FooterLandingComponent } from './core/components/footer-landing/footer-landing.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy
     CompaniesComponent,
     PanelComponent,
     ScrollTopComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    FooterLandingComponent
   ],
   imports: [
     SharedModule,

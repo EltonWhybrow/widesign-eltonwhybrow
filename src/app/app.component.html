@@ -2,5 +2,10 @@
 <main role="main">
   <router-outlet></router-outlet>
 </main>
-<app-footer></app-footer>
+<ng-container *ngIf="landingPage else mainFooter">
+  <app-footer-landing></app-footer-landing>
+</ng-container>
+<ng-template #mainFooter>
+  <app-footer></app-footer>
+</ng-template>
 <app-scroll-top></app-scroll-top>
