@@ -12,8 +12,10 @@ import { TabComponent } from './components/tab/tab.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionItemComponent } from './components/accordion/accordion-item/accordion-item.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollViewDirective } from './directives/scroll-view.directive';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { CompaniesComponent } from './components/companies/companies.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,15 @@ import { ScrollViewDirective } from './directives/scroll-view.directive';
     TabsComponent,
     TabComponent,
     FilterPipe,
-    ScrollViewDirective
+    ScrollViewDirective,
+    TestimonialComponent,
+    CompaniesComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AccordionComponent,
@@ -46,10 +51,13 @@ import { ScrollViewDirective } from './directives/scroll-view.directive';
     SpinnerComponent,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     TabsComponent,
     TabComponent,
     FilterPipe,
-    ScrollViewDirective
+    ScrollViewDirective,
+    TestimonialComponent,
+    CompaniesComponent
   ]
 })
 export class SharedModule { }

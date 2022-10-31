@@ -34,5 +34,14 @@
     "testimonialHighlight": "Great customer support...",
     "testimonial": "The changes on my website were dealt with quickly and efficiently by Elton. I wouldn't hesitate to recommend his services.",
     "location": "Cobham, Surrey"
+  },
+  {
+    "rating": 5,
+    "company": "BT Roofing Services Limited",
+    "name": "Frankie Austin",
+    "image": "testimonial-frankie-profile",
+    "testimonialHighlight": "It can be a minefield trying to choose the right company to work with when it come the improving your site ranking  and visibility online.",
+    "testimonial": "We have been using Elton for over a year now and the result are clear to see. His extensive knowledge of SEO and marketing wizardry is something to be admired, which has definitely given my company a competitive edge",
+    "location": "Reigate, Surrey"
   }
 ]
