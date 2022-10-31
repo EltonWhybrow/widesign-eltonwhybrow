@@ -1,8 +1,8 @@
 <app-header></app-header>
 <main role="main">
-  <router-outlet></router-outlet>
+  <router-outlet (activate)="showHide($event)"></router-outlet>
 </main>
-<ng-container *ngIf="landingPage else mainFooter">
+<ng-container *ngIf="isLanding else mainFooter">
   <app-footer-landing></app-footer-landing>
 </ng-container>
 <ng-template #mainFooter>
