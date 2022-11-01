@@ -12,7 +12,6 @@ export class RoleGuard implements CanActivate {
     private authService: AuthService) { }
   canActivate() {
     if (this.authService.userRole !== 'ROLE_ADMIN') {
-      this.authService.currentRole = 'ROLE_GUEST';
       this.router.navigate(['login/not-authorised']);
       return false;
     } else {

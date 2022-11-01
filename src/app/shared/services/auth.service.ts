@@ -18,14 +18,14 @@ export class AuthService {
   private loggedInStatus: boolean = JSON.parse(localStorage.getItem('loggedIn') || 'false')
   private NODE_BASE_URL = environment.nodeBaseUrl;
   public nickname: string = (localStorage.getItem('nickname') || 'Anonymous');
-  public currentRole: string = '';
-  public userRole: string = '';
+  public userRole: string = (localStorage.getItem('wsrole') || '');
 
   public getUserRole(): any {
     if (this.cookieService.get('wsat')) {
       const token = this.cookieService.get('wsat')
       const decodedToken = helper.decodeToken(token)
       this.userRole = decodedToken.role;
+      localStorage.setItem('wsrole', decodedToken.role);
     }
     // return console.log('>>> Get user role : failed >>>');
 
