@@ -26,6 +26,11 @@
       <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
         [routerLink]="['/playground/side-projects']" routerLinkActive="is-active">Side projects</a>
     </li>
+
+    <li *ngIf="router.url === '/playground/landing-pages'" class="breadcrumbs__item group relative">
+      <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+        [routerLink]="['/playground/landing-pages']" routerLinkActive="is-active">Landing pages</a>
+    </li>
   </ul>
 
 </section>
