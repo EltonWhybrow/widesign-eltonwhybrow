@@ -10,7 +10,7 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent {
   burgerActive: boolean = false;
-  public currentRoute: string = '/';
+  public currentRoute: string = '';
 
   constructor(public authService: AuthService, private router: Router) {
 

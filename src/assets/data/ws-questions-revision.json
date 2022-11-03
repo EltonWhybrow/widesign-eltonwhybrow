@@ -233,5 +233,10 @@
     "id": 46,
     "question": "OWASP Top Ten",
     "answer": "<ul class='list-disc list-inside'><li>Broken Access Control</li><li>Cryptographic Failures</li><li>Injection</li><li>Insecure Design</li><li>Security Misconfiguration </li><li>Vulnerable and Outdated Components</li><li>Identification and Authentication Failures</li><li>Software and Data Integrity Failures </li><li>Security Logging and Monitoring Failures</li><li>Server-Side Request Forgery</li></ul><p><a class='underline text-tealy-500' href='https://owasp.org/www-project-top-ten/' target='_blank'>Read more</a></p>"
+  },
+  {
+    "id": 47,
+    "question": "Javascript: Differnece between Implicit and Explicit Coercion",
+    "answer": "<ul class='list-disc list-inside'><li><strong>Explicit</strong></li><li>Explicitly done in the code by the developer. JavaScript provides inbuilt methods for type conversion. e.g. <strong>Number(), String()</strong></li><li><strong>Implicit</strong></li><li>In this case, the coercion is done implicitly. When JavaScript operates in a wrong data type, it will try to convert the value to the right data type. e.g <strong>12 + '' //Output is '12' as number 12 is converted to string '12'</strong></li></ul><p><a class='underline text-tealy-500' href='https://betterprogramming.pub/implicit-and-explicit-coercion-in-javascript-b23d0cb1a750' target='_blank'>Read more</a></p>"
   }
 ]

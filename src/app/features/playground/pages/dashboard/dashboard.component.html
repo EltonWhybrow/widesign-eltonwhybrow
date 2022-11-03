@@ -111,6 +111,39 @@
           </div>
         </app-card>
       </a>
+
+
+      <!-- Landing pages -->
+      <a routerLink="/playground/landing-pages" class="group">
+        <app-card>
+          <div card-img
+            class="h-40 transition ease-in-out md:group-hover:scale-105 scale-100 duration-300 transform-gpu">
+            <picture>
+              <source srcset="assets/imgs/landing-pages.webp" type="image/webp">
+              <source srcset="assets/imgs/landing-pages.jpg" type="image/jpeg">
+              <img #userImage class="w-full object-cover object-center rounded-lg shadow-md"
+                src="assets/imgs/landing-pages.jpg" alt="webdesign">
+            </picture>
+          </div>
+
+          <ng-container card-header>Landing Pages</ng-container>
+          <ng-container card-sub-header>WIP - Selling products on Wide Sign</ng-container>
+          <div card-body>Just links to landing pages created -Currently only SEO so goes striaght there.
+          </div>
+
+          <div card-more class="flex gap-x-2">
+            <a class="inline-flex text-white pl-3 pr-2 py-2 text-sm bg-tealy-400 hover:bg-tealy-500 transition duration-200 ease-in-out rounded-md"
+              routerLink="/playground/landing-pages">
+              Landing Pages
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </app-card>
+      </a>
     </ng-container>
 
   </div>

@@ -4,6 +4,7 @@ import { AuthGuard } from 'src/app/shared/guards/auth.guard';
 import { RoleGuard } from 'src/app/shared/guards/role.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { InterviewRevisionComponent } from './pages/interview-revision/interview-revision.component';
+import { LandingPagesComponent } from './pages/landing-pages/landing-pages.component';
 import { PlaygroundComponent } from './pages/playground/playground.component';
 import { PortfolioDashboardComponent } from './pages/portfolio/portfolio-dashboard/portfolio-dashboard.component';
 import { PortfolioDetailsComponent } from './pages/portfolio/portfolio-details/portfolio-details.component';
@@ -23,8 +24,9 @@ const routes: Routes = [
           { path: 'portfolio/:id', component: PortfolioDetailsComponent, title: 'Portfolio assets - Web Development & Design - WideSign' }
         ]
       },
-      { path: 'interview-revision', component: InterviewRevisionComponent, canActivate: [RoleGuard], title: 'Revision - Web Development & Design - WideSign' },
       { path: 'side-projects', component: SideProjectsComponent, title: 'Side Projects - Web Development & Design - WideSign' },
+      { path: 'interview-revision', component: InterviewRevisionComponent, canActivate: [RoleGuard], title: 'Revision - Web Development & Design - WideSign' },
+      { path: 'landing-pages', component: LandingPagesComponent, canActivate: [RoleGuard], title: 'Landing Pages - Web Development & Design - WideSign' },
     ]
   },
   { path: '', pathMatch: 'full', redirectTo: '' },

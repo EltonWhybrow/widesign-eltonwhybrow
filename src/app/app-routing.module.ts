@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   },
+  {
+    path: 'products',
+    loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule)
+  },
   { path: '', component: HomepageComponent, title: 'Elton Whybrow - Web Development & Design - WideSign' },
   { path: 'services', component: ServicesComponent, title: 'Services - Web Development & Design - WideSign' },
   { path: 'about', component: AboutComponent, title: 'About - Web Development & Design - WideSign' },

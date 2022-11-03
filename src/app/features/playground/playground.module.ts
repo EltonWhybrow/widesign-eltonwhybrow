@@ -10,6 +10,7 @@ import { PortfolioDetailsComponent } from './pages/portfolio/portfolio-details/p
 import { PortfolioDashboardComponent } from './pages/portfolio/portfolio-dashboard/portfolio-dashboard.component';
 import { InterviewRevisionComponent } from './pages/interview-revision/interview-revision.component';
 import { SideProjectsComponent } from './pages/side-projects/side-projects.component';
+import { LandingPagesComponent } from './pages/landing-pages/landing-pages.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SideProjectsComponent } from './pages/side-projects/side-projects.compo
     PortfolioDetailsComponent,
     PortfolioDashboardComponent,
     InterviewRevisionComponent,
-    SideProjectsComponent
+    SideProjectsComponent,
+    LandingPagesComponent
   ],
   imports: [
     CommonModule,

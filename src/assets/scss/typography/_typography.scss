@@ -22,7 +22,7 @@
 }
 
 .primary-link {
-  @apply text-teal-500 hover:text-teal-600 hover:underline;
+  @apply text-tealy-500 hover:text-tealy-600 hover:underline;
 }
 
 .secondary-link {
@@ -32,6 +32,26 @@
   }
 }
 
+.primary-btn {
+  @apply inline-flex relative text-gray-100 px-4 py-3 text-base bg-tealy-500 hover:bg-tealy-700 transition duration-200 ease-in-out rounded-md items-center uppercase;
+}
+
+.primary-btn-sm {
+  @apply inline-flex relative text-gray-100 px-3 py-2 text-base bg-tealy-500 hover:bg-tealy-700 transition duration-200 ease-in-out rounded-md items-center uppercase;
+}
+
+.secondary-btn {
+  @apply inline-flex relative bg-transparent px-4 py-3 text-base text-tealy-500 border-2 border-tealy-500 hover:border-tealy-700 hover:text-tealy-700 transition duration-200 ease-in-out rounded-md items-center uppercase;
+}
+
 .heading-3 {
   @apply bg-tealy-500 p-2 text-white inline-block text-xl mt-6 mb-3 font-serif rounded-t-sm rounded-r-lg rounded-tl-lg;
+}
+
+.product-heading {
+  @apply mb-1 text-2xl text-white bg-raw-700 inline-block px-4 py-3 mt-10 rounded-t-sm rounded-r-lg rounded-tl-lg;
+}
+
+.tags {
+  @apply inline-block py-1 px-2 first:ml-0 last:mr-0 bg-gray-700 text-white text-sm rounded-md mx-1 mt-3;
 }

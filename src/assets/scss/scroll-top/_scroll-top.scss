@@ -1,5 +1,6 @@
 .scroll-to-top {
   @apply p-2 bg-tealy-800 rounded-full;
+  z-index: 1000;
   cursor: pointer;
   position: fixed;
   bottom: 10px;
