@@ -23,14 +23,16 @@
           <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
             [routerLink]="['/services']" routerLinkActive="is-active">Services</a>
         </li>
-        <!-- <li class="nav__item group relative">
-          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-            [routerLink]="['/client-area']" routerLinkActive="is-active">Clients</a>
-        </li> -->
-        <li class="nav__item group relative" *ngIf="authService.isLoggedIn">
-          <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-            [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Playground</a>
-        </li>
+        <ng-container *ngIf="authService.isLoggedIn">
+          <li class="nav__item group relative">
+            <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+              [routerLink]="['/client-area']" routerLinkActive="is-active">Clients</a>
+          </li>
+          <li class="nav__item group relative">
+            <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+              [routerLink]="['/playground/dashboard']" routerLinkActive="is-active">Playground</a>
+          </li>
+        </ng-container>
         <li class="nav__item group relative">
           <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
             [routerLink]="['/about']" routerLinkActive="is-active">About</a>

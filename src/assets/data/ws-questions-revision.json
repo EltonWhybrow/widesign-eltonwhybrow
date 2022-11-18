@@ -12,17 +12,17 @@
   {
     "id": 3,
     "question": "Advantages of Angular over other frameworks",
-    "answer": "Has <strong>built-in features</strong> like, routing, state management, rxjs library and http services straight out of the box. It has had <strong>long-term support from Google</strong> and has a large community and lots of <strong>documentation.</strong>"
+    "answer": "Has <strong>built-in features</strong> like, Routing, httpClient, rxjs library, and testing straight out of the box. It has had <strong>long-term support from Google</strong> and has a large community and lots of <strong>documentation.</strong>"
   },
   {
     "id": 4,
     "question": "Differences between AngularJS and Angular",
-    "answer": "Angular uses typescript, AngularJS does not. <strong>AngularJS uses MVC</strong> while Angular relplaces the controller with components. Angular is much easier to maintain on larger project due to it structure."
+    "answer": "Angular uses typescript, AngularJS does not. <strong>AngularJS uses MVC</strong> while Angular M-V-VM - (Model-View-ViewModal) relplaces the controller with components. Also uses Typescript now as well as RXJS and Routing, Angular is much easier to maintain on larger project due to it structure."
   },
   {
     "id": 5,
     "question": "Explain Components, Modules and Services in Angular",
-    "answer": "<strong>Components are the basic building blocks</strong>, which control a part of the UI. A <strong>module is a place where we can group components, directives, services, and pipes</strong>. The main objective of a <strong>service is to share data</strong>, functions with different components of the application. They get instantiated only once (singeltons) during the lifetime of an application"
+    "answer": "<strong>Components are the basic building blocks</strong>, which control a part of the UI. A <strong>module is a place where we can group components, directives, services, and pipes</strong>. The main objective of a <strong>service is to share data</strong>, functions with different components of the application. They get instantiated only once (singletons) during the lifetime of an application"
   },
   {
     "id": 6,
@@ -31,7 +31,7 @@
   },
   {
     "id": 7,
-    "question": "How are Observables different from Promises",
+    "question": "Javascript: How are Observables different from Promises",
     "answer": "<strong>Promises -</strong> Emits a single value, Eagerly and cannot be cancelled. <strong>Observable -</strong> Emit multiple values over time, Is lazy and is not called until we subscribe to it. Can be cancelled using <strong>unsubscribe()</strong>."
   },
   {
@@ -52,7 +52,7 @@
   {
     "id": 11,
     "question": "Explain the concept of 'Dependency Injection' in Angular",
-    "answer": "<strong>@Injectable decorator </strong>allows services to be injected in components and directive etc.. across the app"
+    "answer": "<strong>@Injectable decorator </strong>allows services/httpClient to be injected in components and directive etc.. across the app"
   },
   {
     "id": 12,
@@ -61,13 +61,13 @@
   },
   {
     "id": 13,
-    "question": "Authentication and Authorization: Security",
+    "question": "Misc: Authentication and Authorization: Security",
     "answer": "<strong>Authentication -</strong> Login credentials are passed to an authenticate API (server, database). Credentials are validated and a JWT is returned for example. The JWT has information or attributes regarding the current user. User is then identifyable by JWT. This is called authentication.<br /> <strong>Autorization -</strong> Different users can have a different level of access, (roles, claims). The level of access is authorization."
   },
   {
     "id": 14,
-    "question": "What is TypeScript?",
-    "answer": "TypeScript is a <strong>strict syntactical superset of JavaScript</strong>. Its add optional static typing to the language and is compiled down to javascript."
+    "question": "Javascript: What is TypeScript?",
+    "answer": "TypeScript is a <strong>strict syntactical superset of JavaScript</strong>. Its add optional static typing to the language and is compiled down to javascript. Used for stronger typing and increases productivity catching small errors in dev you code editor"
   },
   {
     "id": 15,
@@ -96,7 +96,7 @@
   },
   {
     "id": 20,
-    "question": "Get/Set Example - Javascript",
+    "question": "Javascript: Get/Set Example",
     "answer": "class CoffeeMachine {<br />_waterAmount = 0;<br />setWaterAmount(value) {<br />if (value < 0) value = 0;<br />this._waterAmount = value;<br />}<br />getWaterAmount() {<br />return this._waterAmount;<br /><br />}<br />}<br />new CoffeeMachine().setWaterAmount(100);"
   },
   {
@@ -106,12 +106,12 @@
   },
   {
     "id": 22,
-    "question": "Give a few examples of Angualr NgModules?",
+    "question": "Give a few examples of Angular NgModules?",
     "answer": "Angular libraries such as <strong>FormsModule</strong>, <strong>HttpClientModule</strong>, and <strong>RouterModule</strong>.<br /> Many third-party libraries such as <strong>Angular Material</strong>, <strong>ngRx</strong> store. etc..."
   },
   {
     "id": 23,
-    "question": "What is the precedence between pipe and ternary operators?",
+    "question": "Angular: What is the precedence between pipe and ternary operators?",
     "answer": "The <strong>pipe operator has a higher precedence</strong> than the ternary operator (?:). For example, the expression first ? second : third | fourth is parsed as first ? second : (third | fourth)."
   },
   {
@@ -136,7 +136,7 @@
   },
   {
     "id": 28,
-    "question": "Explain Node Event loop? ",
+    "question": "Explain Node Event loop?",
     "answer": "Your code will run on a <strong>single event loop</strong>, write code with this thing in mind to avoid blocking it.<br/>The <strong>event loop</strong> continuously checks the call stack <strong>(LastIn, FirstOut)</strong> and runs functions, executing in order.<br/>Anything like asyc functions are added the <strong>message queue</strong> and picked up after the call stack is finished. <br/>NOTE: ES6 <strong>Job Queue</strong> allows promises to be picked up in the call stack as soon as they are ready"
   },
   {
@@ -151,7 +151,7 @@
   },
   {
     "id": 31,
-    "question": "JWT in a nutshell - Security",
+    "question": "Misc: JWT in a nutshell - Security",
     "answer": "<strong>Consists of a header, payload and verify signature(secret)</strong>.<br/>A digitally signed token-based stateless authentication mechanism. Way to securely transmit information between parties using JSON.<br/>Authorization: Bearer <strong>token</strong>"
   },
   {
@@ -181,8 +181,8 @@
   },
   {
     "id": 37,
-    "question": "HTTP Request Methods",
-    "answer": "<strong>GET</strong><br/><strong>PUT</strong><br/><strong>POST</strong><br/><strong>PATCH</strong><br/><strong>DELETE</strong>"
+    "question": "Misc: HTTP Request Methods",
+    "answer": "<p>Both PUT and POST can be used for creating.</p><p>PUT is defined to assume idempotency (A function is said to be idempotent if it returns the same output for the same input or does what we expect it to do. Idempotence is different from pure function as it allows side effects), so if you PUT an object twice, it should have no additional effect.</p><strong>GET</strong><br/><strong>PUT</strong> - Used to create a resource, or overwrite it. While you specify the resources new URL. Its idempotent.(Submits always have the same result)<br/><strong>POST</strong> - Used to modify and update a resource<br/><strong>PATCH</strong><br/><strong>DELETE</strong><strong>OPTION</strong>"
   },
   {
     "id": 38,
@@ -221,22 +221,32 @@
   },
   {
     "id": 45,
-    "question": "What is NgRx?",
+    "question": "Angular: What is NgRx?",
     "answer": "<p>NgRx is a framework for building reactive applications in Angular. <strong>NgRx provides state management</strong>, <strong>isolation of side effects</strong>, entity collection management, router bindings, code generation, and <strong>developer tools</strong> that enhance developers experience when building many different types of applications</p>"
   },
   {
     "id": 46,
-    "question": "What are benefits of using store (ngrx)?",
+    "question": "Angular: What are benefits of using store (ngrx)?",
     "answer": "<p><strong>Centralized, Immutable State</strong> / <strong>Performance</strong> - Since state is centralized at the top of your application, data updates can flow down through your components relying on slices of store / <strong>Testability</strong> -All state updates are handled in reducers, which are pure functions. Pure functions are extremely simple to test, as it is simply input in, assert against output.</p>"
   },
   {
     "id": 46,
-    "question": "OWASP Top Ten",
+    "question": "Misc: OWASP Top Ten",
     "answer": "<ul class='list-disc list-inside'><li>Broken Access Control</li><li>Cryptographic Failures</li><li>Injection</li><li>Insecure Design</li><li>Security Misconfiguration </li><li>Vulnerable and Outdated Components</li><li>Identification and Authentication Failures</li><li>Software and Data Integrity Failures </li><li>Security Logging and Monitoring Failures</li><li>Server-Side Request Forgery</li></ul><p><a class='underline text-tealy-500' href='https://owasp.org/www-project-top-ten/' target='_blank'>Read more</a></p>"
   },
   {
     "id": 47,
-    "question": "Javascript: Differnece between Implicit and Explicit Coercion",
+    "question": "Javascript: Difference between Implicit and Explicit Coercion",
     "answer": "<ul class='list-disc list-inside'><li><strong>Explicit</strong></li><li>Explicitly done in the code by the developer. JavaScript provides inbuilt methods for type conversion. e.g. <strong>Number(), String()</strong></li><li><strong>Implicit</strong></li><li>In this case, the coercion is done implicitly. When JavaScript operates in a wrong data type, it will try to convert the value to the right data type. e.g <strong>12 + '' //Output is '12' as number 12 is converted to string '12'</strong></li></ul><p><a class='underline text-tealy-500' href='https://betterprogramming.pub/implicit-and-explicit-coercion-in-javascript-b23d0cb1a750' target='_blank'>Read more</a></p>"
+  },
+  {
+    "id": 48,
+    "question": "Javascript: Immutable",
+    "answer": "<p><strong>Immutable means cannot be changed</strong> - Example is a const array but it can still be changed if you a[0]= 1; jump inside and mutate. Answer is to Object.freeze to object.</p><p>Object.freeze can make any object properties or methods immutable. e.g. const array1 = Object.freeze([1, 2, 3]);</p>"
+  },
+  {
+    "id": 49,
+    "question": "Angular - ProvidedIn",
+    "answer": "<p>Provide a service to only certain areas of the app. Instead of the standard PorvidedIn: 'root' set up.</p>"
   }
 ]
