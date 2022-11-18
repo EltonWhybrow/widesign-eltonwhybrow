@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
   showHide(event: Component) {
-    console.log('>>>LOG>>>', event);
+    // console.log('>>>LOG>>>', event);
     if (event instanceof SeoComponent) { this.isLanding = true } else { this.isLanding = false };
 
   }
