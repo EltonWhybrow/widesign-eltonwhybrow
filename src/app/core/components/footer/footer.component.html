@@ -102,13 +102,13 @@
           <ul>
             <li *ngFor="let tweet of twitterFeed?.data"
               class="border-b rounded border-tealy-900 relative p-4 pb-6 pr-10 my-5 last:border-b-0 flex justify-center">
-
+              <!-- {{tweet?.entities?.urls[0].images.url}}
               <ng-container *ngIf="tweet?.entities?.urls;">
                 <div *ngFor="let img of tweet?.entities?.urls[0].images; let i=index" class="flex-none pr-3">
                   <a href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
                     <img *ngIf="i===1" src="{{img.url}}" alt="{{img.url}}" width="100px" height="100px"></a>
                 </div>
-              </ng-container>
+              </ng-container> -->
 
               <p>
                 <a class="hover:underline" href="//twitter.com/eltonwhybrow/status/{{tweet.id}}" target="_blank">
