@@ -47,7 +47,7 @@ jobs:
           # email subject
           subject: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
           # email body as text
-          body: ${{ github.repository }} Git Action build (${{ github.job }}) has <strong>${{ job.status }}</strong>
+          body: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
           # comma-separated string, send email to
           # Optional HTML body read from file:
           html_body: file://README.html
