@@ -34,6 +34,27 @@ jobs:
           path: |
             dist/widesign-eltonwhybrow
 
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v2
+        with:
+          # mail server settings
+          server_address: mail.supremecluster.com
+          server_port: 465
+          # user credentials
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          # email subject
+          subject: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
+          # email body as text
+          body: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
+          # comma-separated string, send email to
+          # Optional HTML body read from file:
+          html_body: file://README.html
+          to: elton@widesign.co.uk
+          # from email name
+          from: WideSign Site Build
+
   deployment:
     needs: build
     runs-on: ubuntu-latest

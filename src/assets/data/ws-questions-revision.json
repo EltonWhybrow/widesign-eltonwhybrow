@@ -248,5 +248,10 @@
     "id": 49,
     "question": "Angular - ProvidedIn",
     "answer": "<p>Provide a service to only certain areas of the app. Instead of the standard PorvidedIn: 'root' set up.</p>"
+  },
+  {
+    "id": 50,
+    "question": "Javascript - What is a Truthy value",
+    "answer": "<p>A truthy value is a value that is considered true when encountered in a Boolean context. <strong>All values are truthy unless they are defined as falsy</strong>. That is, all values are truthy except <strong>false</strong>, <strong>0</strong>, <strong>-0</strong>, <strong>0n</strong>, <strong>''(empty string)</strong>, <strong>null</strong>, <strong>undefined</strong>, and <strong>NaN</strong>.</p>"
   }
 ]
