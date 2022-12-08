@@ -48,9 +48,9 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           # email subject
-          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          subject: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
           # email body as text
-          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          body: ${{ github.repository }} Git Action build (${{ github.job }}) has <strong>${{ job.status }}</strong>
           # comma-separated string, send email to
           to: elton@widesign.co.uk, whybrow.elton@gmail.com
           # from email name
