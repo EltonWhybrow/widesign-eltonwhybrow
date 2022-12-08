@@ -49,7 +49,9 @@ jobs:
           # email body as text
           body: ${{ github.repository }} Git Action build (${{ github.job }}) has <strong>${{ job.status }}</strong>
           # comma-separated string, send email to
-          to: elton@widesign.co.uk, whybrow.elton@gmail.com
+          # Optional HTML body read from file:
+          html_body: file://README.html
+          to: elton@widesign.co.uk
           # from email name
           from: WideSign Site Build
 
