@@ -1,86 +1,86 @@
-name: Staging
+# name: Staging
 
-on:
-  push:
-    branches:
-      - staging
-      - FEAT-*
+# on:
+#   push:
+#     branches:
+#       - staging
+#       - FEAT-*
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
 
-    steps:
-      - uses: actions/checkout@v3
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
 
-      - name: Install packages & build ssr/prod ng app
-        run: |
-          npm install
-          npm run build:prod
-          ls
-          cd dist
-          ls
+#       - name: Install packages & build ssr/prod ng app
+#         run: |
+#           npm install
+#           npm run build:prod
+#           ls
+#           cd dist
+#           ls
 
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-folder
-          path: |
-            dist/widesign-eltonwhybrow
+#       - name: Archive production artifacts
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: dist-folder
+#           path: |
+#             dist/widesign-eltonwhybrow
 
-      - name: Send mail
-        if: always()
-        uses: dawidd6/action-send-mail@v2
-        with:
-          # mail server settings
-          server_address: mail.supremecluster.com
-          server_port: 465
-          # user credentials
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          # email subject
-          subject: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
-          # email body as text
-          body: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
-          # comma-separated string, send email to
-          to: elton@widesign.co.uk, whybrow.elton@gmail.com
-          # from email name
-          from: WideSign Site Build
+#       - name: Send mail
+#         if: always()
+#         uses: dawidd6/action-send-mail@v2
+#         with:
+#           # mail server settings
+#           server_address: mail.supremecluster.com
+#           server_port: 465
+#           # user credentials
+#           username: ${{ secrets.EMAIL_USERNAME }}
+#           password: ${{ secrets.EMAIL_PASSWORD }}
+#           # email subject
+#           subject: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
+#           # email body as text
+#           body: ${{ github.repository }} Git Action build (${{ github.job }}) has ${{ job.status }}
+#           # comma-separated string, send email to
+#           to: elton@widesign.co.uk, whybrow.elton@gmail.com
+#           # from email name
+#           from: WideSign Site Build
 
-  deployment:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: staging
-    concurrency: staging
-    steps:
-      - name: Download dist folder
-        uses: actions/download-artifact@v2
-        with:
-          name: dist-folder
+#   deployment:
+#     needs: build
+#     runs-on: ubuntu-latest
+#     environment: staging
+#     concurrency: staging
+#     steps:
+#       - name: Download dist folder
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: dist-folder
 
-      - name: Where am i
-        run: |
-          ls
-          pwd
+#       - name: Where am i
+#         run: |
+#           ls
+#           pwd
 
-      - name: Upload
-        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
-        with:
-          ftp_host: ftp://ftps3.uk.cloudlogin.co
-          ftp_username: ${{ secrets.FTP_USER }}
-          ftp_password: ${{ secrets.FTP_PWD }}
-          local_source_dir: "/github/workspace/"
-          dist_target_dir: "/"
-          delete: "true"
-          exclude: "'^.htaccess'"
-          only_newer: true
-          ignore_time: false
+#       - name: Upload
+#         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+#         with:
+#           ftp_host: ftp://ftps3.uk.cloudlogin.co
+#           ftp_username: ${{ secrets.FTP_USER }}
+#           ftp_password: ${{ secrets.FTP_PWD }}
+#           local_source_dir: "/github/workspace/"
+#           dist_target_dir: "/"
+#           delete: "true"
+#           exclude: "'^.htaccess'"
+#           only_newer: true
+#           ignore_time: false
