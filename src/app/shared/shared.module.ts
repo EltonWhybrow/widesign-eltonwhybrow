@@ -14,7 +14,6 @@ import { AccordionItemComponent } from './components/accordion/accordion-item/ac
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollViewDirective } from './directives/scroll-view.directive';
-import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { CompaniesComponent } from './components/companies/companies.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { CompaniesComponent } from './components/companies/companies.component';
     TabComponent,
     FilterPipe,
     ScrollViewDirective,
-    TestimonialComponent,
     CompaniesComponent
   ],
   imports: [
@@ -56,7 +54,6 @@ import { CompaniesComponent } from './components/companies/companies.component';
     TabComponent,
     FilterPipe,
     ScrollViewDirective,
-    TestimonialComponent,
     CompaniesComponent
   ]
 })

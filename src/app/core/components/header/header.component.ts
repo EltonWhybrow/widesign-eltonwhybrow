@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { AuthService } from 'src/app/shared/services/auth.service';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -12,7 +11,7 @@ export class HeaderComponent {
   burgerActive: boolean = false;
   public currentRoute: string = '';
 
-  constructor(public authService: AuthService, private router: Router) {
+  constructor(private router: Router) {
 
     /*
       Getting current route to display items based on / route
