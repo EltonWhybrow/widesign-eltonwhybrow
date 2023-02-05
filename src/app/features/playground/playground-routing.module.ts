@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from 'src/app/shared/guards/auth.guard';
-import { RoleGuard } from 'src/app/shared/guards/role.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { InterviewRevisionComponent } from './pages/interview-revision/interview-revision.component';
 import { LandingPagesComponent } from './pages/landing-pages/landing-pages.component';
@@ -14,7 +12,7 @@ import { SideProjectsComponent } from './pages/side-projects/side-projects.compo
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
-    path: '', component: PlaygroundComponent, canActivate: [AuthGuard],
+    path: '', component: PlaygroundComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent, title: 'Dashboard - Web Development & Design - WideSign' },
       {
@@ -25,8 +23,8 @@ const routes: Routes = [
         ]
       },
       { path: 'side-projects', component: SideProjectsComponent, title: 'Side Projects - Web Development & Design - WideSign' },
-      { path: 'interview-revision', component: InterviewRevisionComponent, canActivate: [RoleGuard], title: 'Revision - Web Development & Design - WideSign' },
-      { path: 'landing-pages', component: LandingPagesComponent, canActivate: [RoleGuard], title: 'Landing Pages - Web Development & Design - WideSign' },
+      { path: 'interview-revision', component: InterviewRevisionComponent, title: 'Revision - Web Development & Design - WideSign' },
+      { path: 'landing-pages', component: LandingPagesComponent, title: 'Landing Pages - Web Development & Design - WideSign' },
     ]
   },
   { path: '', pathMatch: 'full', redirectTo: '' },
