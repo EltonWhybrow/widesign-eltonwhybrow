@@ -47,17 +47,7 @@
 
         <nav id="burger-nav__list" role="navigation" aria-label="Main" [ngClass]="{
             'open':burgerActive}"
-          class="fixed overflow-scroll top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700 pb-20">
-
-
-          <ul class="text-3xl px-8 uppercase mt-10 w-1/2">
-            <li class="nav__item group relative">
-              <a class="nav__link block p-2 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-                (click)="this.toggleBurgerNav()" [routerLink]="['/playground/dashboard']"
-                routerLinkActive="is-active">Playground</a>
-            </li>
-            <div class="my-2 border-t border-tealy-500"></div>
-          </ul>
+          class="flex justify-center items-center fixed overflow-scroll top-0 right-0 w-full h-screen z-10 bg-white border-b-8 border-tealy-700 pb-20">
 
           <ul class="px-8 text-center w-1/2">
             <li class="block nav__item text-lg">
