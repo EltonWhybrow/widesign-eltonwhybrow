@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -7,12 +7,12 @@ import { filter } from 'rxjs/operators';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   burgerActive: boolean = false;
   public currentRoute: string = '';
+  randomPic: number = 2;
 
   constructor(private router: Router) {
-
     /*
       Getting current route to display items based on / route
     */
@@ -21,7 +21,14 @@ export class HeaderComponent {
     ).subscribe(event => {
       this.currentRoute = event.url;
     })
+  }
 
+  ngOnInit(): void {
+    this.randomPic = this.get_random([2, 3, 4])
+  }
+
+  private get_random(list: number[]) {
+    return list[Math.floor((Math.random() * list.length))];
   }
 
   /*

@@ -3,7 +3,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { cold, getTestScheduler } from 'jasmine-marbles';
 
-import { BreadcrumbsComponent } from 'src/app/shared/components/breadcrumbs/breadcrumbs.component';
+
 import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
 import { SpinnerComponent } from 'src/app/shared/components/spinner/spinner.component';
 import { PortfolioDashboardComponent } from './portfolio-dashboard.component';
@@ -68,7 +68,7 @@ describe('PortfolioDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PortfolioDashboardComponent, HeadingComponent, BreadcrumbsComponent, SpinnerComponent],
+      declarations: [PortfolioDashboardComponent, HeadingComponent, SpinnerComponent],
       imports: [HttpClientTestingModule],
       schemas: [NO_ERRORS_SCHEMA]
     })

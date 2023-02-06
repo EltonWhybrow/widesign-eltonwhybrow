@@ -1,5 +1,25 @@
 [
   {
+    "id": "7",
+    "heading": "Home Tutoring - Custom WP Theme",
+    "body": "Key Stage 1 & 2 Home tutoring site for local business start-up",
+    "footer": [
+      "Custom Wordpress Theme",
+      "Web Design",
+      "GitHub actions"
+    ],
+    "url": "redhill-tutoring",
+    "imageName": "side-projects-redhill-tutoring",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://redhilltutoring.co.uk/",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-redhill-tutoring.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-redhill-tutoring.webp"
+      }
+    ]
+  },
+  {
     "id": "1",
     "heading": "ingenie Business",
     "body": "This app was built when <strong>'ingenie Business'</strong> required a B2B site for marketing their core telematics technology that powered <strong>ingenie Insurance</strong> product it offered to its own customer. The App was built in the latest Angular version at the time and used a NodeJS backend using <strong>Nodemailer</strong> to handle mail requests and responses. Both apps were unit tested and run through <strong>CircleCI</strong> before being deployed to <strong>Azure Cloud hosting</strong>.",
@@ -66,6 +86,66 @@
     ]
   },
   {
+    "id": "8",
+    "heading": "Stranger Things Quiz/Game",
+    "body": "Using Angular 13 this Quiz was created to test family and freinds on their 'Stranger Things' knowledge. Feel free to give it a spin if you think your a super fan. Includes a 'whack a demi' game.",
+    "footer": [
+      "Angular 13",
+      "Web Design",
+      "GitHub actions"
+    ],
+    "url": "stranger-things-quiz",
+    "imageName": "side-projects-stranger-things",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://eltonwhybrow.github.io/stranger-things-quiz/",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-stranger-things.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-stranger-things.webp"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "heading": "Garden Landscaping - Custom Theme",
+    "body": "Our friends at Bud Landscapes wanted their site refreshed so this is the finished product. They do some great garden cabin if your in the market for one.",
+    "footer": [
+      "Wordpress",
+      "Web Design",
+      "Custom Theme"
+    ],
+    "url": "bud-landscapes",
+    "imageName": "side-projects-budlandscapes",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://budlandscapes.co.uk",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-budlandscapes.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-budlandscapes.webp"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "heading": "BT Roofing Limited",
+    "body": "Roofing Specialists - Web setup and emails etc. Ongoing SEO work carried out",
+    "footer": [
+      "Wordpress",
+      "Web Design",
+      "SEO"
+    ],
+    "url": "bt-roofing",
+    "imageName": "side-projects-bt-roofing",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://budlandscapes.co.uk",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-bt-roofing.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-bt-roofing.webp"
+      }
+    ]
+  },
+  {
     "id": "3",
     "heading": "ingenie custom rebuild and libraries",
     "body": "Complete rebuild of the ingenie brochureware site in <strong>Wordpress</strong>. Custom themed from scratch and intergrated <strong>style/component library</strong>. This project was assigned to me to do whilst carring out mmy normal day to day business at ingenie. Continuous delivery was set up using CircleCI and deployed to a managed Wordpress hosting platform. The component library helped non-tech people within marketing manged content and add complex blocks of functionality, as well as keep the simple html element unifom throughout the site.",
@@ -89,6 +169,25 @@
         "url": "/assets/imgs/ingenie/ingenie-styleguide.pdf",
         "imgJpg": "/assets/imgs/ingenie/assets-ig-wpsite-styleguide.jpg",
         "imgWebp": "/assets/imgs/ingenie/assets-ig-wpsite-styleguide.webp"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "heading": "Flashlight Photography",
+    "body": "Flashlight Photography",
+    "footer": [
+      "HTML, CSS",
+      "Web Design"
+    ],
+    "url": "flashlight-photography",
+    "imageName": "side-projects-flashlight",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://flashlight-photography.co.uk/",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-flashlight.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-flashlight.webp"
       }
     ]
   },
@@ -167,6 +266,45 @@
         "url": "https://www.howdendrivingdata.com/",
         "imgJpg": "/assets/imgs/howden/assets-howden-live-site.jpg",
         "imgWebp": "/assets/imgs/howden/assets-howden-live-site.webp"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "heading": "Mower Spares - E-Commerce",
+    "body": "Mower Spares - E-Commerce",
+    "footer": [
+      "HTML, CSS",
+      "E-commerce",
+      "Web Design"
+    ],
+    "url": "spares-4-mowers",
+    "imageName": "side-projects-spares-mowers",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://spares4mowers.co.uk",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-spares-mowers.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-spares-mowers.webp"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "heading": "Legacy - Widesign Site",
+    "body": "Legacy - Widesign Site",
+    "footer": [
+      "HTML, CSS",
+      "Web Design"
+    ],
+    "url": "legacy-widesign",
+    "imageName": "side-projects-legacy-widesign",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://legacy.widesign.co.uk/2013/",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-legacy-widesign.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-legacy-widesign.webp"
       }
     ]
   }
