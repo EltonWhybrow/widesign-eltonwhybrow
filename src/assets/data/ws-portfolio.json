@@ -1,25 +1,5 @@
 [
   {
-    "id": "7",
-    "heading": "Home Tutoring - Custom WP Theme",
-    "body": "Key Stage 1 & 2 Home tutoring site for a local business start-up",
-    "footer": [
-      "Custom WordPress Theme",
-      "Web Design",
-      "Logo Design"
-    ],
-    "url": "redhill-tutoring",
-    "imageName": "side-projects-redhill-tutoring",
-    "assets": [
-      {
-        "name": "Live site",
-        "url": "https://redhilltutoring.co.uk/",
-        "imgJpg": "/assets/imgs/side-projects/side-projects-redhill-tutoring.jpg",
-        "imgWebp": "/assets/imgs/side-projects/side-projects-redhill-tutoring.webp"
-      }
-    ]
-  },
-  {
     "id": "1",
     "heading": "ingenie Business",
     "body": "This app was built when <strong>'ingenie Business'</strong> required a B2B site for marketing their core telematics technology that powered <strong>ingenie Insurance</strong> product it offered to its own customer. The App was built in the latest Angular version at the time and used a NodeJS backend using <strong>Nodemailer</strong> to handle mail requests and responses. Both apps were built, linted and unit tested through <strong>CircleCI</strong> before being deployed to <strong>Azure Cloud hosting</strong>.",
@@ -55,6 +35,26 @@
         "url": "/assets/video/ingenie-business/why-it-works-animation.mp4",
         "imgJpg": "/assets/imgs/ingenie-business/assets-ig-bus-animation2.jpg",
         "imgWebp": "/assets/imgs/ingenie-business/assets-ig-bus-animation2.webp"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "heading": "Home Tutoring - Custom Theme",
+    "body": "Key Stage 1 & 2 Home tutoring site for a local business start-up.",
+    "footer": [
+      "WordPress",
+      "Web Design",
+      "Logo Design"
+    ],
+    "url": "redhill-tutoring",
+    "imageName": "side-projects-redhill-tutoring",
+    "assets": [
+      {
+        "name": "Live site",
+        "url": "https://redhilltutoring.co.uk/",
+        "imgJpg": "/assets/imgs/side-projects/side-projects-redhill-tutoring.jpg",
+        "imgWebp": "/assets/imgs/side-projects/side-projects-redhill-tutoring.webp"
       }
     ]
   },
@@ -126,6 +126,26 @@
     ]
   },
   {
+    "id": "6",
+    "heading": "Howden Driving Data",
+    "body": "Howden Driving Data is a leading data company, specialising in the use of behavioral and geospatial data to provide insurers, brokers, financial institutions, and OEMs with loss prevention and loss management solutions across the globe. This was a quick turnaround custom theme for Howden and ingenie after the takeover.",
+    "footer": [
+      "Custom WP Theme",
+      "CircleCI",
+      "WPSync Set-up"
+    ],
+    "url": "howden-theme",
+    "imageName": "howden-theme",
+    "assets": [
+      {
+        "name": "Live Howden site",
+        "url": "https://www.howdendrivingdata.com/",
+        "imgJpg": "/assets/imgs/howden/assets-howden-live-site.jpg",
+        "imgWebp": "/assets/imgs/howden/assets-howden-live-site.webp"
+      }
+    ]
+  },
+  {
     "id": "10",
     "heading": "BT Roofing Limited",
     "body": "Roofing Specialists - Reigate company. We are Roofing Specialists in Reigate and Banstead and surrounding areas. Website setup, hosting and emails. Ongoing SEO work being carried out",
@@ -148,7 +168,7 @@
   {
     "id": "3",
     "heading": "ingenie custom rebuild and libraries",
-    "body": "Complete rebuild of the ingenie brochure ware site in <strong>WordPress</strong>. Custom themed from scratch and integrated <strong>style/component library</strong>. This project was assigned to me to do whilst carrying out my normal 'business as usual' at ingenie. Continuous delivery was set up using CircleCI and deployed to their existing managed WordPress hosting platform. The component library helped non-tech people within marketing manage content and add complex blocks of functionality with ease, whilst keeping component elements uniform throughout the site.",
+    "body": "Complete rebuild of the ingenie brochure ware site in <strong>WordPress</strong>. Custom themed from scratch and integrated <strong>style/component library</strong>. Continuous delivery was set up using CircleCI and deployed to their existing managed WordPress hosting platform. The component library helped non-tech people within marketing manage content and add complex blocks of functionality with ease, whilst keeping component elements uniform throughout the site.",
     "footer": [
       "Wordpress",
       "Custom Theme",
@@ -247,26 +267,6 @@
         "url": "/assets/imgs/esure/fnol/es-toolkit-screens.jpg",
         "imgJpg": "/assets/imgs/esure/fnol/assets-es-app-fnol.jpg",
         "imgWebp": "/assets/imgs/esure/fnol/assets-es-app-fnol.webp"
-      }
-    ]
-  },
-  {
-    "id": "6",
-    "heading": "Howden Driving Data",
-    "body": "Howden Driving Data is a leading data company, specialising in the use of behavioral and geospatial data to provide insurers, brokers, financial institutions, and OEMs with loss prevention and loss management solutions across the globe. This was a quick turnaround custom theme for Howden and ingenie after the takeover.",
-    "footer": [
-      "Custom WP Theme",
-      "CircleCI",
-      "WPSync Set-up"
-    ],
-    "url": "howden-theme",
-    "imageName": "howden-theme",
-    "assets": [
-      {
-        "name": "Live Howden site",
-        "url": "https://www.howdendrivingdata.com/",
-        "imgJpg": "/assets/imgs/howden/assets-howden-live-site.jpg",
-        "imgWebp": "/assets/imgs/howden/assets-howden-live-site.webp"
       }
     ]
   },

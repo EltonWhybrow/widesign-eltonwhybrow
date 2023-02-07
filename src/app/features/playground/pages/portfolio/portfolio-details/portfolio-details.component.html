@@ -1,20 +1,13 @@
-<section class="main-content-tighty mt-10">
-  <ul class="flex text-xs">
-    <li class="breadcrumbs__item group relative">
-      <a class="breadcrumbs__link block px-1 text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
-        [routerLink]="['/portfolio']" routerLinkActive="is-active">Back to portfolio</a>
-    </li>
-  </ul>
-</section>
+<app-heading>
+  <ng-container text-one>{{portfolioResult.heading}}</ng-container>
+  <ng-container text-two>/</ng-container>
+  <ng-container text-three>Assets</ng-container>
+</app-heading>
 
 <section class="main-content">
+  <a class="breadcrumbs__link block pb-4 text-xs text-gray-500 hover:text-tealy-500 transition duration-150 ease-in-out"
+    [routerLink]="['/portfolio']" routerLinkActive="is-active">Back to portfolio</a>
   <ng-container *ngIf="portfolioResult else loadingPortfolioDetails">
-    <h3 class="heading-3">{{portfolioResult.heading}} assets
-    </h3>
-    <p class="standard-paragraph text-raw-400 text-lg font-thin">
-      Some assets from the project.
-    </p>
-
     <div class="grid md:grid-cols-3 gap-14">
       <!-- Details -->
       <ng-container *ngFor="let assets of portfolioResult.assets">
