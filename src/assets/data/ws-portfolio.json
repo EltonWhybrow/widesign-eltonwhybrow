@@ -2,11 +2,11 @@
   {
     "id": "7",
     "heading": "Home Tutoring - Custom WP Theme",
-    "body": "Key Stage 1 & 2 Home tutoring site for local business start-up",
+    "body": "Key Stage 1 & 2 Home tutoring site for a local business start-up",
     "footer": [
-      "Custom Wordpress Theme",
+      "Custom WordPress Theme",
       "Web Design",
-      "GitHub actions"
+      "Logo Design"
     ],
     "url": "redhill-tutoring",
     "imageName": "side-projects-redhill-tutoring",
@@ -22,7 +22,7 @@
   {
     "id": "1",
     "heading": "ingenie Business",
-    "body": "This app was built when <strong>'ingenie Business'</strong> required a B2B site for marketing their core telematics technology that powered <strong>ingenie Insurance</strong> product it offered to its own customer. The App was built in the latest Angular version at the time and used a NodeJS backend using <strong>Nodemailer</strong> to handle mail requests and responses. Both apps were unit tested and run through <strong>CircleCI</strong> before being deployed to <strong>Azure Cloud hosting</strong>.",
+    "body": "This app was built when <strong>'ingenie Business'</strong> required a B2B site for marketing their core telematics technology that powered <strong>ingenie Insurance</strong> product it offered to its own customer. The App was built in the latest Angular version at the time and used a NodeJS backend using <strong>Nodemailer</strong> to handle mail requests and responses. Both apps were built, linted and unit tested through <strong>CircleCI</strong> before being deployed to <strong>Azure Cloud hosting</strong>.",
     "footer": [
       "Angular",
       "NodeJS",
@@ -60,7 +60,7 @@
   },
   {
     "id": "2",
-    "heading": "Shelias' Wheels Loyalty",
+    "heading": "Sheilas' Wheels Loyalty",
     "body": "Sheilas Wheels first native app built using the <strong>ionic framework</strong> and headless CMS. Marketing could then update current discounts and incentives as well as offer add-on products and services. <strong>Drupal</strong> was used as a <strong>headless CMS</strong> for marketing to manage with as little developer input as possible. The app was deployed on both <strong>AppStore</strong> and <strong>Google Play</strong> during a phase where esure were going through a digital transformation.",
     "footer": [
       "ionic",
@@ -88,11 +88,11 @@
   {
     "id": "8",
     "heading": "Stranger Things Quiz/Game",
-    "body": "Using Angular 13 this Quiz was created to test family and freinds on their 'Stranger Things' knowledge. Feel free to give it a spin if you think your a super fan. Includes a 'whack a demi' game.",
+    "body": "Using Angular 13 this Quiz was created to test family and friends on their 'Stranger Things' knowledge. Feel free to give it a spin if you think your a super fan. Includes a 'whack a demogorgon' game.",
     "footer": [
       "Angular 13",
       "Web Design",
-      "GitHub actions"
+      "Game Development"
     ],
     "url": "stranger-things-quiz",
     "imageName": "side-projects-stranger-things",
@@ -108,7 +108,7 @@
   {
     "id": "9",
     "heading": "Garden Landscaping - Custom Theme",
-    "body": "Our friends at Bud Landscapes wanted their site refreshed so this is the finished product. They do some great garden cabin if your in the market for one.",
+    "body": "Our friends at Bud Landscapes wanted their site refreshed so this is the finished product. They wanted a site that would show off their garden projects and using video and photos. They do some great garden cabins if your in the market for one.",
     "footer": [
       "Wordpress",
       "Web Design",
@@ -128,9 +128,9 @@
   {
     "id": "10",
     "heading": "BT Roofing Limited",
-    "body": "Roofing Specialists - Web setup and emails etc. Ongoing SEO work carried out",
+    "body": "Roofing Specialists - Reigate company. We are Roofing Specialists in Reigate and Banstead and surrounding areas. Website setup, hosting and emails. Ongoing SEO work being carried out",
     "footer": [
-      "Wordpress",
+      "WordPress",
       "Web Design",
       "SEO"
     ],
@@ -148,7 +148,7 @@
   {
     "id": "3",
     "heading": "ingenie custom rebuild and libraries",
-    "body": "Complete rebuild of the ingenie brochureware site in <strong>Wordpress</strong>. Custom themed from scratch and intergrated <strong>style/component library</strong>. This project was assigned to me to do whilst carring out mmy normal day to day business at ingenie. Continuous delivery was set up using CircleCI and deployed to a managed Wordpress hosting platform. The component library helped non-tech people within marketing manged content and add complex blocks of functionality, as well as keep the simple html element unifom throughout the site.",
+    "body": "Complete rebuild of the ingenie brochure ware site in <strong>WordPress</strong>. Custom themed from scratch and integrated <strong>style/component library</strong>. This project was assigned to me to do whilst carrying out my normal 'business as usual' at ingenie. Continuous delivery was set up using CircleCI and deployed to their existing managed WordPress hosting platform. The component library helped non-tech people within marketing manage content and add complex blocks of functionality with ease, whilst keeping component elements uniform throughout the site.",
     "footer": [
       "Wordpress",
       "Custom Theme",
@@ -175,9 +175,9 @@
   {
     "id": "11",
     "heading": "Flashlight Photography",
-    "body": "Flashlight Photography",
+    "body": "Flashlight Photography provide modern and traditional school / nursery photography for schools. Simple intergrated ordering system for photos.",
     "footer": [
-      "HTML, CSS",
+      "HTML, CSS, JS",
       "Web Design"
     ],
     "url": "flashlight-photography",
@@ -227,10 +227,11 @@
   {
     "id": "5",
     "heading": "esure FNOL App",
-    "body": "I was tasked with building this native hybrid app by a sponsor while working for the <strong>esure Group</strong>. After the success of the Sheilas' Wheels app and release, esure wanted to investigate oppotunities around savings with <strong>'First Notice of Loss'</strong> app. This was built using the <strong>ionic</strong> framework and had features such as capture images/details at the scene, with the ability to send to esure and store your insurance details to share with other driver involved.",
+    "body": "I was tasked with building this native hybrid app by a sponsor while working for the <strong>esure Group</strong>. After the success of the Sheilas' Wheels app and release, esure wanted to investigate opportunities around savings with <strong>'First Notice of Loss'</strong> app. This was built using the <strong>ionic</strong> framework and had features such as capture images/details at the scene, with the ability to send to esure and store your insurance details to share with other driver involved.",
     "footer": [
-      "ionic",
-      "x-code"
+      "Ionic",
+      "X-Code",
+      "Javascript"
     ],
     "url": "esure-fnol-app",
     "imageName": "es-fnol-app",
@@ -252,7 +253,7 @@
   {
     "id": "6",
     "heading": "Howden Driving Data",
-    "body": "This was a quick turnaround custom theme for Howden and ingenie after the takeover. ",
+    "body": "Howden Driving Data is a leading data company, specialising in the use of behavioral and geospatial data to provide insurers, brokers, financial institutions, and OEMs with loss prevention and loss management solutions across the globe. This was a quick turnaround custom theme for Howden and ingenie after the takeover.",
     "footer": [
       "Custom WP Theme",
       "CircleCI",
@@ -272,7 +273,7 @@
   {
     "id": "12",
     "heading": "Mower Spares - E-Commerce",
-    "body": "Mower Spares - E-Commerce",
+    "body": "Spare parts for Lawnmowers and garden machinery - all the spares for lawnmowers you will ever need with an unbeatable service. Shopping cart and payment setup for client in Maidenhead.",
     "footer": [
       "HTML, CSS",
       "E-commerce",
@@ -292,10 +293,11 @@
   {
     "id": "13",
     "heading": "Legacy - Widesign Site",
-    "body": "Legacy - Widesign Site",
+    "body": "Legacy design for web design company.",
     "footer": [
-      "HTML, CSS",
-      "Web Design"
+      "HTML",
+      "Web Design",
+      "CSS Animations"
     ],
     "url": "legacy-widesign",
     "imageName": "side-projects-legacy-widesign",
